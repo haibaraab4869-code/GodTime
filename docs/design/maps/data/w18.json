@@ -1,0 +1,438 @@
+{
+  "id": "W18",
+  "name": "未封之口",
+  "chapter": 6,
+  "role": "准入秘境",
+  "shape": "近正方",
+  "aspect": "1.05:1",
+  "size": [
+    3360,
+    3200
+  ],
+  "canvas_origin": [
+    41280,
+    -3200
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "封口骨龛",
+      "rect": [
+        0,
+        2400,
+        1120,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 入口段",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "水仓前庭",
+      "rect": [
+        1120,
+        2400,
+        1120,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 入口段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "折梯井",
+      "rect": [
+        0,
+        1600,
+        1120,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "B 西侧段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "病房残排",
+      "rect": [
+        1120,
+        1600,
+        1120,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "B 中轴段",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "上廊船骸",
+      "rect": [
+        0,
+        800,
+        1120,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 上廊段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "未索引室",
+      "rect": [
+        1120,
+        800,
+        1120,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 上廊段",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "封蜡井",
+      "rect": [
+        1120,
+        0,
+        1120,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 深层",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "信匣室",
+      "rect": [
+        2240,
+        0,
+        1120,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 深层",
+      "content": "收藏",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R03",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R04",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R05",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R06",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "V",
+      "kind": "branch",
+      "requires": "DT",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "S",
+      "room": "R02",
+      "pos": [
+        1152,
+        3200
+      ],
+      "to": "W17",
+      "to_room": "R14",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "永久强化",
+      "name": "麒麟材料（阶三）",
+      "room": "R05",
+      "pos": [
+        560,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "凶骨",
+      "name": "病房骨梳",
+      "room": "R04",
+      "pos": [
+        1680,
+        2360
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "水仓签牌",
+      "room": "R01",
+      "pos": [
+        860,
+        3100
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "病房姓名木牌",
+      "room": "R04",
+      "pos": [
+        1400,
+        2350
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "未索引泥板",
+      "room": "R06",
+      "pos": [
+        1680,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "叙事物",
+      "name": "妻子私人信",
+      "room": "R08",
+      "pos": [
+        2800,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "DT"
+    },
+    {
+      "id": "I-07",
+      "type": "叙事物",
+      "name": "封蜡井刻痕",
+      "room": "R07",
+      "pos": [
+        1680,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "DT"
+    },
+    {
+      "id": "I-08",
+      "type": "地图残页",
+      "name": "水仓剖图",
+      "room": "R08",
+      "pos": [
+        2520,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "DT"
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R06",
+      "pos": [
+        1960,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R02",
+      "pos": [
+        1960,
+        3160
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "静默巡房",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R04"
+      ],
+      "count": 2,
+      "era": "past",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "飞行",
+      "name": "缄口鸦",
+      "hp": 30,
+      "rooms": [
+        "R05",
+        "R06"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "环境",
+      "name": "涨水涌",
+      "hp": 0,
+      "rooms": [
+        "R01",
+        "R02"
+      ],
+      "count": 2,
+      "era": "present",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R06",
+      "type": "光路",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w18_mirror_2",
+      "fail_feedback": "无接收感应；现在态只有灼痕发亮，光柱不出现"
+    }
+  ],
+  "flags": [
+    "w18_checkpoint",
+    "w18_mirror_2",
+    "w18_wax_past",
+    "w18_wax_present",
+    "w18_letter_taken",
+    "w18_relic_taken",
+    "w18_page_taken"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      560,
+      3160
+    ]
+  }
+}

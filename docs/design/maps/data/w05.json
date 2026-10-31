@@ -1,0 +1,494 @@
+{
+  "id": "W05",
+  "name": "灰羽焚田",
+  "chapter": 2,
+  "role": "过渡",
+  "shape": "极横长（横向过渡带）",
+  "aspect": "4.8:1",
+  "size": [
+    3840,
+    800
+  ],
+  "canvas_origin": [
+    11904,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "驿道残柱·西口",
+      "rect": [
+        0,
+        0,
+        448,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 驿道入口",
+      "content": "教学",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "第一车辙断口",
+      "rect": [
+        448,
+        0,
+        448,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 车辙拉链",
+      "content": "机关+战斗",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "九年碑·稻草垛林",
+      "rect": [
+        896,
+        0,
+        448,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 车辙拉链",
+      "content": "战斗+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "焚灰深沟",
+      "rect": [
+        1344,
+        0,
+        384,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 800,
+      "era": "both",
+      "region": "C 焚灰深沟",
+      "content": "精灵+探索",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "旧车辕阁楼",
+      "rect": [
+        1728,
+        0,
+        480,
+        256
+      ],
+      "shape": "矩形",
+      "floor_y": 256,
+      "era": "both",
+      "region": "D 车辕桥",
+      "content": "支脉（P2 回访）",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "车辕桥",
+      "rect": [
+        1728,
+        256,
+        480,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 车辕桥",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "焚田尽头·断桥",
+      "rect": [
+        2208,
+        0,
+        672,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "E 断桥关隘",
+      "content": "精怪战场（锁门）",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "东口·落羽台",
+      "rect": [
+        2880,
+        0,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "E 断桥关隘",
+      "content": "出口+喘息",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R05",
+      "side": "N",
+      "kind": "branch",
+      "requires": "P2",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W04",
+      "to_room": "R11",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R08",
+      "pos": [
+        3840,
+        760
+      ],
+      "to": "W06",
+      "to_room": "R12",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "焦骨车辖",
+      "room": "R07",
+      "pos": [
+        2540,
+        700
+      ],
+      "obtain": "击败精怪 薪偶·守垛人 掉落",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "九年碑·碑阳",
+      "room": "R03",
+      "pos": [
+        1180,
+        760
+      ],
+      "obtain": "调查（过去态全文 / 现在态补读下半）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "车辙饭勺",
+      "room": "R02",
+      "pos": [
+        620,
+        600
+      ],
+      "obtain": "挖掘（现在态土脊下车辙坑）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "禁焚告示残牌",
+      "room": "R06",
+      "pos": [
+        1900,
+        640
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "永久强化",
+      "name": "战技残篇·逐日",
+      "room": "R05",
+      "pos": [
+        1960,
+        220
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀·驿道",
+      "room": "R01",
+      "pos": [
+        220,
+        740
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀·车辕",
+      "room": "R06",
+      "pos": [
+        2000,
+        760
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀·断桥",
+      "room": "R07",
+      "pos": [
+        2700,
+        740
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄沉淀·碑下",
+      "room": "R03",
+      "pos": [
+        1060,
+        760
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "稻草偶",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R03"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "飞行",
+      "name": "焚田虫",
+      "hp": 30,
+      "rooms": [
+        "R06",
+        "R07"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "远程",
+      "name": "羽卫·灰羽哨",
+      "hp": 35,
+      "rooms": [
+        "R03",
+        "R08"
+      ],
+      "count": 3,
+      "era": "past",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "燋壤",
+      "hp": 0,
+      "rooms": [
+        "R01"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "断辕守",
+      "hp": 120,
+      "rooms": [
+        "R05"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "灰羽灵",
+      "room": "R04",
+      "era": "present",
+      "blocks": "现在态悬于 R04 上空，落灰把唯一土脊 y=640 埋成不可站平面，现在态 R04 整段不可通",
+      "dispel": "切至过去态即不存在；或过去态在 R03 稻草垛顶取得灰羽桩、带回 R04 西端巢柱放回（永久安抚）",
+      "detour_cost": "过去态路线多 15—20s，且只能走 52px 宽独木（x=1420–1472），两侧悬空"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "薪偶·守垛人",
+      "room": "R07",
+      "arena": [
+        672,
+        800
+      ],
+      "trigger": "从 R07 西侧门洞进入即封东西两门；可在门前回头离开",
+      "phases": 1,
+      "moves": [
+        {
+          "name": "垛顶砸落",
+          "telegraph": 0.85,
+          "window": 0.24,
+          "damage": 2,
+          "dodge": "跳跃/冲刺",
+          "cd": 3.2
+        },
+        {
+          "name": "稻草裹缠",
+          "telegraph": 0.7,
+          "window": 0.3,
+          "damage": 1,
+          "dodge": "冲刺穿出（不可格挡）",
+          "cd": 4.5
+        },
+        {
+          "name": "守垛冲撞",
+          "telegraph": 0.8,
+          "window": 0.32,
+          "damage": 2,
+          "dodge": "跳跃",
+          "cd": 5.0
+        }
+      ],
+      "weakness": "每次重砸后 1.4s 硬直；过去态三级稻草高台给高度优势，现在态平地给横向空间——破绽位置随时代改变，背破绽无效",
+      "reward": "凶骨 ×1（I-01）+ 战后东侧栅门永久开放为通路"
+    }
+  ],
+  "boss": null,
+  "devices": [],
+  "flags": [
+    "w05_checkpoint_lit",
+    "w05_item_I01",
+    "w05_item_I02",
+    "w05_item_I03",
+    "w05_item_I04",
+    "w05_item_I05",
+    "w05_item_I06",
+    "w05_item_I07",
+    "w05_item_I08",
+    "w05_item_I09",
+    "w05_elite_slayed",
+    "w05_grayfeather_soothed",
+    "w05_hook_drift_plate",
+    "w05_door_w04",
+    "w05_door_w06"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      96,
+      760
+    ]
+  }
+}

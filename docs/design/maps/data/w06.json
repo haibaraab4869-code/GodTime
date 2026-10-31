@@ -1,0 +1,998 @@
+{
+  "id": "W06",
+  "name": "鸾巢医舍",
+  "chapter": 2,
+  "role": "主题大区",
+  "shape": "竖井（自下而上）",
+  "aspect": "0.78:1",
+  "size": [
+    1920,
+    2464
+  ],
+  "canvas_origin": [
+    15744,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西巢门",
+      "rect": [
+        0,
+        1984,
+        480,
+        480
+      ],
+      "shape": "矩形",
+      "floor_y": 2464,
+      "era": "both",
+      "region": "A 巢门层",
+      "content": "入口+灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "落羽廊",
+      "rect": [
+        480,
+        1984,
+        560,
+        480
+      ],
+      "shape": "矩形",
+      "floor_y": 2464,
+      "era": "both",
+      "region": "A 巢门层",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "焚羽窖",
+      "rect": [
+        1040,
+        1984,
+        560,
+        480
+      ],
+      "shape": "矩形",
+      "floor_y": 2464,
+      "era": "both",
+      "region": "A 巢门层",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R18",
+      "name": "东南吊桥头",
+      "rect": [
+        1600,
+        1984,
+        320,
+        480
+      ],
+      "shape": "矩形",
+      "floor_y": 2464,
+      "era": "both",
+      "region": "A 巢门层",
+      "content": "出口",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "药隧口·井梯下段",
+      "rect": [
+        0,
+        1472,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 1984,
+      "era": "both",
+      "region": "B 医舍层",
+      "content": "支线枢纽",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "药碾房",
+      "rect": [
+        480,
+        1472,
+        480,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 1984,
+      "era": "both",
+      "region": "B 医舍层",
+      "content": "探索（环境）",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "医舍前廊",
+      "rect": [
+        960,
+        1472,
+        480,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 1984,
+      "era": "both",
+      "region": "B 医舍层",
+      "content": "喘息",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "角闻医舍",
+      "rect": [
+        1440,
+        1472,
+        480,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 1984,
+      "era": "both",
+      "region": "B 医舍层",
+      "content": "QS 取得",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "井梯中段",
+      "rect": [
+        0,
+        960,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 1472,
+      "era": "both",
+      "region": "C 井梯层",
+      "content": "精灵+战斗",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "药井",
+      "rect": [
+        480,
+        960,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 1472,
+      "era": "both",
+      "region": "C 井梯层",
+      "content": "机关（三灵协作）",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "巢体西缘",
+      "rect": [
+        960,
+        960,
+        480,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 1472,
+      "era": "both",
+      "region": "C 井梯层",
+      "content": "精怪战场（锁门）",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "坠梁井·中段",
+      "rect": [
+        1440,
+        960,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 1472,
+      "era": "both",
+      "region": "C 井梯层",
+      "content": "单向坠落通道",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "井梯上段",
+      "rect": [
+        0,
+        448,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 巢心层",
+      "content": "支线+主脉",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "巢心",
+      "rect": [
+        480,
+        448,
+        960,
+        512
+      ],
+      "shape": "拱顶",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 巢心层",
+      "content": "P2 取得",
+      "landmark": true
+    },
+    {
+      "id": "R14",
+      "name": "断环梁",
+      "rect": [
+        1440,
+        448,
+        480,
+        512
+      ],
+      "shape": "竖井",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 巢心层",
+      "content": "P2 首次应用",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "熏药阁",
+      "rect": [
+        0,
+        0,
+        480,
+        448
+      ],
+      "shape": "矩形",
+      "floor_y": 448,
+      "era": "both",
+      "region": "E 议台层",
+      "content": "秘室（P2 回访）",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "焚城议台",
+      "rect": [
+        480,
+        0,
+        960,
+        448
+      ],
+      "shape": "拱顶",
+      "floor_y": 448,
+      "era": "both",
+      "region": "E 议台层",
+      "content": "守印者战场",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "东巢门·断梁台",
+      "rect": [
+        1440,
+        0,
+        480,
+        448
+      ],
+      "shape": "矩形",
+      "floor_y": 448,
+      "era": "both",
+      "region": "E 议台层",
+      "content": "出口",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R04",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R08",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R12",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "E",
+      "kind": "main",
+      "requires": "P2",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R17",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R17",
+      "b": "R16",
+      "side": "W",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R18",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "secret",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R15",
+      "side": "V",
+      "kind": "branch",
+      "requires": "P2",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R11",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R07",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R03",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R12",
+      "pos": [
+        0,
+        760
+      ],
+      "to": "W05",
+      "to_room": "R08",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R04",
+      "pos": [
+        0,
+        1700
+      ],
+      "to": "W03",
+      "to_room": "R05",
+      "requires": "QS",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "E",
+      "room": "R11",
+      "pos": [
+        1920,
+        1100
+      ],
+      "to": "W16",
+      "to_room": "R01",
+      "requires": "DS",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "E",
+      "room": "R14",
+      "pos": [
+        1920,
+        450
+      ],
+      "to": "W08",
+      "to_room": "R01",
+      "requires": "P2",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R07",
+      "pos": [
+        1920,
+        1690
+      ],
+      "to": "W07",
+      "to_room": "R07",
+      "requires": "P2",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "巢心·燃羽刻辞",
+      "room": "R13",
+      "pos": [
+        1000,
+        700
+      ],
+      "obtain": "调查（过去全文 / 现在仅焦痕）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "角闻医舍·药簿",
+      "room": "R07",
+      "pos": [
+        1700,
+        1900
+      ],
+      "obtain": "调查（现在态）",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "焚城议台·反焚议单",
+      "room": "R16",
+      "pos": [
+        900,
+        400
+      ],
+      "obtain": "调查（燧羽侯击破后可读）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "守药偶·铜牌",
+      "room": "R10",
+      "pos": [
+        1200,
+        1400
+      ],
+      "obtain": "击败精怪 守药偶·铁箍 掉落",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄沉淀·落羽",
+      "room": "R02",
+      "pos": [
+        700,
+        2400
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀·井梯",
+      "room": "R08",
+      "pos": [
+        200,
+        1420
+      ],
+      "obtain": "拾取（稻草垛踏面）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀·上段",
+      "room": "R12",
+      "pos": [
+        200,
+        900
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀·熏药",
+      "room": "R15",
+      "pos": [
+        240,
+        400
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄沉淀·巢口",
+      "room": "R13",
+      "pos": [
+        700,
+        500
+      ],
+      "obtain": "拾取（P2 验证高台）",
+      "missable": false,
+      "requires": "P2"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-06",
+      "tier": "杂兵",
+      "name": "稻草偶",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R08"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-07",
+      "tier": "杂兵",
+      "name": "羽卫·巢廊",
+      "hp": 45,
+      "rooms": [
+        "R04",
+        "R12"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-08",
+      "tier": "远程",
+      "name": "灰羽哨",
+      "hp": 35,
+      "rooms": [
+        "R03"
+      ],
+      "count": 2,
+      "era": "past",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-09",
+      "tier": "飞行",
+      "name": "焚田虫",
+      "hp": 30,
+      "rooms": [
+        "R03"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-10",
+      "tier": "飞行",
+      "name": "巢蛾",
+      "hp": 30,
+      "rooms": [
+        "R09",
+        "R13"
+      ],
+      "count": 3,
+      "era": "past",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-11",
+      "tier": "环境",
+      "name": "燃羽坠",
+      "hp": 0,
+      "rooms": [
+        "R13",
+        "R14"
+      ],
+      "count": 6,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-12",
+      "tier": "环境",
+      "name": "药渣堆",
+      "hp": 0,
+      "rooms": [
+        "R05"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-13",
+      "tier": "精英",
+      "name": "焚羽窖守",
+      "hp": 120,
+      "rooms": [
+        "R03"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-14",
+      "tier": "精英",
+      "name": "羽卫·束羽",
+      "hp": 120,
+      "rooms": [
+        "R12"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-15",
+      "tier": "环境",
+      "name": "井梯缘地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R12"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-16",
+      "tier": "环境",
+      "name": "断梁斜刺墙（斜刺墙）",
+      "hp": 0,
+      "rooms": [
+        "R14"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-02",
+      "name": "麟影",
+      "room": "R08",
+      "era": "present",
+      "blocks": "悬在铁梯 y=1200 处展开 240px 高影幕，现在态铁梯上段被截断，玩家从 R04 爬到 R08 中段即止（撞幕弹回，不扣血）",
+      "dispel": "切至过去态即不存在（铁梯亦不存在，改走稻草垛）；或过去态在 R09 药井井底取得麟角影屑，带到现在态 R08 铁梯口放回（永久安抚）",
+      "detour_cost": "过去态稻草垛 4 级（1472→1312→1152→992→960），耗时 20s（现在铁梯全段 12s），且稻草垛上有稻草偶 2 只"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-02",
+      "name": "守药偶·铁箍",
+      "room": "R10",
+      "arena": [
+        480,
+        512
+      ],
+      "trigger": "踏入 R10 东半（x>1200 且 y>1300）即封东西两门；可在西侧高台回头离开",
+      "phases": 1,
+      "moves": [
+        {
+          "name": "箍身撞",
+          "telegraph": 0.8,
+          "window": 0.26,
+          "damage": 2,
+          "dodge": "跳跃/冲刺",
+          "cd": 3.4
+        },
+        {
+          "name": "药杵砸地",
+          "telegraph": 0.9,
+          "window": 0.24,
+          "damage": 2,
+          "dodge": "冲刺离地（重型不可格挡）",
+          "cd": 4.2
+        },
+        {
+          "name": "稻草缠足",
+          "telegraph": 0.7,
+          "window": 0.3,
+          "damage": 1,
+          "dodge": "跳跃脱离",
+          "cd": 5.0
+        }
+      ],
+      "weakness": "每次箍身撞后 1.5s 硬直（铁箍松开、露出稻草芯）；过去态破绽在下层平地、现在态破绽在上层平台，背破绽无效",
+      "reward": "叙事物·铜牌（I-04）+ 魂魄 ×60 + 战后开通 R10↔R11 捷径"
+    }
+  ],
+  "boss": {
+    "id": "B-02",
+    "name": "燧羽侯",
+    "room": "R16",
+    "arena": [
+      960,
+      448
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "焚羽俯冲"
+        ],
+        "terrain_change": "巢体燃羽：场地地面出现 3 处火点（x=200/480/760，y=448），半径 96，每 6s 轮换到下一组（{120,420,820}→{280,600,880}），生成前 0.6s 赭红地面预兆；羽雨由 3 波变 5 波"
+      }
+    ],
+    "moves": [
+      {
+        "name": "落羽斩",
+        "telegraph": 0.9,
+        "window": 0.22,
+        "damage": 2,
+        "dodge": "跳跃/冲刺/精准闪避",
+        "cd": 3.0
+      },
+      {
+        "name": "羽雨",
+        "telegraph": 1.0,
+        "window": 0.2,
+        "damage": 1,
+        "dodge": "走位（落点起手即显形）",
+        "cd": 6.0
+      },
+      {
+        "name": "断环撞",
+        "telegraph": 0.8,
+        "window": 0.32,
+        "damage": 3,
+        "dodge": "跳跃",
+        "cd": 5.0
+      },
+      {
+        "name": "焚羽俯冲",
+        "telegraph": 0.85,
+        "window": 0.26,
+        "damage": 3,
+        "dodge": "冲刺穿身下",
+        "cd": 7.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "章印·丹丘印",
+      "flags": [
+        "w06_boss_down"
+      ],
+      "map_change": "议台东西两门开启；R17 断梁由 y=320 落至 y=448，东→W08 通路打通；I-03 反焚议单变为可读"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R09",
+      "type": "三灵协作",
+      "levels": 3,
+      "solution": "水轮 2 · 风轮 1 · 地脉 3",
+      "flag": "w06_yaojing_2",
+      "fail_feedback": "每错一档，井口涌出的水压把角色推回井底（不扣血）；三项全错时井底喷气 8s 不可站"
+    },
+    {
+      "id": "D2",
+      "room": "R03",
+      "type": "升降平台",
+      "levels": 1,
+      "solution": "无解谜，从 R07 地板落口坠入即落到燃羽堆最上层 y=2144",
+      "flag": "w06_drop_used",
+      "fail_feedback": "无（单向落口，不可逆）"
+    },
+    {
+      "id": "D3",
+      "room": "R17",
+      "type": "升降平台",
+      "levels": 1,
+      "solution": "燧羽侯击破后断梁自动落至 y=448，形成东出口通道",
+      "flag": "w06_boss_down",
+      "fail_feedback": "未击破时门洞前是实体断口，无提示"
+    }
+  ],
+  "flags": [
+    "w06_checkpoint_lit",
+    "w06_item_I01",
+    "w06_item_I02",
+    "w06_item_I03",
+    "w06_item_I04",
+    "w06_item_I05",
+    "w06_item_I06",
+    "w06_item_I07",
+    "w06_item_I08",
+    "w06_item_I09",
+    "w06_p2_acquired",
+    "w06_qs_acquired",
+    "w06_sprite_soothed",
+    "w06_elite_slayed",
+    "w06_boss_down",
+    "w06_yaojing_2",
+    "w06_yaojing_1",
+    "w06_yaojing_3",
+    "w06_drop_used",
+    "w06_door_w05",
+    "w06_door_w03",
+    "w06_door_w16",
+    "w06_door_w08",
+    "w06_door_w07"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      96,
+      2400
+    ]
+  },
+  "grants": [
+    {
+      "ability": "P2",
+      "room": "R13",
+      "pos": [
+        960,
+        500
+      ],
+      "era": "past",
+      "radius": 48,
+      "label": "燧羽穗",
+      "text": "巢口垂着一穗燧羽。握住它，第二口气就留在脚下了。"
+    },
+    {
+      "ability": "QS",
+      "room": "R07",
+      "pos": [
+        1700,
+        1900
+      ],
+      "era": "present",
+      "radius": 56,
+      "label": "医舍祭台",
+      "text": "药格还温。站定不移，麒麟来认这一笔旧账。"
+    }
+  ]
+}

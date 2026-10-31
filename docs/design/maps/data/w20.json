@@ -1,0 +1,766 @@
+{
+  "id": "W20",
+  "name": "息壤书岸",
+  "chapter": 7,
+  "role": "主题大区",
+  "shape": "极横长",
+  "aspect": "4.7:1",
+  "size": [
+    7520,
+    1600
+  ],
+  "canvas_origin": [
+    50896,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "封壁门厅",
+      "rect": [
+        0,
+        0,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 西岸段",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "息壤一隆",
+      "rect": [
+        960,
+        0,
+        960,
+        800
+      ],
+      "shape": "梯形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 西岸段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "根桥脊",
+      "rect": [
+        1920,
+        0,
+        960,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 根桥段",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "泥板高台",
+      "rect": [
+        2880,
+        0,
+        960,
+        800
+      ],
+      "shape": "梯形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 根桥段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "潮头旧线",
+      "rect": [
+        3840,
+        0,
+        960,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 800,
+      "era": "both",
+      "region": "C 书岸段",
+      "content": "精灵",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "书岸残架",
+      "rect": [
+        4800,
+        0,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "C 书岸段",
+      "content": "灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "东沙脊",
+      "rect": [
+        5760,
+        0,
+        880,
+        800
+      ],
+      "shape": "梯形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 东岸段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "息壤顶",
+      "rect": [
+        6640,
+        0,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 东岸段",
+      "content": "收藏",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "沙洲浅滩",
+      "rect": [
+        0,
+        800,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 西岸段",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "根须渡",
+      "rect": [
+        960,
+        800,
+        960,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 根桥段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "泥板田",
+      "rect": [
+        1920,
+        800,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 根桥段",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "育床",
+      "rect": [
+        2880,
+        800,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 根桥段",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "潮文台",
+      "rect": [
+        3840,
+        800,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 书岸段",
+      "content": "叙事",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "潮手战场",
+      "rect": [
+        4800,
+        800,
+        960,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 书岸段",
+      "content": "精怪",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "审录引道",
+      "rect": [
+        5760,
+        800,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "D 东岸段",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "东岸门",
+      "rect": [
+        6640,
+        800,
+        880,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "D 东岸段",
+      "content": "出口",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R09",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R10",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R12",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R04",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R03",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R13",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R15",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R16",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R15",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R16",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R09",
+      "pos": [
+        0,
+        1560
+      ],
+      "to": "W19",
+      "to_room": "R08",
+      "requires": "DT",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R16",
+      "pos": [
+        7520,
+        1560
+      ],
+      "to": "W21",
+      "to_room": "R02",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "永久强化",
+      "name": "麒麟材料（阶四）",
+      "room": "R12",
+      "pos": [
+        3360,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "息壤层刻",
+      "room": "R02",
+      "pos": [
+        1440,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "潮头旧线涂记",
+      "room": "R05",
+      "pos": [
+        4320,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "书岸残页",
+      "room": "R06",
+      "pos": [
+        5140,
+        700
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "地图残页",
+      "name": "息壤层序图",
+      "room": "R03",
+      "pos": [
+        2400,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R09",
+      "pos": [
+        480,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R13",
+      "pos": [
+        4320,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R15",
+      "pos": [
+        6240,
+        1560
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "潮手",
+      "hp": 45,
+      "rooms": [
+        "R09",
+        "R10",
+        "R11",
+        "R04"
+      ],
+      "count": 10,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "审录吏",
+      "hp": 40,
+      "rooms": [
+        "R05",
+        "R06",
+        "R15"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "飞行",
+      "name": "墨蛾",
+      "hp": 30,
+      "rooms": [
+        "R02",
+        "R06",
+        "R07"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "息壤陷泥",
+      "hp": 0,
+      "rooms": [
+        "R11",
+        "R12",
+        "R13"
+      ],
+      "count": 5,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "拾字长",
+      "hp": 180,
+      "rooms": [
+        "R08"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "育床尖棱地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R12"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-07",
+      "tier": "环境",
+      "name": "枯根垂刺（顶刺）",
+      "hp": 0,
+      "rooms": [
+        "R03"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "潮文灵",
+      "room": "R05",
+      "era": "present",
+      "blocks": "现在态把潮文排成一面字墙，封住潮头旧线的中线通路",
+      "dispel": "切至过去即不存在（字还没写上泥板）",
+      "detour_cost": "过去路线要涉高及腰的潮头水，全程移速下降且多一次换时",
+      "shared_individual": "chao_wen_ling",
+      "counted": false
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "拾字潮手",
+      "room": "R14",
+      "arena": [
+        960,
+        800
+      ],
+      "trigger": "进入即锁门",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "沈字砸",
+          "telegraph": 0.55,
+          "window": 0.22,
+          "damage": 2,
+          "dodge": "侧向冲刺",
+          "cd": 2.8
+        },
+        {
+          "name": "泥浪推",
+          "telegraph": 0.45,
+          "window": 0.2,
+          "damage": 1,
+          "dodge": "二段跳/根须高台",
+          "cd": 2.4
+        },
+        {
+          "name": "拾字掷",
+          "telegraph": 0.4,
+          "window": 0.18,
+          "damage": 1,
+          "dodge": "贴地冲刺",
+          "cd": 2.0
+        }
+      ],
+      "weakness": "泥浪后 1.3s 塌身硬直；削韧 90 破韧倒地 1.0s",
+      "reward": "魂魄 ×40 + 潮文残简"
+    }
+  ],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R12",
+      "type": "根系",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w20_roots_2",
+      "fail_feedback": "活根未接上，根桥只长到一半就枯"
+    },
+    {
+      "id": "D2",
+      "room": "R11",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w20_tide_1",
+      "fail_feedback": "潮头没退到位，泥板还在水下"
+    },
+    {
+      "id": "D3",
+      "room": "R03",
+      "type": "根系",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w20_roots_3",
+      "fail_feedback": "根桥跨不到对岸，断口仍在"
+    }
+  ],
+  "flags": [
+    "w20_checkpoint",
+    "w20_roots_2",
+    "w20_roots_3",
+    "w20_tide_1",
+    "w20_elite_down",
+    "w20_sprite_calmed",
+    "w20_relic_taken",
+    "w20_page_taken"
+  ],
+  "checkpoint": {
+    "room": "R06",
+    "pos": [
+      5280,
+      760
+    ]
+  }
+}

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>空洞骑士 · 地图设计参考</title>
+<style>
+  :root{
+    --bg:#0a0c10;
+    --bg-soft:#11141b;
+    --card:#151922;
+    --line:#242a36;
+    --ink:#e6e8ee;
+    --ink-dim:#9aa3b5;
+    --ink-faint:#5d6675;
+    --bone:#e8e0cb;
+    --accent:#8fb8d8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 50% -10%, #16202c 0%, var(--bg) 60%) fixed;
+    color:var(--ink);
+    font:15px/1.7 -apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:Georgia,"Times New Roman","Songti SC",serif;letter-spacing:.04em}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(10,12,16,.82);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{
+    max-width:1240px;margin:0 auto;padding:14px 28px;
+    display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:baseline;gap:12px}
+  .brand h1{margin:0;font-size:19px;font-weight:500;color:var(--bone)}
+  .brand span{font-size:12px;color:var(--ink-faint);letter-spacing:.14em;text-transform:uppercase}
+  .spacer{flex:1}
+  .stat{font-size:12px;color:var(--ink-dim);border-left:1px solid var(--line);padding-left:14px}
+  .stat b{color:var(--bone);font-weight:600}
+
+  main{max-width:1240px;margin:0 auto;padding:34px 28px 90px}
+
+  .lede{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:26px;
+    align-items:stretch;margin-bottom:44px;
+  }
+  .world{
+    position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+    background:#05070a;cursor:zoom-in;
+  }
+  .world img{display:block;width:100%;height:auto;opacity:.94;transition:.4s}
+  .world:hover img{opacity:1;transform:scale(1.012)}
+  .world .tag{
+    position:absolute;left:14px;bottom:12px;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:#b9c4d6;background:rgba(5,7,10,.72);
+    border:1px solid var(--line);padding:4px 9px;border-radius:3px;
+  }
+  .brief h2{margin:0 0 10px;font-size:16px;font-weight:600;color:var(--bone)}
+  .brief p{margin:0 0 12px;font-size:13.5px;color:var(--ink-dim)}
+  .brief ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-dim)}
+  .brief li{margin-bottom:6px}
+  .brief li b{color:var(--ink);font-weight:600}
+
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 18px;border-bottom:1px solid var(--line);padding-bottom:10px}
+  .sec-head h2{margin:0;font-size:15px;letter-spacing:.1em;color:var(--bone);font-weight:600}
+  .sec-head em{font-style:normal;font-size:12px;color:var(--ink-faint)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;
+    cursor:zoom-in;transition:border-color .25s,transform .25s;
+  }
+  .card:hover{border-color:#3b475c;transform:translateY(-2px)}
+  .card .shot{position:relative;background:#05070a;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .card .shot img{max-width:100%;max-height:100%;display:block;opacity:.9;transition:.35s}
+  .card:hover .shot img{opacity:1}
+  .card .shot .ratio{
+    position:absolute;right:8px;top:8px;font-size:10.5px;letter-spacing:.08em;
+    color:#9fb0c6;background:rgba(5,7,10,.7);padding:2px 6px;border-radius:3px;
+  }
+  .card .meta{padding:13px 15px 15px}
+  .card .name{display:flex;align-items:baseline;gap:8px;margin-bottom:3px}
+  .card .name b{font-size:15px;color:var(--bone);font-weight:600}
+  .card .name span{font-size:11.5px;color:var(--ink-faint);letter-spacing:.06em}
+  .card .role{font-size:11.5px;color:var(--accent);letter-spacing:.06em;margin-bottom:8px}
+  .card .note{font-size:12.5px;color:var(--ink-dim);line-height:1.65;margin:0;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+  .gapbox{margin-top:34px;border:1px dashed #2c3440;border-radius:9px;padding:18px 22px;background:rgba(255,255,255,.012)}
+  .gapbox h3{margin:0 0 8px;font-size:13px;letter-spacing:.1em;color:#c9a86a;font-weight:600}
+  .gapbox p{margin:0 0 8px;font-size:12.5px;color:var(--ink-dim)}
+  .gapbox ul{margin:0;padding-left:18px;font-size:12.5px;color:var(--ink-faint);columns:2;column-gap:32px}
+
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:11.5px;color:var(--ink-faint);display:flex;gap:20px;flex-wrap:wrap}
+  footer code{color:#8d9aae;background:#12161d;padding:1px 5px;border-radius:3px;font-size:11px}
+
+  /* ---------- viewer ---------- */
+  .viewer{
+    position:fixed;inset:0;z-index:100;display:none;background:rgba(4,6,9,.96);
+    backdrop-filter:blur(6px);
+  }
+  .viewer.on{display:block}
+  .vstage{position:absolute;inset:0;overflow:hidden;cursor:grab}
+  .vstage.drag{cursor:grabbing}
+  .vstage img{
+    position:absolute;left:50%;top:50%;transform-origin:center center;
+    will-change:transform;user-select:none;-webkit-user-drag:none;
+    image-rendering:auto;
+  }
+  .vtop{
+    position:absolute;left:0;right:0;top:0;padding:14px 22px;display:flex;align-items:center;gap:16px;
+    background:linear-gradient(180deg,rgba(4,6,9,.92),transparent);z-index:3;
+  }
+  .vtop b{font-size:16px;color:var(--bone);font-weight:600}
+  .vtop .en{font-size:11.5px;color:var(--ink-faint);letter-spacing:.12em;text-transform:uppercase}
+  .vtop .ops{margin-left:auto;display:flex;gap:8px;align-items:center}
+  .btn{
+    background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink-dim);
+    font-size:12px;padding:5px 11px;border-radius:5px;cursor:pointer;font-family:inherit;
+    line-height:1.5;white-space:nowrap;
+  }
+  .btn:hover{background:rgba(255,255,255,.1);color:var(--ink)}
+  .vnote{
+    position:absolute;left:22px;bottom:22px;max-width:min(560px,52vw);z-index:3;
+    background:rgba(9,12,17,.92);border:1px solid var(--line);border-radius:9px;padding:15px 18px;
+  }
+  .vnote .role{font-size:11px;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+  .vnote p{margin:0 0 9px;font-size:13px;color:#c3cbda;line-height:1.7}
+  .vnote .take{margin:0;font-size:12.5px;color:#9fbfa8;border-left:2px solid #2f4a3a;padding-left:10px}
+  .vhint{position:absolute;right:22px;bottom:22px;font-size:11px;color:var(--ink-faint);z-index:3;text-align:right;line-height:1.9}
+  .vnav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;font-size:22px;
+    width:44px;height:64px;display:flex;align-items:center;justify-content:center;
+    background:rgba(255,255,255,.04);border:1px solid var(--line);color:#b9c4d6;cursor:pointer;border-radius:6px}
+  .vnav:hover{background:rgba(255,255,255,.1)}
+  .vprev{left:14px} .vnext{right:14px}
+
+  @media (max-width:880px){
+    .lede{grid-template-columns:1fr}
+    .vnote{max-width:calc(100vw - 44px);left:22px;bottom:70px}
+    .vhint{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="brand">
+      <h1 class="serif">空洞骑士 · 地图设计参考</h1>
+      <span>Hollow Knight Map Reference</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="stat">全图 <b>1</b> 张</div>
+    <div class="stat">区域拆解 <b>15</b> 张</div>
+    <div class="stat">原始尺寸 <b>最高 392 MP</b></div>
+  </div>
+</header>
+
+<main>
+  <section class="lede">
+    <div class="world" id="worldCard">
+      <img src="overview/hk-worldmap-full.png" alt="空洞骑士全图">
+      <div class="tag">点击放大 · 全王国总图</div>
+    </div>
+    <div class="brief">
+      <h2 class="serif">怎么用这批参考</h2>
+      <p>两张图层配合看：<b>全图</b>回答「区域之间怎么连」，<b>区域拆解图</b>回答「一个区域内部怎么长」。前者决定世界图，后者决定房间。</p>
+      <ul>
+        <li><b>先看比例</b>：每个区域的宽高比直接决定它是走廊、盆地还是竖井，卡片右上角都标了。</li>
+        <li><b>再看开口</b>：数一数每个区域有几个出入口，进出方向决定它在世界图里是枢纽、动脉还是死胡同。</li>
+        <li><b>最后看密度</b>：战斗区、叙事区、迷宫区在图上明显不是同一种笔触。</li>
+      </ul>
+      <p style="margin-top:12px;font-size:12.5px;color:var(--ink-faint)">本目录只作设计参考，<b>不得</b>进入 <code style="font-size:11px;background:#12161d;padding:1px 5px;border-radius:3px">assets/</code>，也不参与 Godot 导入（已放 <code style="font-size:11px;background:#12161d;padding:1px 5px;border-radius:3px">.gdignore</code>）。</p>
+    </div>
+  </section>
+
+  <div class="sec-head">
+    <h2 class="serif">区域拆解</h2>
+    <em>大致按探索顺序排列 · 点击查看大图与设计观察</em>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="gapbox">
+    <h3>本批参考的缺口</h3>
+    <p>全图里能看到、但这次没有单独拆解图稿的区域。<b>已确认不补</b>，需要时对照全图即可，这批素材只作参考、不求完整。</p>
+    <ul id="miss"></ul>
+  </div>
+
+  <footer>
+    <span>图像来源：用户提供的《空洞骑士》全图缩略图与区域 100% 拆解图，仅作内部关卡设计参考。</span>
+    <span>原始 PNG 保留在 <code>regions/</code>（约 675 MB），<code>previews/</code> 与 <code>thumbs/</code> 为自动生成的浏览用压缩版。</span>
+  </footer>
+</main>
+
+<div class="viewer" id="viewer">
+  <div class="vstage" id="vstage">
+    <img id="vimg" alt="">
+  </div>
+  <div class="vtop">
+    <div>
+      <b id="vtitle" class="serif"></b>
+      <div class="en" id="ven"></div>
+    </div>
+    <div class="ops">
+      <button class="btn" id="zoomOut">−</button>
+      <button class="btn" id="zoomIn">+</button>
+      <button class="btn" id="reset">适应窗口</button>
+      <button class="btn" id="toggleNote">说明</button>
+      <button class="btn" id="openRaw">原始 PNG</button>
+      <button class="btn" id="close">关闭 Esc</button>
+    </div>
+  </div>
+  <div class="vnav vprev" id="prev">‹</div>
+  <div class="vnav vnext" id="next">›</div>
+  <div class="vnote" id="vnote">
+    <div class="role" id="vrole"></div>
+    <p id="vtext"></p>
+    <p class="take" id="vtake"></p>
+  </div>
+  <div class="vhint">滚轮缩放 · 拖拽平移 · 双击复位<br>← → 切换上一张 / 下一张</div>
+</div>
+
+<script>
+const REGIONS = [
+  {id:"Kings Pass_100%",en:"King's Pass",cn:"国王山道",w:5380,h:3200,role:"开场教学长廊",
+   note:"全作第一个区域：一条几乎单向的下行通道，靠地形本身教跳跃、下劈与冲刺。玩家走过之后基本无法回头。没有一句文字说明，也没有 UI 提示——教学完全由落差与门洞形状承担。",
+   take:"第一章开场用「不可回头的下行走廊」做教学，把操作教学写进地形断面而不是弹窗。"},
+  {id:"Dirtmouth_100%",en:"Dirtmouth",cn:"德特茅斯",w:7086,h:1903,role:"地表据点 / 竖直入口",
+   note:"极扁平的横条（约 3.7:1）：一条地面街道 + 两侧崖壁，中央一口竖井向下直插十字路。整张图就是「水平安全区 + 垂直开口」的组合，是全作唯一没有战斗压力的地面区域。",
+   take:"据点区要极简、极平；唯一的结构信息是那口向下的竖井——玩家永远记得自己是从哪下去的。"},
+  {id:"Forgotten Crossroads_100%",en:"Forgotten Crossroads",cn:"遗忘十字路",w:19257,h:7464,role:"世界中枢 / 网状枢纽",
+   note:"早期最大区域（约 2.6:1 的横向网）。房间像蜂巢一样互相咬合，上下左右都有开口，主环加若干死路侧袋；几乎所有早期区域都从这里分叉出去，回头路极多。",
+   take:"中枢区要做「网」不做「树」：多入口汇聚、大量回环，让玩家反复经过同一处却每次走不同路线。"},
+  {id:"Fog Canyon_100%",en:"Fog Canyon",cn:"雾之峡谷",w:13350,h:6900,role:"过渡连接区",
+   note:"结构上是「一根主竖井 + 左右横向支脉」，房间少、单段短，主要功能是把十字路、苍绿之径、真菌荒地、王后花园缝在一起。酸液池与爆炸孢子负责劝退式减速。",
+   take:"过渡区越短越好：它的职责是缝合，不是表现。用环境危害而非敌人密度来控制通过节奏。"},
+  {id:"Fungal Wastes_100%",en:"Fungal Wastes",cn:"真菌荒地",w:16200,h:15000,role:"方形立体区",
+   note:"长宽接近 1:0.93，是全作少数的「正方体」区域：不是走廊式，而是上下左右同时铺开的三维平台层。弹跳蘑菇提供额外垂直度，多条路径最终汇聚到螳螂村。",
+   take:"至少留一个区域做成近正方的立体层叠，用弹跳与气流机关制造非线性的垂直通行。"},
+  {id:"Queens Gardens_100%",en:"Queen's Gardens",cn:"王后花园",w:14700,h:12000,role:"中层横向区 / 多入口",
+   note:"横向铺展但坡度明显（约 1.2:1），地形带大量斜向台地与酸液水塘。至少三个方向可以进入，内部是一条主脉加数条回到自身的环路。",
+   take:"同一区域给 3 个以上入口，让它承担「捷径枢纽」的角色，而不是一条走完就废的单线关卡。"},
+  {id:"City of Tears_100%",en:"City of Tears",cn:"泪水之城",w:25325,h:12522,role:"垂直都市 / 后半枢纽",
+   note:"面积最大的区域（317 MP，约 2:1），结构是「多层楼板 + 若干贯穿全高的竖井 + 电梯」。中央广场作为视觉与导航锚点，玩家靠「看到广场」判断自己在哪一层。",
+   take:"超大区域必须给一个贯穿全高的地标（广场、塔、光柱）当坐标系，否则玩家会在多层结构里彻底迷失。"},
+  {id:"Royal Waterways_100%",en:"Royal Waterways",cn:"皇家水道",w:25950,h:5400,role:"极横长水道",
+   note:"极端比例 4.8:1 的地下长廊：一条主干横向贯通王国腹部，沿途垂下一串短支井。它不是「区域」而是「动脉」，用来把东西两端拉通。",
+   take:"世界图需要一条横向动脉，连接相隔最远的两个区域；这类区域靠方向感取胜，不需要复杂分支。"},
+  {id:"Resting Grounds_100%",en:"Resting Grounds",cn:"安息之地",w:19008,h:4968,role:"叙事 / 低战斗区",
+   note:"宽扁条带（约 3.8:1）：墓地、墓碑、梦境入口。战斗密度全作最低，靠氛围与文本推进；同时是梦境系统的入口，把「另一个图层」挂在一个安静区域上。",
+   take:"安排一个几乎无战斗的叙事区，用它承载系统入口（本作可以是「时代切换」的叙事来源），主动降低信息密度。"},
+  {id:"Deepnest_100%",en:"Deepnest",cn:"深巢",w:25800,h:9900,role:"迷宫 / 高压区",
+   note:"约 2.6:1 但它是「迷」不是「网」：房间外形不规则、通道狭窄曲折、大量死路与伪装墙体，而且区域内不给地图。玩家被迫用记忆导航，恐惧感来自失去方向而不是敌人强度。",
+   take:"迷宫区的手段是「撤掉信息」而不是「加难度」：地形可以很不规则，但出口处必须给确定性回报。"},
+  {id:"Ancient Basin_100%",en:"Ancient Basin",cn:"古老盆地",w:23100,h:6900,role:"低位横向区 / 下行门",
+   note:"3.3:1 的横向盆地，地势平坦、房间大而空，尽头是一口直通深渊的竖井。整片区域的作用是「减速 + 蓄势」，为向下坠落做情绪铺垫。",
+   take:"在深层入口之前放一段开阔、安静、几乎无障碍的横路，用空间尺度制造「即将下沉」的预期。"},
+  {id:"Kingdoms Edge_100%",en:"Kingdom's Edge",cn:"王国边缘",w:19484,h:20155,role:"攀爬型竖区",
+   note:"1:1.03 的近正方，但实际玩法是「从底部一路向上」：长竖井、大跳台、风场，越往上越暴露。地图形状本身就在暗示一条垂直路线。",
+   take:"竖高区要把主线做成明确的向上冲动，用风场与移动平台把「爬」变成节奏而不是苦工。"},
+  {id:"Howling Cliffs_100%",en:"Howling Cliffs",cn:"呼啸悬崖",w:9620,h:6455,role:"边界 / 侧翼区",
+   note:"王国最左侧的边界地带：结构松散、洞穴零散，大量风与坠落风险。存在感很低但不可删——它定义了世界的「边」。",
+   take:"世界边界要有一个「没有目的」的区域，让玩家感知地图是有限的，而不是无限延伸的走廊。"},
+  {id:"Hive_100%",en:"Hive",cn:"蜂巢",w:9975,h:4275,role:"封闭秘境",
+   note:"2.3:1 的独立封闭区，必须用钥匙才能进入；内部只有一条主线加两条支线，风格与全世界其余部分完全割裂（暖黄对冷蓝）。它是「奖励型区域」，不承担连通职责。",
+   take:"给一个需要资格才能进入的封闭秘境，允许它风格跳脱，作为探索奖励而非必经之路。"},
+  {id:"Abyss_100%",en:"Abyss",cn:"深渊",w:19430,h:10050,role:"终局底部 / 能力源",
+   note:"世界最底部：一条从盆地坠落的巨型竖井 + 底部横向厅堂。几乎全黑，只能靠自身光源照明；这里是能力与真相的源头。视觉上极度单调，但情绪浓度最高。",
+   take:"终局区域可以用极简的形状承载最大的情绪：一条坠落、一片黑暗、一件东西在等你。"}
+];
+
+const WORLD = {src:"overview/hk-worldmap-full.png", w:1674, h:1050, en:"World Map", cn:"全王国总图", role:"世界图 / 区域连通", 
+  note:"十五个区域拼成的整张王国地图：颜色区分区域，黑色是未探索或实体岩石，白色文字是区名。注意看它的形状——整体是一个横向铺开、局部极深的「地层剖面」，而不是规整的网格。",
+  take:"世界图应该长得像地质剖面：横向延展、局部深井、边缘破碎，而不是一张等分的方格网。"};
+
+const MISSING = [
+  "苍绿之径 Greenpath — 早期绿色纵向区，新手的第二个区域",
+  "水晶山峰 Crystal Peak — 中后期高位矿区，垂直攀爬",
+  "蓝湖 Blue Lake — 小型水平过渡",
+  "白宫 White Palace — 高难平台挑战秘境",
+  "黑卵神殿 Temple of the Black Egg — 终局入口",
+  "愚人斗兽场 Colosseum of Fools — 纯战斗挑战场"
+];
+
+const $ = s => document.querySelector(s);
+const grid = $("#grid");
+const ratio = (w,h) => (w/h).toFixed(2) + ":1";
+
+// ---- cards ----
+REGIONS.forEach((r,i)=>{
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML = `
+    <div class="shot">
+      <img loading="lazy" src="thumbs/${encodeURIComponent(r.id)}.jpg" alt="${r.en}">
+      <div class="ratio">${ratio(r.w,r.h)}</div>
+    </div>
+    <div class="meta">
+      <div class="name"><b class="serif">${r.cn}</b><span>${r.en}</span></div>
+      <div class="role">${r.role}</div>
+      <p class="note">${r.note}</p>
+    </div>`;
+  el.addEventListener("click",()=>open(i));
+  grid.appendChild(el);
+});
+
+$("#miss").innerHTML = MISSING.map(m=>`<li>${m}</li>`).join("");
+
+// ---- viewer ----
+const viewer=$("#viewer"), stage=$("#vstage"), img=$("#vimg");
+let idx=-1, sc=1, tx=0, ty=0, baseW=0, baseH=0, dragging=false, sx=0, sy=0;
+
+function fit(){
+  const W = stage.clientWidth, H = stage.clientHeight;
+  const r = Math.min((W*0.92)/baseW, (H*0.86)/baseH, 3);
+  sc = r; tx=0; ty=0; apply();
+}
+function apply(){
+  // scale relative to natural size
+  img.style.width = baseW+"px";
+  img.style.transform = `translate(-50%,-50%) translate(${tx}px,${ty}px) scale(${sc})`;
+}
+function open(i){
+  idx = (i < 0) ? -1 : ((i % REGIONS.length) + REGIONS.length) % REGIONS.length;
+  const isWorld = idx < 0;
+  const it = isWorld ? WORLD : REGIONS[idx];
+  currentIsWorld = isWorld;
+
+  img.src = isWorld
+    ? WORLD.src
+    : "previews/" + encodeURIComponent(REGIONS[idx].id) + ".jpg";
+  baseW = it.w; baseH = it.h;
+
+  $("#vtitle").textContent = it.cn;
+  $("#ven").textContent = isWorld
+    ? "Hollow Knight · World Map"
+    : `${it.en} · ${it.w}×${it.h} px`;
+  $("#vrole").textContent = it.role;
+  $("#vtext").textContent = it.note;
+  $("#vtake").textContent = it.take;
+  $("#prev").style.display = isWorld ? "none" : "flex";
+  $("#next").style.display = isWorld ? "none" : "flex";
+
+  viewer.classList.add("on");
+  document.body.style.overflow = "hidden";
+  fit();
+}
+let currentIsWorld = true;
+
+img.addEventListener("load",()=>{
+  // 用预览图自身像素做基准，保证清晰度按显示尺寸缩放
+  baseW = img.naturalWidth;
+  baseH = img.naturalHeight;
+  fit();
+});
+function closeViewer(){
+  viewer.classList.remove("on");
+  document.body.style.overflow="";
+  img.src="";
+  idx=-1;
+}
+$("#close").onclick=closeViewer;
+viewer.addEventListener("click",e=>{ if(e.target===viewer||e.target===stage) closeViewer(); });
+
+$("#worldCard").addEventListener("click",()=>open(-1));
+$("#worldCard").style.cursor="zoom-in";
+
+$("#zoomIn").onclick =()=>{ sc=Math.min(sc*1.32,8); apply(); };
+$("#zoomOut").onclick=()=>{ sc=Math.max(sc/1.32,0.08); apply(); };
+$("#reset").onclick  = fit;
+$("#toggleNote").onclick = ()=>{
+  const n=$("#vnote");
+  const hidden = n.style.display==="none";
+  n.style.display = hidden ? "block" : "none";
+  $("#toggleNote").textContent = hidden ? "说明" : "显示说明";
+};
+$("#prev").onclick = ()=> open(idx-1);
+$("#next").onclick = ()=> open(idx+1);
+$("#openRaw").onclick = ()=>{
+  const p = currentIsWorld ? "overview/hk-worldmap-full.png" : "regions/"+encodeURIComponent(REGIONS[idx].id)+".png";
+  window.open(p,"_blank");
+};
+
+stage.addEventListener("wheel",e=>{
+  e.preventDefault();
+  const rect = stage.getBoundingClientRect();
+  const mx = e.clientX-rect.left-rect.width/2;
+  const my = e.clientY-rect.top-rect.height/2;
+  const k = e.deltaY<0 ? 1.14 : 1/1.14;
+  const ns = Math.min(Math.max(sc*k,0.08),10);
+  const f = ns/sc;
+  tx = mx - (mx-tx)*f;
+  ty = my - (my-ty)*f;
+  sc = ns; apply();
+},{passive:false});
+
+stage.addEventListener("pointerdown",e=>{
+  dragging=true; stage.classList.add("drag"); sx=e.clientX-tx; sy=e.clientY-ty;
+  stage.setPointerCapture(e.pointerId);
+});
+stage.addEventListener("pointermove",e=>{
+  if(!dragging)return; tx=e.clientX-sx; ty=e.clientY-sy; apply();
+});
+stage.addEventListener("pointerup",e=>{ dragging=false; stage.classList.remove("drag"); });
+stage.addEventListener("dblclick",fit);
+
+document.addEventListener("keydown",e=>{
+  if(!viewer.classList.contains("on")) return;
+  if(e.key==="Escape") closeViewer();
+  if(e.key==="ArrowLeft" && !currentIsWorld) open(idx-1);
+  if(e.key==="ArrowRight" && !currentIsWorld) open(idx+1);
+  if(e.key==="0") fit();
+});
+
+// 深链：#world / #r0..#r14，便于把某张图直接发给别人
+(function(){
+  if(location.hash === "#world"){ open(-1); return; }
+  const m = location.hash.match(/^#r(\d+)$/);
+  if(m){
+    const n = parseInt(m[1],10);
+    if(n>=0 && n<REGIONS.length) open(n);
+  }
+})();
+</script>
+</body>
+</html>

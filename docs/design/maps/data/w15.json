@@ -1,0 +1,285 @@
+{
+  "id": "W15",
+  "name": "赤潮观测塔",
+  "chapter": 5,
+  "role": "过渡",
+  "shape": "竖井(竖塔)",
+  "aspect": "0.55:1",
+  "size": [
+    1056,
+    1920
+  ],
+  "canvas_origin": [
+    35568,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "塔基潮门",
+      "rect": [
+        0,
+        1600,
+        1056,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1920,
+      "era": "both",
+      "region": "A 塔基",
+      "content": "入口/灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "涨潮井",
+      "rect": [
+        0,
+        1280,
+        1056,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 涨潮井",
+      "content": "机关(潮位)",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "测潮仪室",
+      "rect": [
+        0,
+        960,
+        1056,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "C 测潮仪室",
+      "content": "叙事",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "晶盐井壁",
+      "rect": [
+        0,
+        640,
+        1056,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 晶盐井壁",
+      "content": "换手点",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "塔顶观测台",
+      "rect": [
+        0,
+        0,
+        1056,
+        640
+      ],
+      "shape": "拱顶",
+      "floor_y": 640,
+      "era": "both",
+      "region": "F 塔顶观测台",
+      "content": "出口/视野",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R04",
+      "b": "R06",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R03",
+      "pos": [
+        0,
+        1112
+      ],
+      "to": "W14",
+      "to_room": "R10",
+      "requires": "PG",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R06",
+      "pos": [
+        1056,
+        400
+      ],
+      "to": "W16",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "N",
+      "room": "R06",
+      "pos": [
+        528,
+        0
+      ],
+      "to": "W28",
+      "to_room": "R01",
+      "requires": "DS",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "测潮刻度铭",
+      "room": "R03",
+      "pos": [
+        528,
+        1240
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "镜筒刻字",
+      "room": "R06",
+      "pos": [
+        420,
+        440
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R01",
+      "pos": [
+        900,
+        1880
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R03",
+      "pos": [
+        900,
+        1240
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R06",
+      "pos": [
+        420,
+        300
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "P2"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "熔壳蟹·幼",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R03"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R02",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w15_tide_gauge",
+      "fail_feedback": "档位2踏板仍被淹；档位3水位淹过R03地面，把人顶回R01并扣1血"
+    }
+  ],
+  "flags": [
+    "w15_checkpoint",
+    "w15_tide_gauge_1",
+    "w15_narr_tide",
+    "w15_narr_lens",
+    "w15_soul_01",
+    "w15_soul_03",
+    "w15_soul_06"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      200,
+      1880
+    ]
+  }
+}

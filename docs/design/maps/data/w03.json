@@ -1,0 +1,725 @@
+{
+  "id": "W03",
+  "name": "城簿廊与寄信井",
+  "chapter": 1,
+  "role": "主题大区",
+  "shape": "近正方 · 三层",
+  "aspect": "1.1:1",
+  "size": [
+    2112,
+    1920
+  ],
+  "canvas_origin": [
+    4416,
+    -1920
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "城簿西廊",
+      "rect": [
+        0,
+        0,
+        448,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 544,
+      "era": "both",
+      "region": "A 上层",
+      "content": "入口(NW)/回环",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "卷宗架厅",
+      "rect": [
+        448,
+        0,
+        448,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 544,
+      "era": "both",
+      "region": "A 上层",
+      "content": "叙事/通行",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "寄信井口",
+      "rect": [
+        896,
+        0,
+        512,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 544,
+      "era": "both",
+      "region": "A 上层",
+      "content": "穿墙教学入口",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "抄录台",
+      "rect": [
+        1408,
+        0,
+        352,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 544,
+      "era": "both",
+      "region": "A 上层",
+      "content": "机关（光路）",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "北窗阁",
+      "rect": [
+        1760,
+        0,
+        352,
+        544
+      ],
+      "shape": "矩形",
+      "floor_y": 544,
+      "era": "both",
+      "region": "A 上层",
+      "content": "支路/钩子",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "西廊梯口",
+      "rect": [
+        0,
+        544,
+        448,
+        576
+      ],
+      "shape": "矩形",
+      "floor_y": 1120,
+      "era": "both",
+      "region": "B 中层",
+      "content": "灯龛/攀爬",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "城簿主廊",
+      "rect": [
+        448,
+        544,
+        448,
+        576
+      ],
+      "shape": "矩形",
+      "floor_y": 1120,
+      "era": "both",
+      "region": "B 中层",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "寄信井中段",
+      "rect": [
+        896,
+        544,
+        576,
+        576
+      ],
+      "shape": "矩形",
+      "floor_y": 1120,
+      "era": "both",
+      "region": "B 中层",
+      "content": "精怪战场",
+      "landmark": true
+    },
+    {
+      "id": "R09",
+      "name": "寄信台",
+      "rect": [
+        1472,
+        544,
+        320,
+        576
+      ],
+      "shape": "矩形",
+      "floor_y": 1120,
+      "era": "both",
+      "region": "B 中层",
+      "content": "叙事",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "东廊",
+      "rect": [
+        1792,
+        544,
+        320,
+        576
+      ],
+      "shape": "矩形",
+      "floor_y": 1120,
+      "era": "both",
+      "region": "B 中层",
+      "content": "出口(E)",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "井底西",
+      "rect": [
+        0,
+        1120,
+        576,
+        480
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 下层",
+      "content": "战斗/攀爬",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "井底仓",
+      "rect": [
+        576,
+        1120,
+        576,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 下层",
+      "content": "精英/地图",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "封板下",
+      "rect": [
+        1152,
+        1120,
+        608,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 下层",
+      "content": "穿墙落点",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "南廊",
+      "rect": [
+        1760,
+        1120,
+        352,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "C 下层",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "井底南口",
+      "rect": [
+        0,
+        1600,
+        576,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1920,
+      "era": "both",
+      "region": "D 南段",
+      "content": "入口(S)",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R06",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R07",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R08",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R11",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R11",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R13",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R12",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "W",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R14",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R15",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "E",
+      "room": "R05",
+      "pos": [
+        2112,
+        40
+      ],
+      "to": "W06",
+      "to_room": "R04",
+      "requires": "QS",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "S",
+      "room": "R15",
+      "pos": [
+        176,
+        1920
+      ],
+      "to": "W02",
+      "to_room": "R02",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R10",
+      "pos": [
+        2112,
+        632
+      ],
+      "to": "W04",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R15",
+      "pos": [
+        0,
+        1760
+      ],
+      "to": "W26",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "城簿残页（两态合读）",
+      "room": "R02",
+      "pos": [
+        700,
+        504
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "未寄之信",
+      "room": "R09",
+      "pos": [
+        1600,
+        1080
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "地图残页",
+      "name": "城簿半图",
+      "room": "R12",
+      "pos": [
+        860,
+        1568
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "梯口沉淀",
+      "room": "R06",
+      "pos": [
+        200,
+        1080
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "主廊沉淀",
+      "room": "R07",
+      "pos": [
+        660,
+        1080
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "井底沉淀",
+      "room": "R11",
+      "pos": [
+        300,
+        1560
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "封板沉淀",
+      "room": "R13",
+      "pos": [
+        1300,
+        1560
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "南口沉淀",
+      "room": "R15",
+      "pos": [
+        300,
+        1880
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R07"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "抄手",
+      "hp": 45,
+      "rooms": [
+        "R07"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R11"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R13"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-06",
+      "tier": "精英",
+      "name": "巡簿兵·副册",
+      "hp": 120,
+      "rooms": [
+        "R12"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-07",
+      "tier": "环境",
+      "name": "阶脚地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R14"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-08",
+      "tier": "环境",
+      "name": "封板倒垂刺（顶刺）",
+      "hp": 0,
+      "rooms": [
+        "R13"
+      ],
+      "count": 6,
+      "era": "present",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "删名吏",
+      "room": "R08",
+      "arena": [
+        576,
+        576
+      ],
+      "trigger": "进入井室触发框即落铜网锁门",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "抹名横扫",
+          "telegraph": 0.5,
+          "window": 0.18,
+          "damage": 2,
+          "dodge": "跳跃/冲刺",
+          "cd": 2.4
+        },
+        {
+          "name": "划册墨线",
+          "telegraph": 0.7,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "侧移 60px 或绕到册台后",
+          "cd": 3.2
+        },
+        {
+          "name": "覆册下压",
+          "telegraph": 0.85,
+          "window": 0.24,
+          "damage": 3,
+          "dodge": "跳起后落地（地面震动 0.3s）",
+          "cd": 4.2
+        }
+      ],
+      "weakness": "覆册下压收招后 1.1s 失衡；破绽位置随时代移动（过去在册台西侧 / 现在在东侧）",
+      "reward": "卷宗闸开（进 R12 的残页通路）＋ 魂魄 ×3"
+    }
+  ],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R04",
+      "type": "光路",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w03_lightpath_2",
+      "fail_feedback": "光斑落在架侧而非接收器，东廊接收端不响应"
+    },
+    {
+      "id": "D2",
+      "room": "R08",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w03_bucket_1",
+      "fail_feedback": "吊桶停在井腰，够不到井口"
+    }
+  ],
+  "flags": [
+    "w03_checkpoint",
+    "w03_well_cross",
+    "w03_bone_picked",
+    "w03_eraser_down",
+    "w03_subclerk_down",
+    "w03_ledger_read",
+    "w03_letter_read",
+    "w03_map_page",
+    "w03_lightpath_1",
+    "w03_lightpath_2",
+    "w03_bucket_1"
+  ],
+  "checkpoint": {
+    "room": "R06",
+    "pos": [
+      200,
+      1080
+    ]
+  }
+}

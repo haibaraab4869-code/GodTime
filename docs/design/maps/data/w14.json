@@ -1,0 +1,832 @@
+{
+  "id": "W14",
+  "name": "盐海焚舟岸",
+  "chapter": 5,
+  "role": "主题大区",
+  "shape": "极横长",
+  "aspect": "4.9:1",
+  "size": [
+    5632,
+    1152
+  ],
+  "canvas_origin": [
+    29936,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "干岸渡口",
+      "rect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "A 岸头",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "盐壳滩",
+      "rect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "A 岸头",
+      "content": "教学(涉水/脆壳)",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "焚舟坞",
+      "rect": [
+        1024,
+        384,
+        512,
+        384
+      ],
+      "shape": "拱顶",
+      "floor_y": 768,
+      "era": "both",
+      "region": "B 干坞",
+      "content": "灯龛/机关(潮位)",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "断桅长廊",
+      "rect": [
+        1536,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "C 断桅长廊",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "冷岸风庭",
+      "rect": [
+        2048,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "D 冷岸风庭",
+      "content": "能力取得(PG)/机关(风场)",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "风口栈桥",
+      "rect": [
+        2560,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "E 风口栈桥",
+      "content": "PG 自验证",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "盐尘柱林",
+      "rect": [
+        3072,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "F 盐尘柱林",
+      "content": "战斗(远程压制)",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "沉船脊",
+      "rect": [
+        3584,
+        384,
+        512,
+        384
+      ],
+      "shape": "拱顶",
+      "floor_y": 768,
+      "era": "both",
+      "region": "G 沉船脊",
+      "content": "地标/精灵",
+      "landmark": true
+    },
+    {
+      "id": "R09",
+      "name": "焚舟渡头",
+      "rect": [
+        4096,
+        384,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 768,
+      "era": "both",
+      "region": "H 渡头",
+      "content": "战斗/支线口",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "盐风带",
+      "rect": [
+        4608,
+        384,
+        1024,
+        768
+      ],
+      "shape": "L形",
+      "floor_y": 1152,
+      "era": "both",
+      "region": "I 盐风带",
+      "content": "能力门(PG)/世界出口",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "桅顶望台",
+      "rect": [
+        1024,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "J 上层",
+      "content": "支线/叙事",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "浮舟横梁",
+      "rect": [
+        2048,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "J 上层",
+      "content": "支线/精英",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "焚帆架",
+      "rect": [
+        4096,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "J 上层",
+      "content": "支线",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "盐壳裂窟",
+      "rect": [
+        1536,
+        768,
+        512,
+        384
+      ],
+      "shape": "L形",
+      "floor_y": 1152,
+      "era": "both",
+      "region": "K 下层",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "沉舟腹",
+      "rect": [
+        3584,
+        768,
+        512,
+        384
+      ],
+      "shape": "拱顶",
+      "floor_y": 1152,
+      "era": "both",
+      "region": "K 下层",
+      "content": "支线/机关(潮位)",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "盐蜮巢",
+      "rect": [
+        2560,
+        768,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1152,
+      "era": "both",
+      "region": "K 下层",
+      "content": "支线/精英",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "main",
+      "requires": "PG",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R11",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R05",
+      "b": "R12",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R09",
+      "b": "R13",
+      "side": "N",
+      "kind": "branch",
+      "requires": "PG",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R14",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R16",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R15",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        424
+      ],
+      "to": "W12",
+      "to_room": "R18",
+      "requires": "PW",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R10",
+      "pos": [
+        5632,
+        1112
+      ],
+      "to": "W15",
+      "to_room": "R03",
+      "requires": "PG",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "凶骨·盐蚀",
+      "room": "R14",
+      "pos": [
+        1780,
+        1120
+      ],
+      "obtain": "击败",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "永久强化",
+      "name": "战技残篇「烬帆式」",
+      "room": "R12",
+      "pos": [
+        2300,
+        360
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "盐壳剖面碑",
+      "room": "R02",
+      "pos": [
+        700,
+        720
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "桅顶刻字",
+      "room": "R11",
+      "pos": [
+        1180,
+        340
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "舱内货单",
+      "room": "R15",
+      "pos": [
+        3900,
+        1100
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R03",
+      "pos": [
+        1200,
+        720
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R06",
+      "pos": [
+        2700,
+        720
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R09",
+      "pos": [
+        4300,
+        720
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R13",
+      "pos": [
+        4300,
+        340
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PG"
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "魂魄沉淀点(×3堆)",
+      "room": "R16",
+      "pos": [
+        2800,
+        1120
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-11",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R10",
+      "pos": [
+        5560,
+        960
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PG"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "盐蜮",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R07"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "杂兵",
+      "name": "熔壳蟹",
+      "hp": 45,
+      "rooms": [
+        "R03",
+        "R04"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "远程",
+      "name": "烬帆手",
+      "hp": 45,
+      "rooms": [
+        "R07",
+        "R09"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "飞行",
+      "name": "盐尘蛾",
+      "hp": 40,
+      "rooms": [
+        "R06",
+        "R09"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "杂兵",
+      "name": "沉船虫",
+      "hp": 45,
+      "rooms": [
+        "R15"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "盐壳裂口",
+      "hp": 0,
+      "rooms": [
+        "R02"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-07",
+      "tier": "环境",
+      "name": "断桅根地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R04"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-08",
+      "tier": "环境",
+      "name": "炭架骨茬地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R09"
+      ],
+      "count": 5,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "EL-01",
+      "tier": "精英",
+      "name": "烬帆手·残桅",
+      "hp": 150,
+      "rooms": [
+        "R12"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "EL-02",
+      "tier": "精英",
+      "name": "熔壳蟹·甲王",
+      "hp": 150,
+      "rooms": [
+        "R16"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "盐蜮群",
+      "room": "R08",
+      "era": "present",
+      "blocks": "现在态结成会动的盐壳横在骨梁下层通道(x=3700-3960)，踏入被顶回并扣1血",
+      "dispel": "切至过去即不存在",
+      "detour_cost": "过去态从骨梁上层绕过，多2段跳(+18s)，无生命代价"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "盐壳掘工",
+      "room": "R14",
+      "arena": [
+        512,
+        384
+      ],
+      "trigger": "踏入战场中心即锁门",
+      "phases": 1,
+      "moves": [
+        {
+          "name": "掘地横扫",
+          "telegraph": 0.55,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "跳跃/冲刺",
+          "cd": 2.8
+        },
+        {
+          "name": "盐壳抛掷",
+          "telegraph": 0.7,
+          "window": 0.18,
+          "damage": 2,
+          "dodge": "冲刺穿落点间隙",
+          "cd": 3.4
+        },
+        {
+          "name": "塌方(环境技)",
+          "telegraph": 1.2,
+          "window": 0.3,
+          "damage": 1,
+          "dodge": "走位离开断层",
+          "cd": 6.0
+        }
+      ],
+      "weakness": "举镐过头后1.1s硬直；破韧90后1.0s失衡",
+      "reward": "凶骨·盐蚀 ×1 + 魂魄 ×2"
+    }
+  ],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R03",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w14_dock_tide",
+      "fail_feedback": "水位过低踏面不浮起；过高把船骨顶翻，需重新排水4s"
+    },
+    {
+      "id": "D2",
+      "room": "R05",
+      "type": "风场",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w14_wind_align",
+      "fail_feedback": "错误风向为下压-180，把玩家按在场上"
+    },
+    {
+      "id": "D3",
+      "room": "R15",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w14_hold_tide",
+      "fail_feedback": "水位不对时侧门在水下或水面上，均无法通过"
+    },
+    {
+      "id": "D4",
+      "room": "R10",
+      "type": "风场",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w14_gale",
+      "fail_feedback": "档位2是下压风，滑翔会被按进盐浆"
+    }
+  ],
+  "flags": [
+    "w14_checkpoint",
+    "w14_pg_obtained",
+    "w14_dock_tide_2",
+    "w14_wind_align_2",
+    "w14_hold_tide_3",
+    "w14_gale_1",
+    "w14_shell_collapse_a",
+    "w14_shell_collapse_b",
+    "w14_shell_collapse_c",
+    "w14_elite_sail_down",
+    "w14_elite_claw_down",
+    "w14_guard_digger_down",
+    "w14_bone_01",
+    "w14_scroll_08",
+    "w14_narr_02",
+    "w14_narr_11",
+    "w14_narr_15",
+    "w14_soul_03",
+    "w14_soul_06",
+    "w14_soul_09",
+    "w14_soul_13",
+    "w14_soul_16",
+    "w14_soul_10"
+  ],
+  "checkpoint": {
+    "room": "R03",
+    "pos": [
+      1180,
+      728
+    ]
+  },
+  "grants": [
+    {
+      "ability": "PG",
+      "room": "R05",
+      "pos": [
+        2330,
+        470
+      ],
+      "era": "present",
+      "radius": 48,
+      "label": "冷岸风台",
+      "text": "台面被风托在半空，边缘磨出一道滑痕。站上去，风会替你走完那截断桥。"
+    }
+  ]
+}

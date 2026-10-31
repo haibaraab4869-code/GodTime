@@ -17,6 +17,7 @@ var _status: Label
 var _panel: VBoxContainer
 
 func setup(input_actions: Node) -> void:
+	layer = 30
 	_input_actions = input_actions
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build()
@@ -50,15 +51,15 @@ func _build() -> void:
 
 	var reset := Button.new()
 	reset.text = "恢复默认"
-	reset.focus_mode = Control.FOCUS_NONE
-	reset.position = Vector2(60, ROW_START + 8 * ROW_HEIGHT)
+	reset.focus_mode = Control.FOCUS_ALL
+	reset.position = Vector2(60, ROW_START + (_input_actions.ACTION_ORDER.size() + 1) * ROW_HEIGHT)
 	reset.pressed.connect(_on_reset)
 	add_child(reset)
 
 	var close := Button.new()
 	close.text = "关闭"
-	close.focus_mode = Control.FOCUS_NONE
-	close.position = Vector2(200, ROW_START + 8 * ROW_HEIGHT)
+	close.focus_mode = Control.FOCUS_ALL
+	close.position = Vector2(200, ROW_START + (_input_actions.ACTION_ORDER.size() + 1) * ROW_HEIGHT)
 	close.pressed.connect(close_panel)
 	add_child(close)
 
@@ -71,7 +72,7 @@ func _build() -> void:
 		row.add_child(label)
 		var button := Button.new()
 		button.custom_minimum_size = Vector2(340, 26)
-		button.focus_mode = Control.FOCUS_NONE
+		button.focus_mode = Control.FOCUS_ALL
 		button.pressed.connect(_on_row_pressed.bind(action))
 		row.add_child(button)
 		_panel.add_child(row)
@@ -99,8 +100,9 @@ func _input(event: InputEvent) -> void:
 		_status.text = ""
 		get_viewport().set_input_as_handled()
 		return
-	if not (event is InputEventKey or event is InputEventJoypadButton):
+	if not (event is InputEventKey or event is InputEventJoypadButton or event is InputEventJoypadMotion):
 		return
+	if event is InputEventJoypadMotion and absf(event.axis_value) < 0.6: return
 	if event is InputEventKey and not event.pressed:
 		return
 	if event is InputEventKey and event.is_echo():
@@ -132,6 +134,7 @@ func open_panel() -> void:
 	visible = true
 	_status.text = ""
 	get_tree().paused = true
+	if not _rows.is_empty(): _rows[0].button.grab_focus()
 
 func close_panel() -> void:
 	_capturing = false

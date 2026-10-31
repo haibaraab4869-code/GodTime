@@ -2,3 +2,15 @@
 .godot/
 /android/
 .workbuddy/
+.codebuddy/
+
+# 地图参考素材：675 MB 原始大图不入库，仅保留预览版/缩略图/全图
+docs/design/maps/reference/*/regions/*.png
+
+# QA 历史验收运行的临时产物（日志 / 截图），只保留 .md 结论与 .json 台账
+docs/qa/runs/**/*.log
+docs/qa/runs/**/*.png
+
+# Python 缓存
+__pycache__/
+*.pyc

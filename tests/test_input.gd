@@ -3,7 +3,7 @@ extends SceneTree
 # Verifies the semantic input layer: default bindings, keyboard/gamepad
 # rebinding isolation, conflict removal, reset, persistence, and the buffer.
 
-const SAVE_PATH := "user://input_bindings.cfg"
+const SAVE_PATH := "user://test_input_bindings.cfg"
 
 func _initialize() -> void:
 	_run.call_deferred()
@@ -15,6 +15,7 @@ func _fail(failures: int, message: String) -> int:
 func _run() -> void:
 	var failures := 0
 	var InputActions = load("res://game/input_actions.gd").new()
+	InputActions.save_path = SAVE_PATH
 	get_root().add_child(InputActions)
 	await process_frame
 
@@ -123,6 +124,7 @@ func _run() -> void:
 	InputActions.rebind("dash", key_d, true)
 	await process_frame
 	var reloaded = load("res://game/input_actions.gd").new()
+	reloaded.save_path = SAVE_PATH
 	reloaded._load()
 	var saved_key := false
 	for descriptor in reloaded.bindings["dash"]:

@@ -1,0 +1,31 @@
+{
+  "_说明": "序列帧单帧模板，按 ai-prompt-spec-shihung.md §7.2 使用。init 填母版文件名（放 ComfyUI/input/），只改 pos 里的动作层词，其余逐字不动。",
+  "template": "img2img",
+  "ckpt": "SDXL\\Illustrious-XL-v2.0.safetensors",
+  "lora": "角色卡\\qsuimo-000005.safetensors",
+  "lora_w": 0.75,
+  "init": "ref_stand.png",
+  "denoise": 0.68,
+  "w": 832,
+  "h": 1216,
+  "steps": 30,
+  "cfg": 5.0,
+  "sampler": "dpmpp_2m",
+  "sched": "karras",
+  "seed": 20261029,
+  "pos": "masterpiece, best quality, amazing quality, very aesthetic, chibi, super deformed, 3 heads tall, full body, solo, [动作层], side view, profile, facing right, androgynous young boy, short black hair, bob cut, half-closed eyes, small three-pronged gold crown, vermilion dot on forehead, dark grey long robe, wide sleeves, crossed collar, gold trim, gold sash, two short gold ribbons hanging at waist, bare feet, long trailing robe hem behind, ink wash painting, sumi-e, flat color, thick ink outline, limited palette, black and gold, blank background, empty background, plain cream paper background, no shadow",
+  "neg": "worst quality, low quality, lowres, jpeg artifacts, blurry, bad anatomy, bad hands, extra fingers, extra limbs, deformed, watermark, multiple views, character sheet, border, frame, cropped, text, chinese text, japanese text, kanji, calligraphy, inscription, lettering, signature, red seal, stamp, 3d, cgi, photorealistic, render, gradient, airbrush, cel shading, oversaturated, realistic proportions, adult, long legs, tall, front view, facing viewer, both eyes visible, shoes, trousers, background scenery, black swirl, extra ribbons",
+  "_动作层可选值": {
+    "idle": "idle breathing, slight sway, arms at sides",
+    "run": "running, one leg forward, one leg back, arms swinging, leaning slightly ahead",
+    "jump": "jumping, knees tucked up, arms raised forward",
+    "fall": "falling, arms spread wide, legs apart, robe swept up",
+    "dash": "dashing, leaning far forward, arms swept back, robe trailing behind",
+    "attack": "attacking, one arm swung forward, torso twisted, sleeve flared",
+    "hurt": "hurt, leaning backward, head tilted back, robe thrown forward",
+    "respawn": "stretched vertically, elongated body, recovering",
+    "turn": "squashed sideways, compressed body, shifting weight",
+    "land": "landing, knees bent, body compressed, robe settling",
+    "era_switch": "looking up, head raised, robe swaying"
+  }
+}

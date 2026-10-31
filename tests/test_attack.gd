@@ -9,11 +9,20 @@ func _run() -> void:
 	var failures := 0
 	var scene: PackedScene = load("res://game/main.tscn")
 	var root := scene.instantiate()
+	root.persist_progress = false
 	get_root().add_child(root)
 	await process_frame
 
 	var player = root.get_node("Player")
-	var dummies := root.get_node("Targets").get_children()
+	# Training targets belong to the test fixture, never the story map.
+	var dummies: Array[Node2D] = []
+	for index in range(3):
+		var dummy := Node2D.new()
+		dummy.set_script(load("res://game/training_dummy.gd"))
+		dummy.position = Vector2(800 + index * 400, 100)
+		root.add_child(dummy)
+		dummies.append(dummy)
+	await process_frame
 	print("dummy_count=", dummies.size())
 	if dummies.size() != 3:
 		print("FAIL: expected 3 training targets")

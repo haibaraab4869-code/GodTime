@@ -1,0 +1,92 @@
+{
+  "canvas": 128,
+  "feet_y": 120,
+  "view_class": "side",
+  "view": "side, facing +x",
+  "flippable": true,
+  "generator": "tools/gen_parts.py",
+  "draw_order": [
+    "leg_far_shin",
+    "leg_far_thigh",
+    "arm_far_lower",
+    "arm_far_upper",
+    "leg_near_thigh",
+    "leg_near_shin",
+    "hem_back",
+    "torso",
+    "hem_front",
+    "sash_2",
+    "sash_1",
+    "gold_line",
+    "arm_near_lower",
+    "arm_near_upper",
+    "head",
+    "crown"
+  ],
+  "pivots": {
+    "crown": [
+      64,
+      8
+    ],
+    "head": [
+      64,
+      45
+    ],
+    "torso": [
+      64,
+      88
+    ],
+    "hem_back": [
+      64,
+      84
+    ],
+    "hem_front": [
+      64,
+      84
+    ],
+    "sash_1": [
+      58,
+      80
+    ],
+    "sash_2": [
+      54,
+      85
+    ],
+    "gold_line": [
+      64,
+      88
+    ],
+    "arm_near_upper": [
+      73,
+      50
+    ],
+    "arm_near_lower": [
+      73,
+      67
+    ],
+    "arm_far_upper": [
+      54,
+      50
+    ],
+    "arm_far_lower": [
+      54,
+      67
+    ],
+    "leg_near_thigh": [
+      64,
+      88
+    ],
+    "leg_near_shin": [
+      64,
+      103
+    ],
+    "leg_far_thigh": [
+      60,
+      88
+    ],
+    "leg_far_shin": [
+      60,
+      103
+    ]
+  }
+}

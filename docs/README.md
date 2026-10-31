@@ -1,17 +1,23 @@
 # GodTime 文档索引
 
-本目录是项目文档的**唯一入口**。文档描述当前事实、决策与待定事项；不将尚未实现的功能写成已完成。当前项目是 Godot `4.7.2` 下的 2D 探索原型（`game/`），无 Git、无测试框架、无导出预设。`design/` 下的[《时间之神：类银河恶魔城游戏策划案（设定版）》](design/时间之神：类银河恶魔城游戏策划案（设定版）.docx)是项目立项设计案，也是设计类的唯一权威来源；后续设计规格应核对并引用该案，不创建内容并行的副本。此处仅标识文档的归属与性质，不表示已逐项验证其内容。
+> 2026-10-30：地图设计文档已按用户指令整体清空，等待重新设计，入口见[设计索引](design/README.md)。地图代码与测试未删除，仍按旧布局运行；旧地图规格（世界地图、纵向地图、结构与关卡布局重构、地图集与镜头、三灵地图重构等）均已作废，不再作为实现依据。历史验收记录见[RUN-0008](qa/runs/RUN-0008-world-regions.md)。
+
+> 第一章高处/地表/地下空间已接入，M键查看分层地图；原空间设计文档已随地图文档清空，实测记录见[RUN-0007](qa/runs/RUN-0007-vertical-maps.md)。
+
+> 2026-10-26：第一章 M01—M06 可通关灰盒已接入，见[制作说明](design/feature-chapter-one.md)和[RUN-0006](qa/runs/RUN-0006-chapter-one.md)。此前 M01 单图说明为历史版本。
+
+本目录是项目文档的**唯一入口**。文档描述当前事实、决策与待定事项；不将尚未实现的功能写成已完成。当前项目是 Godot `4.7.2` 下的 M01 无名渡口可玩灰盒（`game/main.tscn`），已有 Git 与脚本级回归，无 CI 与导出预设；现状及未接入系统见项目总览。`design/` 下的[《时间之神：类银河恶魔城游戏策划案（设定版）》](design/时间之神：类银河恶魔城游戏策划案（设定版）.docx)是项目立项设计案，也是设计类的唯一权威来源；后续设计规格应核对并引用该案，不创建内容并行的副本。此处仅标识文档的归属与性质，不表示已逐项验证其内容。
 
 ## 分类与入口
 
 | 唯一分类 | 用途 | 入口 |
 | --- | --- | --- |
 | `overview/` | 项目范围、现状、关键待定项 | [项目总览](overview/project-overview.md) |
-| `design/` | 玩法规则、关卡和叙事设计 | [设计索引](design/README.md) · [功能规格模板](design/feature-template.md) · [时间切换（待审批）](design/feature-time-switch.md) |
-| `art/` | 美术风格和资产规格 | [美术索引](art/README.md) |
+| `design/` | 玩法规则、关卡和叙事设计 | [设计索引](design/README.md) · [功能规格模板](design/feature-template.md) · [时间切换（待审批）](design/feature-time-switch.md) · [地图文档入口（待重写）](design/maps/README.md) |
+| `art/` | 美术风格和资产规格 | [美术索引](art/README.md) · [美术圣经](art/art-bible.md) · [资产登记](art/asset-manifest.md) |
 | `audio/` | 音乐、音效与音频实现需求 | [音频索引](audio/README.md) |
 | `development/` | 引擎、代码、仓库与协作约定 | [开发规范](development/development-guidelines.md) |
-| `qa/` | 测试计划、验收与缺陷记录 | [测试索引](qa/README.md) · [RUN-0001](qa/runs/RUN-0001-prototype-smoke.md) |
+| `qa/` | 测试计划、验收与缺陷记录 | [测试索引](qa/README.md) · [M01灰盒回归](qa/runs/RUN-0004-m01-greybox.md) |
 | `release/` | 构建、版本与发布流程 | [发布索引](release/README.md) |
 
 ## 文档维护规则

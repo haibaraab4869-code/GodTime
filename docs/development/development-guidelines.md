@@ -1,5 +1,15 @@
 # 开发规范
 
+> 世界地图v3：main.tscn现使用world_game.gd，地图由world_regions.json与48区域场景提供，world_data.gd生成碰撞/轮廓。禁止将历史平行楼层当作当前布局。**地图设计文档已于2026-10-30按用户指令清空并重新设计中**，旧实现说明与结构规格作废；新规格产出前，生成器与运行数据职责以代码本身为准，不要引用已删文档。
+
+> **地图生成链路已移除（2026-10-30）**：`tools/` 下的 `build_world.py`、`build_map_design.py`、`build_map_structure.py`、`build_m02_slice.py`、`build_mythic_design.py`、`author_chapter1_flow.py`、`verify_map_design.py`、`sync_map_docs.py`、`update_reconstruction_docs.py` 已随地图文档重建一并删除，配套 `tests/test_m02_vertical.gd` 同样删除。`game/data/world_regions.json` 现在是**唯一**地图数据来源，需手工维护；改动后必须实机跑 `game/main.tscn` 确认，已无脚本级校验可用。新地图方案定稿时同步重建生成与校验链路。
+
+> 空间改版：地图范围、相机与坠落线现在读取chapter_one_data.gd各图尺寸，不得恢复700/720的全局高度限制。新增open_map语义动作，实测见[RUN-0007](../qa/runs/RUN-0007-vertical-maps.md)；原空间设计文档已随地图文档清空。
+
+> 2026-10-26 章节更新：主场景现在使用 chapter_one.gd，在同一场景中加载 M01—M06。新增重击、凶气技能、包扎三个语义动作；以[项目总览](../overview/project-overview.md)和[RUN-0006](../qa/runs/RUN-0006-chapter-one.md)为最新范围，下文 M01 单图说明为历史。
+
+> 2026-10-26 实施更新：主场景已替换为M01；地形数据集中在 `game/m01_layout.gd`，`world.gd` 负责该地图运行。新增调查与日志动作，M01局部进度独立保存。Git现已存在；下文2026-10-25的“未初始化Git”和旧demo文件描述仅为历史基线，发生冲突时以[项目总览](../overview/project-overview.md)及[RUN-0004](../qa/runs/RUN-0004-m01-greybox.md)为准。
+
 > 本文是当前协作基线（2026-10-25 核对）。仓库已有一个可运行的 2D 探索原型，输入改为语义动作映射并支持手柄与玩家改键，有少量脚本级自动验证；但**仍未初始化 Git、没有 CI、没有通用测试框架、没有导出预设**。引擎版本已实测确认为 `4.7.2.stable.official.ed1daf0bf`。
 
 ## 项目与引擎边界

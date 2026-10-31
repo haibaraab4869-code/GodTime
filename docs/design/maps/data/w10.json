@@ -1,0 +1,604 @@
+{
+  "id": "W10",
+  "name": "风葬关",
+  "chapter": 3,
+  "role": "边界",
+  "shape": "近正方（山风关隘）",
+  "aspect": "1.35:1",
+  "size": [
+    2160,
+    1600
+  ],
+  "canvas_origin": [
+    22976,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "关前风口",
+      "rect": [
+        0,
+        1216,
+        672,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 关前",
+      "content": "入口+环境",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "旗杆坪",
+      "rect": [
+        672,
+        1216,
+        720,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 关前",
+      "content": "教学（选路）",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "关下阶地",
+      "rect": [
+        1392,
+        1216,
+        768,
+        384
+      ],
+      "shape": "斜坡",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 关前",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "风口西廊",
+      "rect": [
+        0,
+        0,
+        672,
+        1216
+      ],
+      "shape": "L形",
+      "floor_y": 1216,
+      "era": "both",
+      "region": "B 关门",
+      "content": "支路（藏风坳玄关）",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "关前庭",
+      "rect": [
+        672,
+        608,
+        720,
+        608
+      ],
+      "shape": "矩形",
+      "floor_y": 1216,
+      "era": "both",
+      "region": "B 关门",
+      "content": "灯龛+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "关门战场",
+      "rect": [
+        1392,
+        608,
+        768,
+        608
+      ],
+      "shape": "拱顶",
+      "floor_y": 1216,
+      "era": "both",
+      "region": "B 关门",
+      "content": "守印者战场",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "关后坡",
+      "rect": [
+        1392,
+        320,
+        768,
+        288
+      ],
+      "shape": "斜坡",
+      "floor_y": 608,
+      "era": "both",
+      "region": "D 关后",
+      "content": "世界出口+战后通路",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "关后关楼",
+      "rect": [
+        1392,
+        0,
+        768,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "D 关后",
+      "content": "叙事",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "关楼西檐",
+      "rect": [
+        672,
+        0,
+        720,
+        608
+      ],
+      "shape": "梯形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "D 关后",
+      "content": "回环通路",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R04",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R05",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R06",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R10",
+      "side": "E",
+      "kind": "loop",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R09",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R04",
+      "pos": [
+        0,
+        780
+      ],
+      "to": "W09",
+      "to_room": "R11",
+      "requires": "PA",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R09",
+      "pos": [
+        2160,
+        465
+      ],
+      "to": "W11",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "N",
+      "room": "R04",
+      "pos": [
+        528,
+        0
+      ],
+      "to": "W27",
+      "to_room": "R01",
+      "requires": "PA",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "过关木牌（过去态）",
+      "room": "R06",
+      "pos": [
+        1400,
+        1100
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "风历刻柱（两态合读）",
+      "room": "R10",
+      "pos": [
+        1776,
+        288
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R01",
+      "pos": [
+        96,
+        1580
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R03",
+      "pos": [
+        1760,
+        1580
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R05",
+      "pos": [
+        1320,
+        1200
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R09",
+      "pos": [
+        2112,
+        592
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "索匠傀",
+      "hp": 45,
+      "rooms": [
+        "R04",
+        "R05"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "风中射手",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R06",
+        "R09"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "杂兵",
+      "name": "关牒吏",
+      "hp": 45,
+      "rooms": [
+        "R05",
+        "R06",
+        "R10"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "风切带",
+      "hp": 0,
+      "rooms": [
+        "R01",
+        "R04"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "none"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "守关老卒",
+      "hp": 180,
+      "rooms": [
+        "R02"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "none"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "风口低顶垂刺（顶刺）",
+      "hp": 0,
+      "rooms": [
+        "R01"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "风葬驮兽",
+      "room": "R03",
+      "arena": [
+        768,
+        384
+      ],
+      "trigger": "进入 R03 且 x>=1500 即锁 W、N 两口",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "冲撞",
+          "telegraph": 0.7,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "PA 侧闪/贴地滑铲",
+          "cd": 3.2
+        },
+        {
+          "name": "抖石",
+          "telegraph": 1.0,
+          "window": 0.4,
+          "damage": 1,
+          "dodge": "走位/PA 穿间隙",
+          "cd": 4.5
+        },
+        {
+          "name": "卧倒喘",
+          "telegraph": 0.0,
+          "window": 1.6,
+          "damage": 0,
+          "dodge": "无（破绽窗口）",
+          "cd": 0.0
+        }
+      ],
+      "weakness": "卧倒喘期间背部甲缝暴露，重击破甲后额外 1.2s 失衡",
+      "reward": "魂魄×8 + 通关牒×1"
+    }
+  ],
+  "boss": {
+    "id": "B-01",
+    "name": "巡空监路使",
+    "room": "R06",
+    "arena": [
+      768,
+      608
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "逆风连跃",
+          "风向反转"
+        ],
+        "terrain_change": "两台侧风槽风向反转（E→W 变 W→E），台面不塌、不加陷阱；转入二阶段时 Boss 有 1.2s 重新标定硬直"
+      }
+    ],
+    "moves": [
+      {
+        "name": "风标跃击",
+        "telegraph": 0.9,
+        "window": 0.22,
+        "damage": 2,
+        "dodge": "PA 侧移 / 地面回身绕后",
+        "cd": 2.8
+      },
+      {
+        "name": "横风推",
+        "telegraph": 0.8,
+        "window": 1.2,
+        "damage": 1,
+        "dodge": "逆风侧走 / 贴地滑铲 / PA 顶风",
+        "cd": 3.5
+      },
+      {
+        "name": "巡空落矛",
+        "telegraph": 1.0,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "走出落点圈 / P2 跳离",
+        "cd": 4.0
+      },
+      {
+        "name": "逆风连跃",
+        "telegraph": 1.0,
+        "window": 0.22,
+        "damage": 2,
+        "dodge": "PA 两段侧移 / 硬吃第一段后滚翻",
+        "cd": 5.2
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "章印·风葬印",
+      "flags": [
+        "w10_boss_down"
+      ],
+      "map_change": "R06 北门开放为通路；关牒全部落地、木栅落下；R09 关后坡开放"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R06",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w10_boss_down",
+      "fail_feedback": "战期转动绞盘无响应，风标锁死"
+    },
+    {
+      "id": "D2",
+      "room": "R04",
+      "type": "风场",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w10_dev_wind_phase",
+      "fail_feedback": "相位错时风口保持 300px/s 全强度，玩家被吹回 R04 地面"
+    },
+    {
+      "id": "D3",
+      "room": "R10",
+      "type": "光路",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w10_dev_mirror",
+      "fail_feedback": "光不落柱，刻柱不可读"
+    }
+  ],
+  "flags": [
+    "w10_checkpoint",
+    "w10_elite_guard_down",
+    "w10_boss_down",
+    "w10_boss_return_point",
+    "w10_codex_mupai_past",
+    "w10_codex_mupai_present",
+    "w10_codex_fengli_first",
+    "w10_codex_fengli_second",
+    "w10_dev_wind_phase",
+    "w10_dev_mirror_past",
+    "w10_dev_mirror_present",
+    "w10_pass_tally"
+  ],
+  "checkpoint": {
+    "room": "R05",
+    "pos": [
+      824,
+      1192
+    ]
+  }
+}

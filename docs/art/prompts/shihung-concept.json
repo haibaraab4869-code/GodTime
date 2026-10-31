@@ -1,0 +1,16 @@
+{
+  "_说明": "母版定稿参数（2026-10-29 实测命中）。seed 20261029 即当前定稿图；换 seed 属正常重抽，不要改提示词。改动前请先看 ai-prompt-spec-shihung.md §11.1：这张图是「原版词 + 一条文字负向」的产物，叠加改良词会破坏它。",
+  "template": "txt2img",
+  "ckpt": "SDXL\\Illustrious-XL-v2.0.safetensors",
+  "lora": "角色卡\\qsuimo-000005.safetensors",
+  "lora_w": 0.65,
+  "w": 832,
+  "h": 1216,
+  "steps": 28,
+  "cfg": 5.0,
+  "sampler": "euler_ancestral",
+  "sched": "normal",
+  "seed": 20261029,
+  "pos": "masterpiece, best quality, amazing quality, very aesthetic, chibi, super deformed, 3 heads tall, full body, solo, standing, standing straight, side view, profile, facing right, feet on ground, androgynous young boy, short black hair, bob cut, half-closed eyes, small three-pronged gold crown, vermilion dot on forehead, dark grey long robe, wide sleeves, crossed collar, gold trim, gold sash, two long gold ribbons hanging at waist, bare feet, long trailing robe hem behind, ink wash painting, sumi-e, chinese ink, flat color, thick ink outline, limited palette, black and gold, plain cream paper background, white background, simple background, no shadow",
+  "neg": "worst quality, low quality, lowres, bad anatomy, bad hands, extra fingers, extra limbs, deformed, blurry, text, watermark, signature, multiple views, character sheet, 3d, photorealistic, gradient, oversaturated, front view, facing viewer, both eyes visible, tall, realistic proportions, adult, long legs, shoes, trousers, sitting, floating, dynamic pose, background scenery, black swirl, chinese text, japanese text, kanji, calligraphy, inscription, lettering, red seal, stamp, turban, headscarf, chef hat, headband, ribbon on floor, ribbon trailing on ground"
+}

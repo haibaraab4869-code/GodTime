@@ -1,0 +1,897 @@
+{
+  "id": "W16",
+  "name": "焰海盐宫",
+  "chapter": 5,
+  "role": "主题大区",
+  "shape": "近正方(四带横向分区)",
+  "aspect": "1.15:1",
+  "size": [
+    1920,
+    1664
+  ],
+  "canvas_origin": [
+    36624,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西檐栈道",
+      "rect": [
+        0,
+        0,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 416,
+      "era": "both",
+      "region": "A 西檐",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "盐檐外庭",
+      "rect": [
+        320,
+        0,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 416,
+      "era": "both",
+      "region": "A 西檐",
+      "content": "双时代通行分岔",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "蜕鳞温洞",
+      "rect": [
+        640,
+        0,
+        320,
+        416
+      ],
+      "shape": "拱顶",
+      "floor_y": 416,
+      "era": "both",
+      "region": "B 背面温洞",
+      "content": "能力取得(DS)",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "短热砂廊",
+      "rect": [
+        960,
+        0,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 416,
+      "era": "both",
+      "region": "B 背面温洞",
+      "content": "DS 自验证",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "后殿门",
+      "rect": [
+        1280,
+        0,
+        320,
+        416
+      ],
+      "shape": "拱顶",
+      "floor_y": 416,
+      "era": "both",
+      "region": "B 背面温洞",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "北檐热风道",
+      "rect": [
+        1600,
+        0,
+        320,
+        416
+      ],
+      "shape": "竖井",
+      "floor_y": 416,
+      "era": "both",
+      "region": "C 北檐",
+      "content": "机关(三灵·风轮)/远期回环",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "盐阶中庭",
+      "rect": [
+        0,
+        416,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "下层环节点",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "陶俑列厅",
+      "rect": [
+        320,
+        416,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "精英",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "正殿前厅",
+      "rect": [
+        640,
+        416,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "灯龛/机关(三灵·水轮)",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "盐卤窖",
+      "rect": [
+        960,
+        416,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "机关(三灵·地脉)/叙事",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "龙骸廊",
+      "rect": [
+        1280,
+        416,
+        320,
+        416
+      ],
+      "shape": "拱顶",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "叙事/战斗",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "熔壳蟹巢",
+      "rect": [
+        1600,
+        416,
+        320,
+        416
+      ],
+      "shape": "L形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "D 前厅带",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "焰海栈桥",
+      "rect": [
+        0,
+        832,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 1248,
+      "era": "both",
+      "region": "E 下层带",
+      "content": "精灵",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "烬风台",
+      "rect": [
+        320,
+        832,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 1248,
+      "era": "both",
+      "region": "E 下层带",
+      "content": "精英",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "正殿",
+      "rect": [
+        640,
+        832,
+        960,
+        416
+      ],
+      "shape": "拱顶",
+      "floor_y": 1248,
+      "era": "both",
+      "region": "F 正殿",
+      "content": "BOSS 战场/地标",
+      "landmark": true
+    },
+    {
+      "id": "R16",
+      "name": "东门厅",
+      "rect": [
+        1600,
+        832,
+        320,
+        416
+      ],
+      "shape": "矩形",
+      "floor_y": 1248,
+      "era": "both",
+      "region": "G 东门",
+      "content": "出口",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "骨堆地窖",
+      "rect": [
+        0,
+        1248,
+        320,
+        416
+      ],
+      "shape": "L形",
+      "floor_y": 1664,
+      "era": "both",
+      "region": "H 地窖",
+      "content": "支线(DS/DT)",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R11",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R10",
+      "side": "W",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R09",
+      "side": "W",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R12",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R12",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R15",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R07",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R13",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R14",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R15",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R16",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R17",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        400
+      ],
+      "to": "W15",
+      "to_room": "R06",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R16",
+      "pos": [
+        1920,
+        980
+      ],
+      "to": "W17",
+      "to_room": "R01",
+      "requires": "DS",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W06",
+      "to_room": "R11",
+      "requires": "DS",
+      "kind": "loop",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "凶骨·龙焰",
+      "room": "R12",
+      "pos": [
+        1780,
+        780
+      ],
+      "obtain": "击败",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "西檐木牌/门梁「借」字",
+      "room": "R01",
+      "pos": [
+        160,
+        380
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "龙族日记(R11 肋骨刻痕)",
+      "room": "R11",
+      "pos": [
+        1400,
+        800
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "骨堆刻名",
+      "room": "R17",
+      "pos": [
+        200,
+        1620
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "DT"
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R05",
+      "pos": [
+        1420,
+        380
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R09",
+      "pos": [
+        760,
+        792
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R13",
+      "pos": [
+        240,
+        1200
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀点(×3堆)",
+      "room": "R17",
+      "pos": [
+        200,
+        1640
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-07",
+      "tier": "杂兵",
+      "name": "熔壳蟹",
+      "hp": 45,
+      "rooms": [
+        "R03",
+        "R07"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-08",
+      "tier": "杂兵",
+      "name": "盐蜮",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R05"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-09",
+      "tier": "远程",
+      "name": "烬帆手",
+      "hp": 45,
+      "rooms": [
+        "R04",
+        "R11"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-10",
+      "tier": "飞行",
+      "name": "焰蛾",
+      "hp": 40,
+      "rooms": [
+        "R06",
+        "R10"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-11",
+      "tier": "环境",
+      "name": "熔岩渗流",
+      "hp": 0,
+      "rooms": [
+        "R04",
+        "R15"
+      ],
+      "count": 6,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-12",
+      "tier": "环境",
+      "name": "龙骸骨茬地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R11"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-13",
+      "tier": "环境",
+      "name": "檐口垂骨刺（顶刺）",
+      "hp": 0,
+      "rooms": [
+        "R01"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "EL-03",
+      "tier": "精英",
+      "name": "陶俑监",
+      "hp": 150,
+      "rooms": [
+        "R08"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "EL-04",
+      "tier": "精英",
+      "name": "烬帆头目",
+      "hp": 150,
+      "rooms": [
+        "R14"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "龙鳞灵",
+      "room": "R13",
+      "era": "present",
+      "blocks": "现在态盘在栈桥中段(x=160,占96x160)成实体鳞脊，踏入被弹回120px，不可跳过(弹回高度200)",
+      "dispel": "切至过去即不存在",
+      "detour_cost": "过去态木栈桥完整(宽96)，多一次切换+两处桥板缺40"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-02",
+      "name": "熔壳蟹王",
+      "room": "R12",
+      "arena": [
+        320,
+        416
+      ],
+      "trigger": "踏入巢坑中心即锁门",
+      "phases": 1,
+      "moves": [
+        {
+          "name": "甲冲",
+          "telegraph": 0.55,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "跳跃/PA 穿侧",
+          "cd": 2.6
+        },
+        {
+          "name": "落壳震波",
+          "telegraph": 0.75,
+          "window": 0.25,
+          "damage": 2,
+          "dodge": "跳出震波环(半径180)",
+          "cd": 3.6
+        },
+        {
+          "name": "巢坑塌陷(环境技)",
+          "telegraph": 1.1,
+          "window": 0.3,
+          "damage": 1,
+          "dodge": "走位离开坑缘",
+          "cd": 6.5
+        }
+      ],
+      "weakness": "举壳过头后1.1s硬直；破韧90后1.0s失衡",
+      "reward": "凶骨·龙焰 ×1 + 魂魄 ×2"
+    }
+  ],
+  "boss": {
+    "id": "B-01",
+    "name": "借火龙骸",
+    "room": "R15",
+    "arena": [
+      960,
+      416
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "焰尾横扫",
+          "龙息火波",
+          "近身喘息"
+        ],
+        "terrain_change": "none"
+      },
+      {
+        "hp_above": 0.0,
+        "new_moves": [
+          "骸骨坠",
+          "借火(自燃强化)"
+        ],
+        "terrain_change": "场地升温：殿顶盐壳裂开，4 处渗流扩为全地面(每0.65s扣1血)，3 座盐台为唯一安全面，每12s有3s全地面冷却；二阶段开场3.0s只播预警不扣血"
+      }
+    ],
+    "moves": [
+      {
+        "name": "焰尾横扫",
+        "telegraph": 0.6,
+        "window": 0.2,
+        "damage": 2,
+        "dodge": "跳跃/冲刺",
+        "cd": 3.2
+      },
+      {
+        "name": "龙息火波",
+        "telegraph": 0.8,
+        "window": 0.25,
+        "damage": 2,
+        "dodge": "跳跃或登上盐台",
+        "cd": 4.0
+      },
+      {
+        "name": "骸骨坠",
+        "telegraph": 1.2,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "走位离开缺牙处落点阴影",
+        "cd": 5.0
+      },
+      {
+        "name": "借火",
+        "telegraph": 1.0,
+        "window": 0.0,
+        "damage": 0,
+        "dodge": "拉远",
+        "cd": 14.0
+      },
+      {
+        "name": "近身喘息",
+        "telegraph": 0.0,
+        "window": 2.0,
+        "damage": 0,
+        "dodge": "治疗/输出窗口",
+        "cd": 0.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "章印",
+      "flags": [
+        "w16_boss_down"
+      ],
+      "map_change": "正殿门锁永久解除，R16 东门开放，R15 地面停止升温（盐台保留为永久安全点）"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R09",
+      "type": "三灵协作",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w16_curtain_down",
+      "fail_feedback": "任一项未校准：正殿热幕不落，R09→R15 不可通行；站上接收台时 HUD 三灯显示缺哪一项"
+    }
+  ],
+  "flags": [
+    "w16_checkpoint",
+    "w16_ds_obtained",
+    "w16_wheel_water_2",
+    "w16_wheel_wind_2",
+    "w16_wheel_earth_1",
+    "w16_curtain_down",
+    "w16_guard_shellking_down",
+    "w16_elite_puppet_down",
+    "w16_elite_ember_down",
+    "w16_boss_down",
+    "w16_heat_risen",
+    "w16_north_loop_open",
+    "w16_coke_crust_broken",
+    "w16_bone_01",
+    "w16_narr_02",
+    "w16_narr_11",
+    "w16_narr_17",
+    "w16_soul_05",
+    "w16_soul_09",
+    "w16_soul_13",
+    "w16_soul_17"
+  ],
+  "checkpoint": {
+    "room": "R09",
+    "pos": [
+      800,
+      792
+    ]
+  },
+  "grants": [
+    {
+      "ability": "DS",
+      "room": "R03",
+      "pos": [
+        800,
+        360
+      ],
+      "era": "past",
+      "radius": 56,
+      "label": "蜕鳞台",
+      "text": "骨上松着一片鳞。剥下它时，地面就不再烫脚。"
+    }
+  ]
+}

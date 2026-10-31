@@ -1,0 +1,165 @@
+{
+  "id": "W27",
+  "name": "藏风坳",
+  "chapter": 3,
+  "role": "暗区",
+  "shape": "分叉团块",
+  "aspect": "2.29:1",
+  "size": [
+    1392,
+    608
+  ],
+  "canvas_origin": [
+    23360,
+    -608
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "藏风坳口",
+      "rect": [
+        0,
+        320,
+        672,
+        288
+      ],
+      "shape": "矩形",
+      "floor_y": 608,
+      "era": "both",
+      "region": "藏风坳",
+      "content": "暗区·坳口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "藏风坳腹",
+      "rect": [
+        0,
+        0,
+        672,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "藏风坳",
+      "content": "暗区·坳腹",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "坳顶风标",
+      "rect": [
+        672,
+        0,
+        720,
+        608
+      ],
+      "shape": "竖井",
+      "floor_y": 608,
+      "era": "both",
+      "region": "藏风坳",
+      "content": "暗区·坳顶（PW 回访）",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R03",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "S",
+      "room": "R01",
+      "pos": [
+        144,
+        608
+      ],
+      "to": "W10",
+      "to_room": "R04",
+      "requires": "PA",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "风标骨",
+      "room": "R03",
+      "pos": [
+        1032,
+        272
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PW"
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "藏风坳存粮账",
+      "room": "R01",
+      "pos": [
+        168,
+        592
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "魂魄",
+      "name": "魂魄×4",
+      "room": "R02",
+      "pos": [
+        336,
+        296
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": "PA"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "索匠傀",
+      "hp": 45,
+      "rooms": [
+        "R01"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "devices": [],
+  "flags": [
+    "w27_grove_enter",
+    "w27_narr_01",
+    "w27_soul_01",
+    "w27_bone_01"
+  ],
+  "checkpoint": null,
+  "boss": ""
+}

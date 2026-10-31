@@ -1,0 +1,898 @@
+{
+  "id": "W19",
+  "name": "归墟议冢",
+  "chapter": 6,
+  "role": "中枢",
+  "shape": "竖井·三楼层",
+  "aspect": "0.88:1",
+  "size": [
+    3520,
+    4000
+  ],
+  "canvas_origin": [
+    47376,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "龙尾葬台",
+      "rect": [
+        880,
+        0,
+        880,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 葬台层",
+      "content": "能力取得",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "断尾壁龛",
+      "rect": [
+        1760,
+        0,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 葬台层",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "上檐北廊",
+      "rect": [
+        0,
+        0,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 葬台层",
+      "content": "出口",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "葬台东龛",
+      "rect": [
+        2640,
+        0,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 葬台层",
+      "content": "收藏",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "竖井上段",
+      "rect": [
+        880,
+        800,
+        880,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 上层",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "投影层",
+      "rect": [
+        1760,
+        800,
+        880,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 上层",
+      "content": "BOSS-2",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "议冢上厅",
+      "rect": [
+        0,
+        800,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 上层",
+      "content": "灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "战期封锁环",
+      "rect": [
+        2640,
+        800,
+        880,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "B 上层",
+      "content": "BOSS-3",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "竖井主段",
+      "rect": [
+        880,
+        1600,
+        880,
+        600
+      ],
+      "shape": "竖井",
+      "floor_y": 2200,
+      "era": "both",
+      "region": "C 主厅层",
+      "content": "地标",
+      "landmark": true
+    },
+    {
+      "id": "R10",
+      "name": "竖井中龛",
+      "rect": [
+        880,
+        2200,
+        880,
+        600
+      ],
+      "shape": "竖井",
+      "floor_y": 2800,
+      "era": "both",
+      "region": "C 主厅层",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "议冢主厅",
+      "rect": [
+        1760,
+        1600,
+        1760,
+        1200
+      ],
+      "shape": "拱顶",
+      "floor_y": 2800,
+      "era": "both",
+      "region": "C 主厅层",
+      "content": "BOSS-1",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "封存西廊",
+      "rect": [
+        0,
+        1600,
+        880,
+        1200
+      ],
+      "shape": "矩形",
+      "floor_y": 2800,
+      "era": "both",
+      "region": "C 主厅层",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "骨门西厅",
+      "rect": [
+        0,
+        2800,
+        880,
+        1200
+      ],
+      "shape": "矩形",
+      "floor_y": 4000,
+      "era": "both",
+      "region": "D 下层",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "竖井下段",
+      "rect": [
+        880,
+        2800,
+        880,
+        600
+      ],
+      "shape": "竖井",
+      "floor_y": 3400,
+      "era": "both",
+      "region": "D 下层",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "潮仓",
+      "rect": [
+        880,
+        3400,
+        880,
+        600
+      ],
+      "shape": "矩形",
+      "floor_y": 4000,
+      "era": "both",
+      "region": "D 下层",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "执事前廊",
+      "rect": [
+        1760,
+        2800,
+        880,
+        600
+      ],
+      "shape": "矩形",
+      "floor_y": 3400,
+      "era": "both",
+      "region": "D 下层",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "战后通路",
+      "rect": [
+        2640,
+        2800,
+        880,
+        1200
+      ],
+      "shape": "拱顶",
+      "floor_y": 4000,
+      "era": "both",
+      "region": "D 下层",
+      "content": "BOSS-4",
+      "landmark": false
+    },
+    {
+      "id": "R18",
+      "name": "缄口执事战场",
+      "rect": [
+        1760,
+        3400,
+        880,
+        600
+      ],
+      "shape": "矩形",
+      "floor_y": 4000,
+      "era": "both",
+      "region": "D 下层",
+      "content": "精怪",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R03",
+      "b": "R01",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "secret",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R04",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R05",
+      "side": "V",
+      "kind": "secret",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R07",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R09",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R12",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R12",
+      "side": "W",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R08",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R11",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R11",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R14",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R15",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R16",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R16",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R18",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R17",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R18",
+      "b": "R17",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R17",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R07",
+      "pos": [
+        0,
+        1240
+      ],
+      "to": "W17",
+      "to_room": "R11",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R08",
+      "pos": [
+        3520,
+        1560
+      ],
+      "to": "W20",
+      "to_room": "R09",
+      "requires": "DT",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R03",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W09",
+      "to_room": "R17",
+      "requires": "DT",
+      "kind": "loop",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "龙尾葬台刻辞",
+      "room": "R01",
+      "pos": [
+        1320,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "千名碑柱名录",
+      "room": "R09",
+      "pos": [
+        1320,
+        2160
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "封壁碑阴",
+      "room": "R17",
+      "pos": [
+        3080,
+        3960
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R12",
+      "pos": [
+        440,
+        2760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R04",
+      "pos": [
+        3080,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "沉淀点",
+      "room": "R15",
+      "pos": [
+        1320,
+        3960
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "地图残页",
+      "name": "议冢剖图",
+      "room": "R02",
+      "pos": [
+        2200,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "DT"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "巡墓骨兵",
+      "hp": 45,
+      "rooms": [
+        "R05",
+        "R12",
+        "R13",
+        "R16"
+      ],
+      "count": 8,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "听差",
+      "hp": 40,
+      "rooms": [
+        "R07",
+        "R10",
+        "R13"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "飞行",
+      "name": "缄口者",
+      "hp": 30,
+      "rooms": [
+        "R09",
+        "R14"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "钟锤落石",
+      "hp": 0,
+      "rooms": [
+        "R16",
+        "R17"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "守碑骨将",
+      "hp": 180,
+      "rooms": [
+        "R12"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "无名灵",
+      "room": "R07",
+      "era": "past",
+      "blocks": "过去态坐在上厅西井口上，封住 R07→R12 的下降通道",
+      "dispel": "切至现在即不存在，井口敞开（现在可从主厅绕竖井主段下来，多 2 房）",
+      "detour_cost": "现在路线需经竖井主段，多 2 房并经过一处杂兵房"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "缄口执事",
+      "room": "R18",
+      "arena": [
+        880,
+        600
+      ],
+      "trigger": "进入即锁门",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "执葬礼杖突",
+          "telegraph": 0.5,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "二段跳/冲刺",
+          "cd": 2.8
+        },
+        {
+          "name": "封名钟摆",
+          "telegraph": 0.6,
+          "window": 0.24,
+          "damage": 2,
+          "dodge": "贴柱背对",
+          "cd": 3.6
+        },
+        {
+          "name": "灰烬撒布",
+          "telegraph": 0.4,
+          "window": 0.18,
+          "damage": 1,
+          "dodge": "侧移出圈",
+          "cd": 2.4
+        }
+      ],
+      "weakness": "钟摆后 1.4s 拉绳硬直；削韧 90 破韧倒地 1.0s",
+      "reward": "魂魄 ×40 + 执事差票"
+    }
+  ],
+  "boss": {
+    "id": "B-19",
+    "name": "百口墓钟",
+    "room": "R11",
+    "arena": [
+      1760,
+      1200
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "钟鸣冲击",
+          "骨舌横扫",
+          "录影投影"
+        ],
+        "terrain_change": "none"
+      },
+      {
+        "hp_above": 0.0,
+        "new_moves": [
+          "三层共鸣",
+          "钟摆碾",
+          "投影齐鸣"
+        ],
+        "terrain_change": "钟体沉入中庭井堵死主厅↔投影层直井，换层只走封锁环 R08；三层楼口投影同时发声"
+      }
+    ],
+    "moves": [
+      {
+        "name": "钟鸣冲击",
+        "telegraph": 1.0,
+        "window": 0.25,
+        "damage": 2,
+        "dodge": "跳跃/冲刺",
+        "cd": 3.2
+      },
+      {
+        "name": "骨舌横扫",
+        "telegraph": 0.45,
+        "window": 0.2,
+        "damage": 2,
+        "dodge": "二段跳/蹬墙",
+        "cd": 2.6
+      },
+      {
+        "name": "三层共鸣",
+        "telegraph": 0.9,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "换层+贴千名碑柱背面",
+        "cd": 6.0
+      },
+      {
+        "name": "投影齐鸣",
+        "telegraph": 0.6,
+        "window": 0.2,
+        "damage": 1,
+        "dodge": "打断投影/绕柱",
+        "cd": 4.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true,
+      "return_point": "R07 议冢上厅 灯龛"
+    },
+    "on_defeat": {
+      "drop": "章印",
+      "flags": [
+        "w19_boss_down",
+        "w19_rubble_cleared"
+      ],
+      "map_change": "钟体沉入中庭井，封锁环三门全开，主厅↔投影层直井恢复通行，战后落石清开"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R05",
+      "type": "升降平台",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w19_lift_2",
+      "fail_feedback": "齿轮相位不对，平台停在两层之间"
+    },
+    {
+      "id": "D2",
+      "room": "R10",
+      "type": "音柱",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w19_echo_1",
+      "fail_feedback": "三根音柱不同步，葬台东龛石门不动"
+    },
+    {
+      "id": "D3",
+      "room": "R15",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w19_tide_3",
+      "fail_feedback": "水位不够，浮不到竖井中龛的檐口"
+    }
+  ],
+  "flags": [
+    "w19_checkpoint",
+    "w19_lift_2",
+    "w19_echo_1",
+    "w19_tide_3",
+    "w19_wall_broken_past",
+    "w19_wall_broken_present",
+    "w19_floor_broken",
+    "w19_sprite_calmed",
+    "w19_elite_down",
+    "w19_boss_down",
+    "w19_rubble_cleared",
+    "w19_seal_broken"
+  ],
+  "checkpoint": {
+    "room": "R07",
+    "pos": [
+      440,
+      1560
+    ]
+  },
+  "grants": [
+    {
+      "ability": "DT",
+      "room": "R01",
+      "pos": [
+        1020,
+        752
+      ],
+      "era": "past",
+      "radius": 48,
+      "label": "龙尾骨",
+      "text": "葬台尽头横着一截尾骨，蜡层还没封到头。敲下去，声音是空的。"
+    }
+  ]
+}

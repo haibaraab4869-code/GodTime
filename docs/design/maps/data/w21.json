@@ -1,0 +1,925 @@
+{
+  "id": "W21",
+  "name": "海眼审录庭",
+  "chapter": 7,
+  "role": "主题大区",
+  "shape": "近正方（中央仪式庭 + 南侧下沉双泉 + 东侧审录所）",
+  "aspect": "1.2:1",
+  "size": [
+    6144,
+    5120
+  ],
+  "canvas_origin": [
+    58416,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "潮门泊位",
+      "rect": [
+        0,
+        2048,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 3072,
+      "era": "both",
+      "region": "A 入庭段",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "渡碑长阶",
+      "rect": [
+        0,
+        1024,
+        1536,
+        1024
+      ],
+      "shape": "斜坡",
+      "floor_y": 2048,
+      "era": "both",
+      "region": "A 入庭段",
+      "content": "引导",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "潮文灯廊",
+      "rect": [
+        1536,
+        1024,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 2048,
+      "era": "both",
+      "region": "A 入庭段",
+      "content": "灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "海眼心湖",
+      "rect": [
+        1536,
+        2048,
+        1536,
+        1024
+      ],
+      "shape": "拱顶",
+      "floor_y": 3072,
+      "era": "both",
+      "region": "B 心湖庭",
+      "content": "地标/叙事",
+      "landmark": true
+    },
+    {
+      "id": "R05",
+      "name": "心湖东堤",
+      "rect": [
+        3072,
+        2048,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 3072,
+      "era": "both",
+      "region": "B 心湖庭",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "浮台回廊",
+      "rect": [
+        3072,
+        1024,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 2048,
+      "era": "both",
+      "region": "B 心湖庭",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "旧钟水道井口",
+      "rect": [
+        3072,
+        0,
+        1536,
+        1024
+      ],
+      "shape": "竖井",
+      "floor_y": 1024,
+      "era": "both",
+      "region": "E 侧枝与回环",
+      "content": "跨区回环",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "双泉下阶",
+      "rect": [
+        1536,
+        3072,
+        1536,
+        1024
+      ],
+      "shape": "斜坡",
+      "floor_y": 4096,
+      "era": "both",
+      "region": "C 双泉下层",
+      "content": "精灵/精英",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "龙息双泉",
+      "rect": [
+        1536,
+        4096,
+        1536,
+        1024
+      ],
+      "shape": "拱顶",
+      "floor_y": 5120,
+      "era": "both",
+      "region": "C 双泉下层",
+      "content": "DB 取得",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "冻台试池",
+      "rect": [
+        3072,
+        4096,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 5120,
+      "era": "both",
+      "region": "C 双泉下层",
+      "content": "自验证/跨区",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "蚀壳试壁",
+      "rect": [
+        3072,
+        3072,
+        1536,
+        1024
+      ],
+      "shape": "梯形",
+      "floor_y": 4096,
+      "era": "both",
+      "region": "C 双泉下层",
+      "content": "自验证",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "校稿吏廊",
+      "rect": [
+        4608,
+        1024,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 2048,
+      "era": "both",
+      "region": "D 审录所",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "审录所门庭",
+      "rect": [
+        4608,
+        2048,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 3072,
+      "era": "both",
+      "region": "D 审录所",
+      "content": "门前返回点",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "审录所正厅",
+      "rect": [
+        4608,
+        3072,
+        1536,
+        1024
+      ],
+      "shape": "拱顶",
+      "floor_y": 4096,
+      "era": "both",
+      "region": "D 审录所",
+      "content": "守印者",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "熄灯档案室",
+      "rect": [
+        0,
+        3072,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 4096,
+      "era": "both",
+      "region": "E 侧枝与回环",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "渡碑西龛",
+      "rect": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 1024,
+      "era": "both",
+      "region": "E 侧枝与回环",
+      "content": "秘室",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "渠底沉档室",
+      "rect": [
+        0,
+        4096,
+        1536,
+        1024
+      ],
+      "shape": "矩形",
+      "floor_y": 5120,
+      "era": "both",
+      "region": "E 侧枝与回环",
+      "content": "秘室",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R08",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R05",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R12",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R15",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R17",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R08",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R16",
+      "side": "N",
+      "kind": "secret",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R14",
+      "side": "E",
+      "kind": "secret",
+      "requires": "DB",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R02",
+      "pos": [
+        0,
+        1560
+      ],
+      "to": "W20",
+      "to_room": "R16",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R14",
+      "pos": [
+        6144,
+        3104
+      ],
+      "to": "W23",
+      "to_room": "R01",
+      "requires": "DB",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "S",
+      "room": "R10",
+      "pos": [
+        3616,
+        5120
+      ],
+      "to": "W22",
+      "to_room": "R01",
+      "requires": "DB",
+      "kind": "secret",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R16",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W12",
+      "to_room": "R09",
+      "requires": "DB",
+      "kind": "loop",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "潮痕碑（下半行）",
+      "room": "R01",
+      "pos": [
+        320,
+        2900
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "心湖底刻辞",
+      "room": "R04",
+      "pos": [
+        2304,
+        2900
+      ],
+      "obtain": "调查（过去态湖底）",
+      "missable": true,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "凶骨",
+      "name": "熄灯卷宗骨",
+      "room": "R15",
+      "pos": [
+        320,
+        3900
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "DB"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "双重校样",
+      "room": "R15",
+      "pos": [
+        1200,
+        3900
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "退稿封蜡屑",
+      "room": "R17",
+      "pos": [
+        320,
+        4900
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "DT"
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "泊位沉淀",
+      "room": "R02",
+      "pos": [
+        768,
+        1900
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "堤边沉淀",
+      "room": "R05",
+      "pos": [
+        3840,
+        2900
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "试池沉淀",
+      "room": "R10",
+      "pos": [
+        3840,
+        4900
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": "DB"
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "西龛沉淀",
+      "room": "R16",
+      "pos": [
+        768,
+        900
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "潮手",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R04",
+        "R05"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "飞行",
+      "name": "墨蛾",
+      "hp": 30,
+      "rooms": [
+        "R04",
+        "R06",
+        "R12"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "远程",
+      "name": "审录吏",
+      "hp": 45,
+      "rooms": [
+        "R12",
+        "R13"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "精英",
+      "name": "收卷使",
+      "hp": 90,
+      "rooms": [
+        "R08"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "环境",
+      "name": "没阶深水",
+      "hp": 0,
+      "rooms": [
+        "R08"
+      ],
+      "count": 1,
+      "era": "present",
+      "respawn": "none"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "墨面反光",
+      "hp": 0,
+      "rooms": [
+        "R04"
+      ],
+      "count": 1,
+      "era": "present",
+      "respawn": "none"
+    },
+    {
+      "id": "E-07",
+      "tier": "环境",
+      "name": "塌架断轴地刺（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R15"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "never"
+    },
+    {
+      "id": "E-08",
+      "tier": "环境",
+      "name": "碑脊斜刺墙（斜刺墙）",
+      "hp": 0,
+      "rooms": [
+        "R02"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "潮文灵",
+      "room": "R08",
+      "era": "present",
+      "blocks": "现在态盘在 R08→R09 泉阶顶，封住下行主脉（宽320×高480）",
+      "dispel": "切至过去：泉阶干燥，它无水可栖，立刻不存在",
+      "detour_cost": "过去态三段折返干石阶，路程 +40px，无额外战斗",
+      "shared_individual": "chao_wen_ling",
+      "counted": true
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "校稿吏",
+      "room": "R12",
+      "arena": [
+        1536,
+        1024
+      ],
+      "trigger": "进入即锁门（南北门落封蜡），可在开战前退出",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "校笔直刺",
+          "telegraph": 0.35,
+          "window": 0.18,
+          "damage": 2,
+          "dodge": "冲刺/闪避",
+          "cd": 2.2
+        },
+        {
+          "name": "退稿卷风",
+          "telegraph": 0.45,
+          "window": 0.22,
+          "damage": 2,
+          "dodge": "跳跃/PA",
+          "cd": 3.0
+        },
+        {
+          "name": "封蜡砸",
+          "telegraph": 0.6,
+          "window": 0.26,
+          "damage": 3,
+          "dodge": "侧移",
+          "cd": 4.0
+        }
+      ],
+      "weakness": "削韧 90，破韧后失衡 1.0s；破绽位在校稿台后侧，两态高度不同（背破绽无效）",
+      "reward": "魂魄 ×30"
+    }
+  ],
+  "boss": {
+    "id": "B-21",
+    "name": "司历校稿者",
+    "room": "R14",
+    "arena": [
+      1536,
+      1024
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "投牒连拍",
+          "校笔横扫",
+          "退稿封蜡"
+        ],
+        "terrain_change": "无（水庭水位固定 96）"
+      },
+      {
+        "hp_above": 0.0,
+        "new_moves": [
+          "涨潮投牒",
+          "浮台踏碎",
+          "退稿封蜡双发"
+        ],
+        "terrain_change": "水庭涨落周期 6.5s：涨 2.2s（96→288）/ 平 2.9s / 落 1.4s；四角浮台升为唯一安全落脚"
+      }
+    ],
+    "moves": [
+      {
+        "name": "投牒连拍",
+        "telegraph": 0.55,
+        "window": 0.2,
+        "damage": 2,
+        "dodge": "侧移/冲刺",
+        "cd": 2.6
+      },
+      {
+        "name": "校笔横扫",
+        "telegraph": 0.35,
+        "window": 0.18,
+        "damage": 2,
+        "dodge": "跳跃",
+        "cd": 2.2
+      },
+      {
+        "name": "退稿封蜡",
+        "telegraph": 0.7,
+        "window": 0.26,
+        "damage": 3,
+        "dodge": "冲刺穿过落点",
+        "cd": 4.2
+      },
+      {
+        "name": "涨潮投牒",
+        "telegraph": 1.2,
+        "window": 0.24,
+        "damage": 2,
+        "dodge": "上浮台",
+        "cd": 6.5
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true,
+      "damage_guard_interval": 0.65,
+      "note": "P2 涨潮强制锁 1536×1024 全战场取景；四角浮台永不被淹"
+    },
+    "on_defeat": {
+      "drop": "章印·校稿印",
+      "flags": [
+        "w21_boss_down"
+      ],
+      "map_change": "东壁封蜡整片脱落露出酸壳；两列校稿台降下 96px 成为通路"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R05",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w21_tide_2",
+      "fail_feedback": "水位不对：浮台与东堤差 >96，R06 接收点不响应"
+    },
+    {
+      "id": "D2",
+      "room": "R09",
+      "type": "三灵协作",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w21_trinity_3",
+      "fail_feedback": "缺一项校准：泉眼只冒泡不结冰，DB 提示不出现"
+    },
+    {
+      "id": "D3",
+      "room": "R08",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w21_stair_1",
+      "fail_feedback": "水位 288：深水推进扣血；水位 0：潮文灵无处可栖（隐藏宽容态）"
+    }
+  ],
+  "flags": [
+    "w21_checkpoint_lit",
+    "w21_item_01",
+    "w21_item_02",
+    "w21_item_03",
+    "w21_item_04",
+    "w21_item_05",
+    "w21_item_06",
+    "w21_item_07",
+    "w21_item_08",
+    "w21_item_09",
+    "w21_db_taken",
+    "w21_tide_2",
+    "w21_trinity_3",
+    "w21_stair_1",
+    "w21_elite_guard_down",
+    "w21_boss_down",
+    "w21_east_acid_open",
+    "w21_side_acid_open",
+    "w21_w12_loop_open",
+    "w21_archive_chain"
+  ],
+  "checkpoint": {
+    "room": "R03",
+    "pos": [
+      2304,
+      1900
+    ]
+  },
+  "grants": [
+    {
+      "ability": "DB",
+      "room": "R09",
+      "pos": [
+        2304,
+        5064
+      ],
+      "era": "both",
+      "radius": 56,
+      "label": "龙息中泉",
+      "text": "三口泉眼，只有中间这口还有息。俯身去接，掌心里结出一层白。"
+    }
+  ]
+}

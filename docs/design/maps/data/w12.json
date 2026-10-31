@@ -1,0 +1,1185 @@
+{
+  "id": "W12",
+  "name": "天倾井",
+  "chapter": 4,
+  "role": "动脉",
+  "shape": "竖井（全高地标）",
+  "aspect": "0.62:1",
+  "size": [
+    1984,
+    3200
+  ],
+  "canvas_origin": [
+    27952,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西来隘口",
+      "rect": [
+        0,
+        2240,
+        496,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 2560,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "入口",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "负石秤台",
+      "rect": [
+        496,
+        2240,
+        496,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 2560,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "底道东梯",
+      "rect": [
+        992,
+        2240,
+        496,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 2560,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "主脉（东壁）",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "底道东廊",
+      "rect": [
+        1488,
+        2240,
+        496,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 2560,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "底道西廊",
+      "rect": [
+        0,
+        2560,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 2880,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "主脉",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "井底东坡",
+      "rect": [
+        992,
+        2560,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 2880,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "主脉",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "井底石室",
+      "rect": [
+        0,
+        2880,
+        496,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "PW 取得",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "井底西龛",
+      "rect": [
+        496,
+        2880,
+        496,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "井底水柜",
+      "rect": [
+        992,
+        2880,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 井底段",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "减重吊台",
+      "rect": [
+        0,
+        1920,
+        992,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 2240,
+      "era": "both",
+      "region": "B 井腰下段",
+      "content": "机关+PW 第二阶",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "钟骨龛",
+      "rect": [
+        992,
+        1920,
+        992,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 2240,
+      "era": "both",
+      "region": "B 井腰下段",
+      "content": "精灵+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "井壁裂口",
+      "rect": [
+        0,
+        1600,
+        992,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 1920,
+      "era": "both",
+      "region": "C 井腰上段",
+      "content": "秘境入口+精英",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "衡台前厅",
+      "rect": [
+        992,
+        1600,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1920,
+      "era": "both",
+      "region": "D 井口段（战场）",
+      "content": "守印者战场房 #1",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "井口西墁台",
+      "rect": [
+        0,
+        640,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 井口段（战场）",
+      "content": "支路（战后）",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "战期封锁环",
+      "rect": [
+        992,
+        640,
+        992,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 井口段（战场）",
+      "content": "守印者战场房 #3",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "井口衡台",
+      "rect": [
+        0,
+        960,
+        1984,
+        640
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "D 井口段（战场）",
+      "content": "守印者战场房 #2+全高地标",
+      "landmark": true
+    },
+    {
+      "id": "R17",
+      "name": "天口西台",
+      "rect": [
+        0,
+        320,
+        992,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "E 井顶段",
+      "content": "支路（PW 回环侧）",
+      "landmark": false
+    },
+    {
+      "id": "R18",
+      "name": "战后通路",
+      "rect": [
+        992,
+        320,
+        992,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "D 井口段（战场）",
+      "content": "守印者战场房 #4",
+      "landmark": false
+    },
+    {
+      "id": "R19",
+      "name": "井顶天口",
+      "rect": [
+        0,
+        0,
+        992,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "E 井顶段",
+      "content": "世界出口（W02 回环）",
+      "landmark": false
+    },
+    {
+      "id": "R20",
+      "name": "东檐出井",
+      "rect": [
+        992,
+        0,
+        992,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "E 井顶段",
+      "content": "世界出口（主线）",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R05",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R05",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R07",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R08",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R06",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R06",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R10",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R10",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R11",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R11",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R12",
+      "side": "V",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R13",
+      "side": "V",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "E",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R16",
+      "side": "V",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R16",
+      "side": "V",
+      "kind": "main",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R14",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R15",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R15",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R17",
+      "side": "V",
+      "kind": "loop",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R18",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R17",
+      "b": "R18",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R17",
+      "b": "R19",
+      "side": "V",
+      "kind": "loop",
+      "requires": "PW",
+      "era": "both"
+    },
+    {
+      "a": "R18",
+      "b": "R20",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R19",
+      "b": "R20",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R17",
+      "pos": [
+        0,
+        600
+      ],
+      "to": "W11",
+      "to_room": "R04",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R18",
+      "pos": [
+        1984,
+        424
+      ],
+      "to": "W14",
+      "to_room": "R01",
+      "requires": "PW",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R16",
+      "pos": [
+        0,
+        1460
+      ],
+      "to": "W13",
+      "to_room": "R06",
+      "requires": "PA",
+      "kind": "secret",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R19",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W02",
+      "to_room": "R17",
+      "requires": "PW",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "E",
+      "room": "R09",
+      "pos": [
+        1984,
+        3136
+      ],
+      "to": "W21",
+      "to_room": "R16",
+      "requires": "DB",
+      "kind": "loop",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "负石骨",
+      "room": "R09",
+      "pos": [
+        1488,
+        3168
+      ],
+      "obtain": "击败精怪",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "石工亲笔信（两态合读）",
+      "room": "R07",
+      "pos": [
+        240,
+        3168
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "钟骨录（过去态）",
+      "room": "R11",
+      "pos": [
+        1488,
+        2224
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "衡台刻铭（现在态）",
+      "room": "R16",
+      "pos": [
+        176,
+        1584
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R04",
+      "pos": [
+        1744,
+        2544
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R08",
+      "pos": [
+        632,
+        3168
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R14",
+      "pos": [
+        96,
+        944
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄×2",
+      "room": "R12",
+      "pos": [
+        480,
+        1632
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PW"
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄×3",
+      "room": "R20",
+      "pos": [
+        1696,
+        64
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PG"
+    },
+    {
+      "id": "I-10",
+      "type": "地图残页",
+      "name": "天倾井·井壁测绘",
+      "room": "R11",
+      "pos": [
+        1264,
+        2224
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "负石者",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R02",
+        "R05",
+        "R10"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "悬棺守",
+      "hp": 45,
+      "rooms": [
+        "R13",
+        "R14",
+        "R17"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "飞行",
+      "name": "落石虫",
+      "hp": 45,
+      "rooms": [
+        "R04",
+        "R06",
+        "R11"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "松骨落石",
+      "hp": 0,
+      "rooms": [
+        "R10",
+        "R12",
+        "R15"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "none"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "井栏旧卫",
+      "hp": 180,
+      "rooms": [
+        "R12"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "none"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "裸壁下沿斜刺墙（斜刺墙）",
+      "hp": 0,
+      "rooms": [
+        "R12"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "none"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "钟骨灵",
+      "room": "R11",
+      "era": "past",
+      "blocks": "过去态趴住钟骨鸣腔，吸走共鸣 → R10 吊台停在半高，两段都跳不到",
+      "dispel": "切至现在即不存在（反向凝聚），但吊台被锁死在低位，只能走底道",
+      "detour_cost": "现在态改走 R03→R11 底道，多 1 房间且撞落石虫；或在过去态用 PW 直接在 R11 双壁间蹬上"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "负石领工",
+      "room": "R09",
+      "arena": [
+        992,
+        320
+      ],
+      "trigger": "进入 R09 且 x>=1200 即锁 W、N 两口",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "负石冲撞",
+          "telegraph": 0.7,
+          "window": 0.2,
+          "damage": 2,
+          "dodge": "PA 侧闪 / 贴墙滑铲",
+          "cd": 3.0
+        },
+        {
+          "name": "卸石",
+          "telegraph": 1.0,
+          "window": 0.4,
+          "damage": 1,
+          "dodge": "走位 / P2 跳离压断处",
+          "cd": 4.2
+        },
+        {
+          "name": "蹲下卸筐",
+          "telegraph": 0.0,
+          "window": 1.6,
+          "damage": 0,
+          "dodge": "无（破绽窗口）",
+          "cd": 0.0
+        }
+      ],
+      "weakness": "蹲下卸筐时背筐脱落，重击破甲后额外 1.2s 失衡",
+      "reward": "凶骨·负石骨×1 + 魂魄×6"
+    }
+  ],
+  "boss": {
+    "id": "B-01",
+    "name": "担山傀",
+    "room": "R16",
+    "arena": [
+      1984,
+      640
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "双臂分砸",
+          "锁链回拉"
+        ],
+        "terrain_change": "外环 8 块骨板依次断裂：每 20s 断 1 块，断裂前 1.2s 骨纹裂开 + 赭金闪，顺序固定为顺时针；中央 3 块骨板（各 520 宽）与四角 4 个永久台（各 96 宽）永不脱离；断裂后掉入 R12 横骨平台（扣 1 血，可爬回）"
+      }
+    ],
+    "moves": [
+      {
+        "name": "抬臂砸落",
+        "telegraph": 1.0,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "PA 侧移 / 翻滚出 640 判定带",
+        "cd": 3.0
+      },
+      {
+        "name": "链推扫",
+        "telegraph": 0.9,
+        "window": 0.25,
+        "damage": 2,
+        "dodge": "P2 跳过（扫击高度 96） / PA 穿过",
+        "cd": 3.2
+      },
+      {
+        "name": "落骨点名",
+        "telegraph": 0.8,
+        "window": 0.3,
+        "damage": 1,
+        "dodge": "走出落点圈 / PW 贴墙规避",
+        "cd": 4.0
+      },
+      {
+        "name": "双臂分砸",
+        "telegraph": 1.0,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "站中间 240 安全带 / PA 出带",
+        "cd": 4.5
+      },
+      {
+        "name": "锁链回拉",
+        "telegraph": 0.8,
+        "window": 0.6,
+        "damage": 0,
+        "dodge": "反向蹬墙 / PA 逆推",
+        "cd": 6.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.3,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "章印·天倾印",
+      "flags": [
+        "w12_boss_down"
+      ],
+      "map_change": "R15 战期封锁环收起并开放为通路；R18 战后通路开放；R16 door_lock 清除成普通通行房；钟骨长鸣一声，此后不再自鸣"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R02",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w12_dev_scale",
+      "fail_feedback": "水位/相位不对时秤台卡在中位，两段都跳不到"
+    },
+    {
+      "id": "D2",
+      "room": "R10",
+      "type": "升降平台",
+      "levels": 3,
+      "solution": 0,
+      "flag": "w12_dev_lift",
+      "fail_feedback": "现在态强行转绞盘无响应，提示「骨架已死」"
+    },
+    {
+      "id": "D3",
+      "room": "R09",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w12_dev_tide",
+      "fail_feedback": "水位不对时浮台不浮起（过去）／石阶被淹（现在）"
+    },
+    {
+      "id": "D4",
+      "room": "R16",
+      "type": "音柱",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w12_dev_bell",
+      "fail_feedback": "错音只重置当前序列，不惩罚"
+    }
+  ],
+  "flags": [
+    "w12_checkpoint",
+    "w12_pw_acquired",
+    "w12_pw_tutorial_1",
+    "w12_pw_tutorial_2",
+    "w12_pw_tutorial_3",
+    "w12_elite_guard_down",
+    "w12_elite_down",
+    "w12_boss_down",
+    "w12_boss_return_point",
+    "w12_ring_segments_0",
+    "w12_ring_segments_1",
+    "w12_ring_segments_2",
+    "w12_ring_segments_3",
+    "w12_ring_segments_4",
+    "w12_ring_segments_5",
+    "w12_ring_segments_6",
+    "w12_ring_segments_7",
+    "w12_bone_01",
+    "w12_codex_shigong_past",
+    "w12_codex_shigong_present",
+    "w12_codex_zhonggu",
+    "w12_codex_hengming",
+    "w12_soul_R04",
+    "w12_soul_R08",
+    "w12_soul_R12",
+    "w12_soul_R14",
+    "w12_soul_R20",
+    "w12_map_present",
+    "w12_dev_scale",
+    "w12_dev_lift",
+    "w12_dev_tide",
+    "w12_dev_bell",
+    "w12_bell_restored",
+    "w12_w21_seal",
+    "w12_pf_barewall_step",
+    "w12_pf_barewall_done"
+  ],
+  "checkpoint": {
+    "room": "R08",
+    "pos": [
+      744,
+      3176
+    ]
+  },
+  "challenges": [
+    {
+      "id": "CH-01",
+      "name": "井腰裸壁·裸壁连蹬",
+      "optional": true,
+      "count": 6,
+      "rooms": [
+        "R10",
+        "R12",
+        "R13"
+      ],
+      "gate": "w12_pw_tutorial_3",
+      "steps": [
+        {
+          "n": 1,
+          "from": "R10",
+          "to": "R10",
+          "span": 240,
+          "rise": 88,
+          "landing": 96,
+          "era": "present",
+          "requires": [],
+          "note": "井壁干燥，一次蹬升 160 有余；落点横骨甲"
+        },
+        {
+          "n": 2,
+          "from": "R10",
+          "to": "R10",
+          "span": 240,
+          "rise": 88,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "该段蹬点骨面现在态已塌只剩断茬；过去态旧骨可蹬但水膜 slippery，一次只能蹬 96，需 1 蹬 + 摆台相位（4.8s）"
+        },
+        {
+          "n": 3,
+          "from": "R10",
+          "to": "R10",
+          "span": 240,
+          "rise": 88,
+          "landing": 96,
+          "era": "present",
+          "requires": [],
+          "note": "落点横骨丙"
+        },
+        {
+          "n": 4,
+          "from": "R10",
+          "to": "R12",
+          "span": 240,
+          "rise": 88,
+          "landing": 96,
+          "era": "present",
+          "requires": [
+            "P2"
+          ],
+          "note": "跨房边界 y1920；井壁间距 320 > 单蹬水平 260，差 60 用 P2 补"
+        },
+        {
+          "n": 5,
+          "from": "R12",
+          "to": "R12",
+          "span": 240,
+          "rise": 88,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "同段 2；蹬升不足贴墙下滑会擦斜刺墙 E-06（x896—992, y1824—1920）"
+        },
+        {
+          "n": 6,
+          "from": "R12",
+          "to": "R13",
+          "span": 120,
+          "rise": 108,
+          "landing": 128,
+          "era": "present",
+          "requires": [
+            "PA"
+          ],
+          "note": "横向穿对墙 496（单蹬 260 + 空冲 420，差 76 由 PW 起跳余量补）；落点 R13 西沿台"
+        }
+      ],
+      "fail": "落回该段起点横骨（不掉血），不重置已通过段数；段 5 蹬升不足擦斜刺墙 E-06 则扣 1 血 + 弹回段 5 起点",
+      "reward": [],
+      "reward_note": "捷径：井底灯龛 R08 重爬时把最后 3 段压成一次 6 连蹬，省 R11 一房、约 35—45 秒",
+      "era_note": "过去态认旧凿痕（判断哪两段必须切过去），现在态长段蹬；段 2/段 5 必须过去态，段 4 需 P2，段 6 需 PA。本段只是加速，不替代「出井必须 PW」不变式"
+    }
+  ],
+  "grants": [
+    {
+      "ability": "PW",
+      "room": "R07",
+      "pos": [
+        240,
+        3136
+      ],
+      "era": "both",
+      "radius": 48,
+      "label": "井壁蹬痕",
+      "text": "骨面上有四道蹬痕，最上一道比人高。摸上去，脚就记得了。",
+      "auto": true
+    }
+  ]
+}

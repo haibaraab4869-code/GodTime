@@ -1,0 +1,466 @@
+{
+  "id": "W07",
+  "name": "反焚鸾台",
+  "chapter": 2,
+  "role": "准入秘境",
+  "shape": "近正方",
+  "aspect": "1.25:1",
+  "size": [
+    1600,
+    1280
+  ],
+  "canvas_origin": [
+    17664,
+    800
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "会合台·西北门",
+      "rect": [
+        0,
+        0,
+        480,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 会合台上层",
+      "content": "入口+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "断檐长廊",
+      "rect": [
+        480,
+        0,
+        560,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 会合台上层",
+      "content": "支路+凶骨",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "东檐残端",
+      "rect": [
+        1040,
+        0,
+        560,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 会合台上层",
+      "content": "支路（P2）",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "灰笼井",
+      "rect": [
+        0,
+        384,
+        480,
+        448
+      ],
+      "shape": "竖井",
+      "floor_y": 832,
+      "era": "both",
+      "region": "B 反焚台中层",
+      "content": "竖向枢纽",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "反焚台",
+      "rect": [
+        480,
+        384,
+        560,
+        448
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "B 反焚台中层",
+      "content": "木架顶（读背面）",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "空笼架",
+      "rect": [
+        1040,
+        384,
+        560,
+        448
+      ],
+      "shape": "矩形",
+      "floor_y": 832,
+      "era": "both",
+      "region": "B 反焚台中层",
+      "content": "跳台",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "底厅·同意书案",
+      "rect": [
+        0,
+        832,
+        1600,
+        448
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "C 底厅",
+      "content": "叙事（同意书正本）",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R04",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R07",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R04",
+      "side": "V",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R03",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R07",
+      "pos": [
+        0,
+        890
+      ],
+      "to": "W06",
+      "to_room": "R07",
+      "requires": "P2",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "J-01",
+      "type": "叙事物",
+      "name": "同意书·正面（拓本）",
+      "room": "R07",
+      "pos": [
+        800,
+        1250
+      ],
+      "obtain": "调查（两态皆可）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-02",
+      "type": "叙事物",
+      "name": "同意书·背面（420 手印）",
+      "room": "R05",
+      "pos": [
+        900,
+        540
+      ],
+      "obtain": "调查（必须过去态；现在态只剩炭痕）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-03",
+      "type": "叙事物",
+      "name": "会合簿",
+      "room": "R01",
+      "pos": [
+        240,
+        360
+      ],
+      "obtain": "调查（过去态）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-04",
+      "type": "叙事物",
+      "name": "反焚誓词（刻于笼架）",
+      "room": "R06",
+      "pos": [
+        1200,
+        800
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-05",
+      "type": "叙事物",
+      "name": "灰笼刻名",
+      "room": "R04",
+      "pos": [
+        240,
+        700
+      ],
+      "obtain": "调查（过去态）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-06",
+      "type": "凶骨",
+      "name": "反焚凶骨",
+      "room": "R02",
+      "pos": [
+        760,
+        340
+      ],
+      "obtain": "拾取（D1 吊笼降下后）",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀·会合台",
+      "room": "R01",
+      "pos": [
+        400,
+        360
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀·角楼",
+      "room": "R03",
+      "pos": [
+        1400,
+        140
+      ],
+      "obtain": "拾取（檐上二层）",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "J-09",
+      "type": "魂魄",
+      "name": "魂魄沉淀·笼底",
+      "room": "R04",
+      "pos": [
+        200,
+        780
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-10",
+      "type": "魂魄",
+      "name": "魂魄沉淀·空笼",
+      "room": "R06",
+      "pos": [
+        1500,
+        800
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-11",
+      "type": "魂魄",
+      "name": "魂魄沉淀·底厅",
+      "room": "R07",
+      "pos": [
+        1300,
+        1250
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "J-12",
+      "type": "叙事物",
+      "name": "同意书·背面第二段（逐户签押，挑战段第 4 段落点上，必须过去态）",
+      "room": "R05",
+      "pos": [
+        512,
+        544
+      ],
+      "obtain": "调查（挑战段檐脊丁）",
+      "missable": true,
+      "requires": ""
+    }
+  ],
+  "enemies": [],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R02",
+      "type": "升降平台",
+      "levels": 1,
+      "solution": "读完 J-02 同意书背面后启动，吊笼自 y=200 降至 y=320，笼门打开，内含凶骨 J-06",
+      "flag": "w07_d1_open",
+      "fail_feedback": "未读背面时吊笼悬在 y=200，笼绳绷紧但不动；玩家能看见里面有东西，但推不动绳"
+    }
+  ],
+  "flags": [
+    "w07_item_J01",
+    "w07_item_J02",
+    "w07_item_J03",
+    "w07_item_J04",
+    "w07_item_J05",
+    "w07_item_J06",
+    "w07_item_J07",
+    "w07_item_J08",
+    "w07_item_J09",
+    "w07_item_J10",
+    "w07_item_J11",
+    "w07_item_J12",
+    "w07_pf_eave_step",
+    "w07_consent_back_read",
+    "w07_d1_open",
+    "w07_door_w06"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      120,
+      360
+    ]
+  },
+  "challenges": [
+    {
+      "id": "CH-01",
+      "name": "断檐外沿·檐脊跳",
+      "optional": true,
+      "count": 4,
+      "rooms": [
+        "R05",
+        "R06"
+      ],
+      "gate": "",
+      "steps": [
+        {
+          "n": 1,
+          "from": "R06",
+          "to": "R05",
+          "span": 224,
+          "rise": -68,
+          "landing": 64,
+          "era": "present",
+          "requires": [],
+          "note": "必须现在态，从既有断檐（x1060—1140）起跳；过去态该处是仪门门扇实体，起跳点不存在"
+        },
+        {
+          "n": 2,
+          "from": "R05",
+          "to": "R05",
+          "span": 128,
+          "rise": 12,
+          "landing": 64,
+          "era": "both",
+          "requires": [],
+          "note": "落点檐脊乙（x736—800），容错 ±16"
+        },
+        {
+          "n": 3,
+          "from": "R05",
+          "to": "R05",
+          "span": 128,
+          "rise": 12,
+          "landing": 64,
+          "era": "both",
+          "requires": [],
+          "note": "落点檐脊丙（x608—672）"
+        },
+        {
+          "n": 4,
+          "from": "R05",
+          "to": "R05",
+          "span": 128,
+          "rise": 12,
+          "landing": 64,
+          "era": "both",
+          "requires": [],
+          "note": "落点檐脊丁（x480—544）；在此切过去读 J-12（现在态只剩炭痕）"
+        }
+      ],
+      "fail": "落 R05 檐下软垫 y800：零死亡、零扣血，沿坡滑回 R06 台面，不重置已通过段数",
+      "reward": [
+        "J-12"
+      ],
+      "reward_note": "",
+      "era_note": "整段只能在现在态起跳；4 处檐脊两态皆实心，因此可在檐脊丁按 Tab 切到过去读背面手印"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ func _run() -> void:
 	var failures := 0
 	var scene: PackedScene = load("res://game/main.tscn")
 	var root := scene.instantiate()
+	root.persist_progress = false
 	get_root().add_child(root)
 	await process_frame
 

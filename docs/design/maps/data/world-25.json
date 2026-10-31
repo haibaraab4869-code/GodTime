@@ -1,0 +1,1614 @@
+{
+  "version": 2,
+  "doc_version": "1.3",
+  "title": "时间之神 · 29 区世界总控",
+  "source_doc": "docs/design/maps/world-map-25.md",
+  "status": "approved-2026-10-30",
+  "updated": "2026-10-30",
+  "notes": {
+    "replaces": "8 章 × 6 区 = 48 区（game/data/world_regions.json，待替换实现，非设计依据）",
+    "chapter_quota": [
+      5,
+      3,
+      4,
+      3,
+      4,
+      3,
+      3,
+      4
+    ],
+    "room_total_est": 320,
+    "room_total_range": [
+      316,
+      324
+    ],
+    "room_mean": 11.03,
+    "role_quota": {
+      "中枢": 2,
+      "动脉": 2,
+      "过渡": 5,
+      "主题大区": 8,
+      "准入秘境": 4,
+      "边界": 2,
+      "终局": 2,
+      "暗区": 4
+    },
+    "role_room_band": {
+      "中枢": "14—18",
+      "动脉": "16—20",
+      "过渡": "6—8",
+      "主题大区": "14—18",
+      "准入秘境": "6—9",
+      "边界": "11—13",
+      "终局": "9—14",
+      "暗区": "1—4"
+    },
+    "ability_order": [
+      "VC",
+      "P2",
+      "QS",
+      "PA",
+      "PW",
+      "PG",
+      "DS",
+      "DT",
+      "DB"
+    ],
+    "ability_names": {
+      "VC": "时间切换",
+      "P2": "凤凰二段跳",
+      "QS": "麒麟初识",
+      "PA": "凤凰空中冲刺",
+      "PW": "凤凰蹬墙",
+      "PG": "凤凰滑翔",
+      "DS": "龙鳞耐热",
+      "DT": "龙尾破壁",
+      "DB": "龙息冻水与酸蚀"
+    },
+    "shape_prototypes": [
+      "横条",
+      "极横长",
+      "竖井",
+      "近正方"
+    ],
+    "aspect_convention": "宽:高，指区域外框（不是单房间）",
+    "VC_note": "所有区域默认持有 VC；边的 requires 不重复标注 VC",
+    "VC_DUAL_note": "已批准（2026-10-30）：VC 质变「双刻」只交付信息（可看见对侧地形虚影、可读对侧交互物轮廓），不交付位移——不可踩对侧幻影平台、不可借虚影穿墙、不可在虚影上停留。单图文档不得扩写为新位移能力。",
+    "opener_note": "opener 表示回环/剧情门由哪一侧开启；requires 为空且 opener 非空时为进度门而非能力门",
+    "requires_vocabulary": "requires 取值只能是能力代号（见 ability_names）、进度旗标（见 progress_gates）或空字符串",
+    "empty_requires_rule": "空字符串只允许出现在两类边上：① 同一章内的主路边；② 相邻章的章界主路边（kind=main，玩家必须能直接走进下一章）。kind=loop 的回环边一律不得为空——跨章回环必须写能力代号或进度旗标",
+    "loop_gate_proof": "6 条能力回环（E26-E31）的 requires 能力均只在该边的新章一端可取得，故能力代号本身即等价于进度门；E32 跨第 1↔8 章且两端无能力约束，必须用进度旗标 ENDGAME",
+    "progress_flag_rule": "进度旗标只表示「门由内侧开启」，不参与战斗或地形条件；置位即永久、不回退；未置位时门为实体碰撞，不得用提示文字代替封堵",
+    "encounters_note": "encounters.sprite = 精灵只数（环境型生灵：无血条、不可杀、单时代独占、活机关）；encounters.elite_guard = 精怪场次数（可战斗精英战：有血条、2—3 套招式与明确破绽、有专属战场并锁门、比守印者弱、不承担判决叙事）。两者每区各取 0 或 1，无则 0",
+    "encounter_totals": {
+      "sprite": 12,
+      "elite_guard": 13
+    },
+    "boss_arena_rule": "W12 天倾井、W19 归墟议冢的守印者战场必须占用独立房间且已计入 rooms_est，不与动脉主脉／中枢竖井共用同一房间的通行空间（战期锁门、战后开放为通路）；W24 司历心湖无 Boss，其 FINAL_DOOR 前庭与证据台账厅（3 间）同样独立成房并计入总数",
+    "ledger_rule": "已确认（2026-10-30，决策 3B）：证据台账核心物合计 3 件（原件 / 公开副本 / 隐私授权）。W23 八门汇流厅只投放原件与公开副本两件实体（均在主线房、missable=false）；第 3 件「隐私授权」不是拾取物，由玩家在 W24 司历心湖 R08 登记厅现场签署产生（阅读授权条款 → 确认 → 生成授权凭据），属行为产出。置位链为「原件验封 → 公开副本登记（置位 FINAL_DOOR）→ 隐私授权签署（置位 ENDGAME）」，三层缺一不置位 ENDGAME；FINAL_DOOR 只由第二层置位，故缺第三层不锁主线与结局，且结局后可回 W24 补签（不软锁）",
+    "ledger_items_by_region": {
+      "W23": [
+        "证据台账·原件",
+        "证据台账·公开副本"
+      ],
+      "W24": [
+        "隐私授权凭据（签署产出，非拾取）"
+      ]
+    },
+    "sprite_counting_rule": "已确认（2026-10-30，决策 4A）：潮文灵为跨区单一个体（chao_wen_ling）——W20 息壤书岸 R05 潮头旧线是写工地，W21 海眼审录庭 R08 双泉泉阶顶是栖息处，随潮迁移。第 7 章精灵计数 1，不是 2；逐区 encounters.sprite 按计数归口在栖息区（W21=1、W20=0，全作合计仍 12）。安抚状态跨区共享：W20 安抚过的，到 W21 仍是安抚过的状态（w20_sprite_calmed 一处记录即对两区生效），不得要求玩家对同一个个体的同一件事做两遍",
+    "ds_copy_rule": "已确认（2026-10-30，决策 5A）：DS 龙鳞耐热只免疫地形热伤害、不免疫任何敌人伤害（combat_config.gd 的 scales_combat_reduction = 0 是唯一依据）。规范原文（唯一允许的措辞，一字不得改）：「龙鳞只挡地形的热，不挡敌人打你」。三处必须逐字一致：① 能力描述文本（能力面板）② W16 焰海盐宫战场提示碑 ③ HUD 状态提示（持有 DS 时的状态图标说明）。禁止措辞：龙鳞护身／龙鳞减伤／抗打／硬壳／免疫伤害／防御力提升／受伤减免",
+    "dual_era_map_ui_rule": "已确认（2026-10-30，决策 2A）：双时代地图 UI 纳入本期范围，W22 墨海下层的「地图过期」机制是硬依赖，UI 未就绪前 W22 不得开工。三层缺一不可：① 双测绘源（survey_past 准确几何 + survey_present 只存 water_level / label_offset_y / verified_edges，不存拓扑）② 褪墨计时 8.0 s ③ 标注漂移 label_offset_y = 96 × water_level，标注落墙内时只加删除线与引线、不得隐藏",
+    "world_coord_merge_rule": "已确认（2026-10-30，决策 1A）：25 区世界坐标全量联调为本期开工前置任务（独立任务）。完成判据：25 份 canvas_origin 占位值全部替换、所有 world_links.to_room 的 TBD 清零、产出 25 区世界坐标总表（每区画布原点 + 四向接口世界坐标）。联调只允许改 canvas_origin 与 world_links 的坐标/目标房字段，不得改 rect、floor_y、links、size",
+    "file_name_note": "文件名沿用 world-25.json（历史原因）；自 v1.3 起内容为 29 区"
+  },
+  "regions": [
+    {
+      "id": "W01",
+      "name": "刻漏津渡",
+      "chapter": 1,
+      "role": "过渡",
+      "shape": "极横长",
+      "aspect": "3.6:1",
+      "rooms_est": 7,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "东 W02"
+        ]
+      },
+      "links": [
+        {
+          "to": "W02",
+          "requires": ""
+        }
+      ],
+      "abilities": [
+        "VC"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去石桥完整可走通；现在桥断三段、下为安全浅滩——初访必在桥心切时落滩，再从过去态爬回桥面，这是第一次被迫换边"
+    },
+    {
+      "id": "W02",
+      "name": "双版市廛",
+      "chapter": 1,
+      "role": "中枢",
+      "shape": "横条",
+      "aspect": "2.4:1",
+      "rooms_est": 17,
+      "entries": {
+        "count": 4,
+        "sides": [
+          "西 W01",
+          "北 W03",
+          "东 W04",
+          "南↓ W12"
+        ]
+      },
+      "links": [
+        {
+          "to": "W01",
+          "requires": ""
+        },
+        {
+          "to": "W03",
+          "requires": ""
+        },
+        {
+          "to": "W04",
+          "requires": ""
+        },
+        {
+          "to": "W12",
+          "requires": "PW"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 0
+      },
+      "era": "过去布棚与摊位形成上层通路；现在石架与屋顶形成下层环道——同一空间两套环，主线各走一套"
+    },
+    {
+      "id": "W03",
+      "name": "城簿廊与寄信井",
+      "chapter": 1,
+      "role": "主题大区",
+      "shape": "近正方",
+      "aspect": "1.1:1",
+      "rooms_est": 15,
+      "entries": {
+        "count": 4,
+        "sides": [
+          "南 W02",
+          "东 W04",
+          "西 W26 墓园",
+          "西北↖ W06 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W02",
+          "requires": ""
+        },
+        {
+          "to": "W04",
+          "requires": ""
+        },
+        {
+          "to": "W06",
+          "requires": "QS"
+        },
+        {
+          "to": "W26",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 1
+      },
+      "era": "过去卷宗架全开、井口未封；现在井口被石板封死——可在过去走进井壁再切回现在，落进封板之下（跨时代穿墙教学）"
+    },
+    {
+      "id": "W04",
+      "name": "鼓楼封粮门",
+      "chapter": 1,
+      "role": "边界",
+      "shape": "极横长",
+      "aspect": "4.2:1",
+      "rooms_est": 12,
+      "entries": {
+        "count": 5,
+        "sides": [
+          "西 W03",
+          "西 W02",
+          "东 W05",
+          "北↑ W09 回环",
+          "南↓ W24 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W03",
+          "requires": ""
+        },
+        {
+          "to": "W02",
+          "requires": ""
+        },
+        {
+          "to": "W05",
+          "requires": ""
+        },
+        {
+          "to": "W09",
+          "requires": "PA"
+        },
+        {
+          "to": "W24",
+          "requires": "ENDGAME"
+        }
+      ],
+      "abilities": [],
+      "boss": "守印者·报丧鼓将",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去城门有车辙与通关木牌、鼓索完好可拉旧升降台；现在封条覆门、木梯坍塌，改由墙内跳路与断索下行"
+    },
+    {
+      "id": "W05",
+      "name": "灰羽焚田",
+      "chapter": 2,
+      "role": "过渡",
+      "shape": "极横长",
+      "aspect": "4.8:1",
+      "rooms_est": 8,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W04",
+          "东 W06"
+        ]
+      },
+      "links": [
+        {
+          "to": "W04",
+          "requires": ""
+        },
+        {
+          "to": "W06",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去运粮车列与稻草垛连成上层踏面；现在焦土低洼、车辙成沟——主路靠两态交替踏面推进"
+    },
+    {
+      "id": "W06",
+      "name": "鸾巢医舍",
+      "chapter": 2,
+      "role": "主题大区",
+      "shape": "竖井",
+      "aspect": "0.78:1",
+      "rooms_est": 18,
+      "entries": {
+        "count": 5,
+        "sides": [
+          "西 W05",
+          "东 W08",
+          "东南↘ W07",
+          "西北↖ W03 回环",
+          "西 W16 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W05",
+          "requires": ""
+        },
+        {
+          "to": "W07",
+          "requires": "P2"
+        },
+        {
+          "to": "W08",
+          "requires": "P2"
+        },
+        {
+          "to": "W03",
+          "requires": "QS"
+        },
+        {
+          "to": "W16",
+          "requires": "DS"
+        }
+      ],
+      "abilities": [
+        "P2",
+        "QS"
+      ],
+      "boss": "守印者·燧羽侯（议台）",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去巢体完整、药架高悬；现在巢只剩燃羽、仓房封门——医舍只在现在可入，巢心只在过去可登"
+    },
+    {
+      "id": "W07",
+      "name": "反焚鸾台",
+      "chapter": 2,
+      "role": "准入秘境",
+      "shape": "近正方",
+      "aspect": "1.25:1",
+      "rooms_est": 7,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "西北↖ W06"
+        ]
+      },
+      "links": [
+        {
+          "to": "W06",
+          "requires": "P2"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "秘境本体（风格割裂：暖赭金、无杂兵）",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去是会合台与断檐；现在只剩灰色空笼——同意书背面只有过去可读，且必须从现在的断檐起跳"
+    },
+    {
+      "id": "W08",
+      "name": "浮桥逐日",
+      "chapter": 3,
+      "role": "过渡",
+      "shape": "极横长",
+      "aspect": "5.0:1",
+      "rooms_est": 7,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W06",
+          "东 W09"
+        ]
+      },
+      "links": [
+        {
+          "to": "W06",
+          "requires": "P2"
+        },
+        {
+          "to": "W09",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去桥板连续、日影钟完整；现在只剩风蚀吊索与错位影子——安全风向靠两代影子的差值读出"
+    },
+    {
+      "id": "W09",
+      "name": "无翼试风庭",
+      "chapter": 3,
+      "role": "主题大区",
+      "shape": "竖井",
+      "aspect": "0.82:1",
+      "rooms_est": 17,
+      "entries": {
+        "count": 4,
+        "sides": [
+          "西 W08",
+          "东 W10",
+          "北↑ W04 回环",
+          "东→W19 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W08",
+          "requires": ""
+        },
+        {
+          "to": "W10",
+          "requires": "PA"
+        },
+        {
+          "to": "W04",
+          "requires": "PA"
+        },
+        {
+          "to": "W19",
+          "requires": "DT"
+        }
+      ],
+      "abilities": [
+        "PA"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 0
+      },
+      "era": "过去瀑布成水幕遮住路线；现在只余空槽——过去挡视线、现在露结构，两个时代各给半张地图"
+    },
+    {
+      "id": "W10",
+      "name": "风葬关",
+      "chapter": 3,
+      "role": "边界",
+      "shape": "近正方",
+      "aspect": "1.35:1",
+      "rooms_est": 9,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西 W09",
+          "东 W11",
+          "北 W27 藏风坳"
+        ]
+      },
+      "links": [
+        {
+          "to": "W09",
+          "requires": "PA"
+        },
+        {
+          "to": "W11",
+          "requires": ""
+        },
+        {
+          "to": "W27",
+          "requires": "PA"
+        }
+      ],
+      "abilities": [],
+      "boss": "守印者·巡空监路使",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 1
+      },
+      "era": "过去可踩旗杆登关；现在旗断而岩柱起——关门两侧各有一套升降路径"
+    },
+    {
+      "id": "W11",
+      "name": "负石悬棺道",
+      "chapter": 4,
+      "role": "过渡",
+      "shape": "极横长",
+      "aspect": "4.4:1",
+      "rooms_est": 7,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W10",
+          "东 W12"
+        ]
+      },
+      "links": [
+        {
+          "to": "W10",
+          "requires": ""
+        },
+        {
+          "to": "W12",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去石阶整齐可直上；现在整条斜坡、落石槽加深——上下行路线完全不同"
+    },
+    {
+      "id": "W12",
+      "name": "天倾井",
+      "chapter": 4,
+      "role": "动脉",
+      "shape": "竖井",
+      "aspect": "0.62:1",
+      "rooms_est": 20,
+      "boss_arena_rooms": 4,
+      "entries": {
+        "count": 5,
+        "sides": [
+          "西 W11",
+          "东 W14",
+          "井壁 W13",
+          "井顶↑ W02 回环",
+          "井底↓ W21 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W11",
+          "requires": ""
+        },
+        {
+          "to": "W13",
+          "requires": "PA"
+        },
+        {
+          "to": "W14",
+          "requires": "PW"
+        },
+        {
+          "to": "W02",
+          "requires": "PW"
+        },
+        {
+          "to": "W21",
+          "requires": "DB"
+        }
+      ],
+      "abilities": [
+        "PW"
+      ],
+      "boss": "守印者·担山傀（井口衡台）",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去钟骨共鸣使平台周期摆动；现在骨架固定成底道——同一口井，两个时代是「活井」与「死井」"
+    },
+    {
+      "id": "W13",
+      "name": "无钟回音室",
+      "chapter": 4,
+      "role": "准入秘境",
+      "shape": "近正方",
+      "aspect": "1.05:1",
+      "rooms_est": 7,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "井壁→W12"
+        ]
+      },
+      "links": [
+        {
+          "to": "W12",
+          "requires": "PA"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "秘境本体（风格割裂：无钟、无声、全灰）",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去能听见记录员删稿的过程；现在由回音结晶重建断句——两态各存一半信息，要拼才有全录音"
+    },
+    {
+      "id": "W14",
+      "name": "盐海焚舟岸",
+      "chapter": 5,
+      "role": "主题大区",
+      "shape": "极横长",
+      "aspect": "4.9:1",
+      "rooms_est": 16,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W12",
+          "东 W15"
+        ]
+      },
+      "links": [
+        {
+          "to": "W12",
+          "requires": "PW"
+        },
+        {
+          "to": "W15",
+          "requires": "PG"
+        }
+      ],
+      "abilities": [
+        "PG"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去海水尚在岸边、船浮成横梁；现在盐壳可站、船骨搁浅——岸线位置本身在变"
+    },
+    {
+      "id": "W15",
+      "name": "赤潮观测塔",
+      "chapter": 5,
+      "role": "过渡",
+      "shape": "竖井",
+      "aspect": "0.55:1",
+      "rooms_est": 5,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西→W14 塔基",
+          "西↖W14 塔顶风廊",
+          "北 W28 溺火石碑"
+        ]
+      },
+      "links": [
+        {
+          "to": "W14",
+          "requires": "PG"
+        },
+        {
+          "to": "W16",
+          "requires": ""
+        },
+        {
+          "to": "W28",
+          "requires": "DS"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去测潮仪仍在运转、潮位刻度可读；现在塔壁结满晶盐、读数被埋——潮位只有过去能读"
+    },
+    {
+      "id": "W16",
+      "name": "焰海盐宫",
+      "chapter": 5,
+      "role": "主题大区",
+      "shape": "近正方",
+      "aspect": "1.15:1",
+      "rooms_est": 17,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西 W15",
+          "东 W17",
+          "北↑ W06 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W15",
+          "requires": ""
+        },
+        {
+          "to": "W17",
+          "requires": "DS"
+        },
+        {
+          "to": "W06",
+          "requires": "DS"
+        }
+      ],
+      "abilities": [
+        "DS"
+      ],
+      "boss": "守印者·借火龙骸",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去盐宫靠退潮后可站的水廊通行；现在整片热地，非 DS 不可过"
+    },
+    {
+      "id": "W17",
+      "name": "白骨千名廊",
+      "chapter": 6,
+      "role": "动脉",
+      "shape": "极横长",
+      "aspect": "4.6:1",
+      "rooms_est": 18,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西 W16",
+          "东 W19",
+          "廊侧 W18"
+        ]
+      },
+      "links": [
+        {
+          "to": "W16",
+          "requires": "DS"
+        },
+        {
+          "to": "W18",
+          "requires": ""
+        },
+        {
+          "to": "W19",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去潮水高涨、骨梁半没；现在潮落骨梁全露——同一廊道在水位两端是两条不同路线"
+    },
+    {
+      "id": "W18",
+      "name": "未封之口",
+      "chapter": 6,
+      "role": "准入秘境",
+      "shape": "近正方",
+      "aspect": "1.05:1",
+      "rooms_est": 8,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "廊侧→W17"
+        ]
+      },
+      "links": [
+        {
+          "to": "W17",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "秘境本体（风格割裂：无 UI、灰阶、无文字；深层房间需 DT）",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去水仓干燥、病房仍有人；现在上层可通、下层涨水、船骸倒扣成洞"
+    },
+    {
+      "id": "W19",
+      "name": "归墟议冢",
+      "chapter": 6,
+      "role": "中枢",
+      "shape": "竖井",
+      "aspect": "0.88:1",
+      "rooms_est": 18,
+      "boss_arena_rooms": 4,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西 W17",
+          "东 W20",
+          "北↑ W09 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W17",
+          "requires": ""
+        },
+        {
+          "to": "W20",
+          "requires": "DT"
+        },
+        {
+          "to": "W09",
+          "requires": "DT"
+        }
+      ],
+      "abilities": [
+        "DT"
+      ],
+      "boss": "守印者·百口墓钟",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去议冢开放、葬台尚空；现在议冢被指定脆壁封存——DT 破封后两态才都能回行"
+    },
+    {
+      "id": "W20",
+      "name": "息壤书岸",
+      "chapter": 7,
+      "role": "主题大区",
+      "shape": "极横长",
+      "aspect": "4.7:1",
+      "rooms_est": 16,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W19",
+          "东 W21"
+        ]
+      },
+      "links": [
+        {
+          "to": "W19",
+          "requires": "DT"
+        },
+        {
+          "to": "W21",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 1
+      },
+      "era": "过去潮头高、息壤仍是泥板；现在沙洲连成陆块、息壤层层隆起——海拔本身在两态间变化"
+    },
+    {
+      "id": "W21",
+      "name": "海眼审录庭",
+      "chapter": 7,
+      "role": "主题大区",
+      "shape": "近正方",
+      "aspect": "1.2:1",
+      "rooms_est": 17,
+      "entries": {
+        "count": 4,
+        "sides": [
+          "西 W20",
+          "东 W23",
+          "庭侧 W22",
+          "北↑ W12 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W20",
+          "requires": ""
+        },
+        {
+          "to": "W22",
+          "requires": "DB"
+        },
+        {
+          "to": "W23",
+          "requires": "DB"
+        },
+        {
+          "to": "W12",
+          "requires": "DB"
+        }
+      ],
+      "abilities": [
+        "DB"
+      ],
+      "boss": "守印者·司历校稿者",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 1
+      },
+      "era": "过去仪式庭下层干燥、心湖浅；现在水庭成池、湖面泛墨——DB 冻的是现在的水，过去本就干"
+    },
+    {
+      "id": "W22",
+      "name": "墨海下层",
+      "chapter": 7,
+      "role": "准入秘境",
+      "shape": "近正方",
+      "aspect": "1.3:1",
+      "rooms_est": 8,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "庭侧→W21"
+        ]
+      },
+      "links": [
+        {
+          "to": "W21",
+          "requires": "DB"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "秘境本体（风格割裂：纯黑白水墨，撤现在态地图）",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去是封存的修订沙盘（无水）；现在整层被淹——地图只对过去有效，现在的地图是过期的"
+    },
+    {
+      "id": "W23",
+      "name": "八门汇流厅",
+      "chapter": 8,
+      "role": "终局",
+      "shape": "横条",
+      "aspect": "2.4:1",
+      "rooms_est": 13,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W21",
+          "东 W24"
+        ]
+      },
+      "links": [
+        {
+          "to": "W21",
+          "requires": "DB"
+        },
+        {
+          "to": "W24",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 1
+      },
+      "era": "过去八门各通不同地景（八条真路）；现在归并为一条公共廊——过去态是全作唯一的「八向」结构"
+    },
+    {
+      "id": "W24",
+      "name": "司历心湖",
+      "chapter": 8,
+      "role": "主题大区",
+      "shape": "近正方",
+      "aspect": "1.3:1",
+      "rooms_est": 17,
+      "boss_arena_rooms": 0,
+      "ritual_rooms": 3,
+      "entries": {
+        "count": 3,
+        "sides": [
+          "西 W23",
+          "东 W25",
+          "北↑ W04 回环"
+        ]
+      },
+      "links": [
+        {
+          "to": "W23",
+          "requires": ""
+        },
+        {
+          "to": "W25",
+          "requires": "FINAL_DOOR"
+        },
+        {
+          "to": "W04",
+          "requires": "ENDGAME"
+        }
+      ],
+      "abilities": [
+        "VC_DUAL"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 1,
+        "elite_guard": 0
+      },
+      "era": "过去齿轮全速运行、纸本楼梯可走；现在齿轮被酸壳卡住、楼梯断成台——重刻场两态是「在转」与「停住」"
+    },
+    {
+      "id": "W25",
+      "name": "未删的明日",
+      "chapter": 8,
+      "role": "终局",
+      "shape": "近正方",
+      "aspect": "1.0:1",
+      "rooms_est": 8,
+      "entries": {
+        "count": 2,
+        "sides": [
+          "西 W24",
+          "东 W29 不曾发生的春天"
+        ]
+      },
+      "links": [
+        {
+          "to": "W24",
+          "requires": "FINAL_DOOR"
+        },
+        {
+          "to": "W29",
+          "requires": "w25_verdict_sealed"
+        }
+      ],
+      "abilities": [],
+      "boss": "BOSS·司历·删稿相（两阶段）",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去是未删的明日（理想投影、无灾民）；现在投影下压着真实灾民名单——两态差异是「承诺」与「凭据」"
+    },
+    {
+      "id": "W26",
+      "name": "无姓者墓园",
+      "chapter": 1,
+      "role": "暗区",
+      "shape": "矩形",
+      "aspect": "1.1:1",
+      "rooms_est": 2,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "东 W03 井底南口"
+        ]
+      },
+      "links": [
+        {
+          "to": "W03",
+          "requires": ""
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去态无姓碑的 41 个名字清晰可读、园门是拱洞；现在态碑面被刮成麻面、园门是实心墙——墓园只在过去存在"
+    },
+    {
+      "id": "W27",
+      "name": "藏风坳",
+      "chapter": 3,
+      "role": "暗区",
+      "shape": "分叉团块",
+      "aspect": "2.29:1",
+      "rooms_est": 3,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "南 W10 风口西廊"
+        ]
+      },
+      "links": [
+        {
+          "to": "W10",
+          "requires": "PA"
+        }
+      ],
+      "abilities": [
+        "P2",
+        "PA",
+        "PW"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去坳内无风、存粮架完整、水缸满；现在坳内灌风、粮架倒、水缸干，坳底多一道风蚀沟"
+    },
+    {
+      "id": "W28",
+      "name": "溺火石碑",
+      "chapter": 5,
+      "role": "暗区",
+      "shape": "拱顶",
+      "aspect": "1.65:1",
+      "rooms_est": 1,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "南 W15 塔顶观测台"
+        ]
+      },
+      "links": [
+        {
+          "to": "W15",
+          "requires": "DS"
+        }
+      ],
+      "abilities": [
+        "DS",
+        "DT"
+      ],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "过去碑面空白（人名还没刻）；现在熔岩渗流从碑底上冒，热浪把碑文烤显形——碑文只在现在可读，而现在必须持 DS"
+    },
+    {
+      "id": "W29",
+      "name": "不曾发生的春天",
+      "chapter": 8,
+      "role": "暗区",
+      "shape": "矩形",
+      "aspect": "0.56:1",
+      "rooms_est": 2,
+      "entries": {
+        "count": 1,
+        "sides": [
+          "西 W25 原告席"
+        ]
+      },
+      "links": [
+        {
+          "to": "W25",
+          "requires": "w25_verdict_sealed"
+        }
+      ],
+      "abilities": [],
+      "boss": "",
+      "secret": "",
+      "encounters": {
+        "sprite": 0,
+        "elite_guard": 0
+      },
+      "era": "反事实空间：纯白宣纸底、无灰阶、无敌人、没有时代——切时在该区无效，HUD 时代指示器撤掉"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "a": "W01",
+      "b": "W02",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "世界入口唯一出边"
+    },
+    {
+      "id": "E02",
+      "a": "W02",
+      "b": "W03",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "网内北向"
+    },
+    {
+      "id": "E03",
+      "a": "W03",
+      "b": "W04",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "网内东向"
+    },
+    {
+      "id": "E04",
+      "a": "W02",
+      "b": "W04",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "三角环闭合，构成全作唯一网"
+    },
+    {
+      "id": "E05",
+      "a": "W04",
+      "b": "W05",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "第 1/2 章界"
+    },
+    {
+      "id": "E06",
+      "a": "W05",
+      "b": "W06",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E07",
+      "a": "W06",
+      "b": "W07",
+      "kind": "secret",
+      "requires": "P2",
+      "opener": "",
+      "note": "秘境侧枝，同边往返"
+    },
+    {
+      "id": "E08",
+      "a": "W06",
+      "b": "W08",
+      "kind": "main",
+      "requires": "P2",
+      "opener": "",
+      "note": "议台断梁 = P2 首次主线应用"
+    },
+    {
+      "id": "E09",
+      "a": "W08",
+      "b": "W09",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E10",
+      "a": "W09",
+      "b": "W10",
+      "kind": "main",
+      "requires": "PA",
+      "opener": "",
+      "note": "关门横风口 = PA 首次主线应用"
+    },
+    {
+      "id": "E11",
+      "a": "W10",
+      "b": "W11",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": "第 3/4 章界"
+    },
+    {
+      "id": "E12",
+      "a": "W11",
+      "b": "W12",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E13",
+      "a": "W12",
+      "b": "W13",
+      "kind": "secret",
+      "requires": "PA",
+      "opener": "",
+      "note": "井壁侧枝"
+    },
+    {
+      "id": "E14",
+      "a": "W12",
+      "b": "W14",
+      "kind": "main",
+      "requires": "PW",
+      "opener": "",
+      "note": "出井唯一手段；第 4/5 章界"
+    },
+    {
+      "id": "E15",
+      "a": "W14",
+      "b": "W15",
+      "kind": "main",
+      "requires": "PG",
+      "opener": "",
+      "note": "盐风带横渡 = PG 首次主线应用"
+    },
+    {
+      "id": "E16",
+      "a": "W15",
+      "b": "W16",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E17",
+      "a": "W16",
+      "b": "W17",
+      "kind": "main",
+      "requires": "DS",
+      "opener": "",
+      "note": "焰海热幕；第 5/6 章界"
+    },
+    {
+      "id": "E18",
+      "a": "W17",
+      "b": "W18",
+      "kind": "secret",
+      "requires": "",
+      "opener": "",
+      "note": "无门可初访；深层房间需 DT（区内门，不占边）"
+    },
+    {
+      "id": "E19",
+      "a": "W17",
+      "b": "W19",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E20",
+      "a": "W19",
+      "b": "W20",
+      "kind": "main",
+      "requires": "DT",
+      "opener": "",
+      "note": "议冢封壁 = DT 首次主线应用；第 6/7 章界"
+    },
+    {
+      "id": "E21",
+      "a": "W20",
+      "b": "W21",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E22",
+      "a": "W21",
+      "b": "W22",
+      "kind": "secret",
+      "requires": "DB",
+      "opener": "",
+      "note": "浅水侧枝"
+    },
+    {
+      "id": "E23",
+      "a": "W21",
+      "b": "W23",
+      "kind": "main",
+      "requires": "DB",
+      "opener": "",
+      "note": "审录所酸壳；第 7/8 章界"
+    },
+    {
+      "id": "E24",
+      "a": "W23",
+      "b": "W24",
+      "kind": "main",
+      "requires": "",
+      "opener": "",
+      "note": ""
+    },
+    {
+      "id": "E25",
+      "a": "W24",
+      "b": "W25",
+      "kind": "main",
+      "requires": "FINAL_DOOR",
+      "opener": "W24",
+      "note": "剧情门（W24 完成公开副本登记后由 W24 侧置位）；双向，BOSS 后仍可返回 W24"
+    },
+    {
+      "id": "E26",
+      "a": "W02",
+      "b": "W12",
+      "kind": "loop",
+      "requires": "PW",
+      "opener": "W12",
+      "note": "旧排水渠，井顶开启"
+    },
+    {
+      "id": "E27",
+      "a": "W03",
+      "b": "W06",
+      "kind": "loop",
+      "requires": "QS",
+      "opener": "W06",
+      "note": "药商旧隧道"
+    },
+    {
+      "id": "E28",
+      "a": "W04",
+      "b": "W09",
+      "kind": "loop",
+      "requires": "PA",
+      "opener": "W09",
+      "note": "鼓楼升降索"
+    },
+    {
+      "id": "E29",
+      "a": "W06",
+      "b": "W16",
+      "kind": "loop",
+      "requires": "DS",
+      "opener": "W16",
+      "note": "热风旧道"
+    },
+    {
+      "id": "E30",
+      "a": "W09",
+      "b": "W19",
+      "kind": "loop",
+      "requires": "DT",
+      "opener": "W19",
+      "note": "归墟旧航道"
+    },
+    {
+      "id": "E31",
+      "a": "W12",
+      "b": "W21",
+      "kind": "loop",
+      "requires": "DB",
+      "opener": "W21",
+      "note": "旧钟水道"
+    },
+    {
+      "id": "E32",
+      "a": "W04",
+      "b": "W24",
+      "kind": "loop",
+      "requires": "ENDGAME",
+      "opener": "W24",
+      "note": "城门旧总钟道；进度门，W24 完成证据台账登记后由 W24 侧置位。未置位时 W04 南侧为封死实体墙 + 碑文「此门自内而开」，不可交互"
+    },
+    {
+      "id": "E33",
+      "a": "W03",
+      "b": "W26",
+      "kind": "secret",
+      "requires": "",
+      "opener": "",
+      "note": "井底南口西墙的无姓碑暗门；过去态开、现在态实心"
+    },
+    {
+      "id": "E34",
+      "a": "W10",
+      "b": "W27",
+      "kind": "secret",
+      "requires": "PA",
+      "opener": "W10",
+      "note": "风口西廊北墙的 420px 横风口，需 P2 起跳接 PA 空冲"
+    },
+    {
+      "id": "E35",
+      "a": "W15",
+      "b": "W28",
+      "kind": "secret",
+      "requires": "DS",
+      "opener": "W15",
+      "note": "塔顶北檐外的风口岩龛，门槛热浪 2s 扣 1 血"
+    },
+    {
+      "id": "E36",
+      "a": "W25",
+      "b": "W29",
+      "kind": "secret",
+      "requires": "w25_verdict_sealed",
+      "opener": "W25",
+      "note": "原告席东墙三字叠刻门，先落判再回看"
+    }
+  ],
+  "progress_gates": [
+    {
+      "flag": "ENDGAME",
+      "edge": "E32",
+      "a": "W04",
+      "b": "W24",
+      "set_by": "W24",
+      "set_when": "在 W24 司历心湖完成证据台账登记（原件 / 公开副本 / 隐私授权三层）后，由 W24 侧置位",
+      "closed_behavior": "W04 南侧出口为一堵封死的实体墙 + 可读碑文「此门自内而开」；不可交互、不显示能力提示、不扣血、不触发安全点搜索、不进地图标注",
+      "open_behavior": "置位后永久开启，双向通行；结局后可经此返回 W04 补完支线",
+      "why_needed": "该边跨第 1 章与第 8 章且两端之间不存在「必须先取得某能力」的约束，只靠能力代号无法阻止第 1 章玩家提前进入终局"
+    },
+    {
+      "flag": "FINAL_DOOR",
+      "edge": "E25",
+      "a": "W24",
+      "b": "W25",
+      "set_by": "W24",
+      "set_when": "W24 心湖完成「公开副本登记」后由 W24 侧置位",
+      "closed_behavior": "明日之门前为静水门框，无门扇与开启动画；不可交互",
+      "open_behavior": "永久开启；BOSS 战后仍可返回 W24，不允许做成无返回的永久关闭",
+      "why_needed": "把「结局入口」显式化为可查旗标，避免实现时误把 W25 当作随时可进的普通区域"
+    }
+  ],
+  "ability_gates": [
+    {
+      "ability": "VC",
+      "acquire": "W01",
+      "first_use": "W01 桥心切时落浅滩 / W03 井壁穿墙",
+      "shortcut": "",
+      "skip_consequence": "不可能跳过：W01 西端为世界起点"
+    },
+    {
+      "ability": "P2",
+      "acquire": "W06",
+      "first_use": "W06 议台断梁（主线）",
+      "shortcut": "W06→W07、W05 上层布棚、W02 绳铃",
+      "skip_consequence": "卡在 W06 议台，非软锁（能力同区）"
+    },
+    {
+      "ability": "QS",
+      "acquire": "W06",
+      "first_use": "取得即生效（生命 4→6、灯龛恢复）",
+      "shortcut": "W06→W03 药商旧隧道",
+      "skip_consequence": "可跳过；以 4 格血打第 3 章，无硬锁"
+    },
+    {
+      "ability": "PA",
+      "acquire": "W09",
+      "first_use": "W09 断层 / W09→W10 关门",
+      "shortcut": "W09→W04 升降索；W13 秘境",
+      "skip_consequence": "卡在 W09，非软锁"
+    },
+    {
+      "ability": "PW",
+      "acquire": "W12",
+      "first_use": "井壁三阶教学",
+      "shortcut": "W12→W02 旧排水渠",
+      "skip_consequence": "卡在井底，但取得室即井底，风险为零"
+    },
+    {
+      "ability": "PG",
+      "acquire": "W14",
+      "first_use": "W14 冷岸风庭 / 跨盐风带去 W15",
+      "shortcut": "W15 塔顶风廊",
+      "skip_consequence": "卡在 W14，非软锁"
+    },
+    {
+      "ability": "DS",
+      "acquire": "W16",
+      "first_use": "温洞熔岩廊 / 盐宫正殿热地",
+      "shortcut": "W16→W06 热风旧道；W15 溺火石碑",
+      "skip_consequence": "卡在 W16，到不了借火龙骸"
+    },
+    {
+      "ability": "DT",
+      "acquire": "W19",
+      "first_use": "同纹理薄骨墙 / 议冢封壁",
+      "shortcut": "W19→W09 旧航道；W18 深层；W15 碑下脆层",
+      "skip_consequence": "卡在 W19；另影响三处档案（不影响主线）"
+    },
+    {
+      "ability": "DB",
+      "acquire": "W21",
+      "first_use": "低水池冻台 / 并行通道蚀壳",
+      "shortcut": "W21→W12 旧钟水道；W22 秘境",
+      "skip_consequence": "卡在 W21，审录所过不去"
+    },
+    {
+      "ability": "VC_DUAL",
+      "acquire": "W24",
+      "first_use": "明日之门前：不切换即读对侧结构",
+      "shortcut": "",
+      "skip_consequence": "已批准交付项：影响真相补遗与尾声旁白，不锁结局；只交付信息、不交付位移（不可踩虚影 / 穿墙 / 停留）"
+    }
+  ]
+}

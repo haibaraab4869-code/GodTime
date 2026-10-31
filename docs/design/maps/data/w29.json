@@ -1,0 +1,156 @@
+{
+  "id": "W29",
+  "name": "不曾发生的春天",
+  "chapter": 8,
+  "role": "暗区",
+  "shape": "矩形",
+  "aspect": "0.56:1",
+  "size": [
+    720,
+    1280
+  ],
+  "canvas_origin": [
+    79600,
+    2560
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "秘境门厅",
+      "rect": [
+        0,
+        0,
+        720,
+        640
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "不曾发生的春天",
+      "content": "秘境门厅",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "不曾发生的春天",
+      "rect": [
+        0,
+        640,
+        720,
+        640
+      ],
+      "shape": "拱顶",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "不曾发生的春天",
+      "content": "秘境本体（纯叙事，无战斗）",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "S",
+      "kind": "secret",
+      "requires": "w25_secret_door_open",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        480
+      ],
+      "to": "W25",
+      "to_room": "R04",
+      "requires": "w25_verdict_sealed",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "秘境 ·「未生者」名录",
+      "room": "R02",
+      "pos": [
+        120,
+        1180
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "w25_secret_door_open"
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "秘境 · 删稿相的第一次删稿",
+      "room": "R02",
+      "pos": [
+        360,
+        1060
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "w25_secret_door_open"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "秘境 · 第七地代表的三封回信",
+      "room": "R02",
+      "pos": [
+        580,
+        1180
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "w25_secret_door_open"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "秘境 · 空白页（唯一没有字的一页）",
+      "room": "R02",
+      "pos": [
+        360,
+        900
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "w25_secret_door_open"
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "大魂魄沉淀（200）",
+      "room": "R02",
+      "pos": [
+        120,
+        980
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": "DT"
+    }
+  ],
+  "enemies": [],
+  "sprite": [],
+  "elite_guard": [],
+  "devices": [],
+  "flags": [
+    "w29_spring_enter",
+    "w29_narr_01",
+    "w29_narr_02",
+    "w29_narr_03",
+    "w29_narr_04",
+    "w29_soul_01"
+  ],
+  "checkpoint": null,
+  "boss": ""
+}

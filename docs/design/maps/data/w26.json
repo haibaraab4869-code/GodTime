@@ -1,0 +1,128 @@
+{
+  "id": "W26",
+  "name": "无姓者墓园",
+  "chapter": 1,
+  "role": "暗区",
+  "shape": "矩形",
+  "aspect": "1.10:1",
+  "size": [
+    704,
+    640
+  ],
+  "canvas_origin": [
+    3712,
+    -640
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "墓园·碑庭",
+      "rect": [
+        0,
+        320,
+        704,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "无姓者墓园",
+      "content": "暗区·碑庭",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "墓园·名墙",
+      "rect": [
+        0,
+        0,
+        704,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "无姓者墓园",
+      "content": "暗区·名墙",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "V",
+      "kind": "secret",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "E",
+      "room": "R01",
+      "pos": [
+        704,
+        480
+      ],
+      "to": "W03",
+      "to_room": "R15",
+      "requires": "",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "名墙下的无姓骨",
+      "room": "R02",
+      "pos": [
+        492,
+        280
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "无姓碑",
+      "room": "R01",
+      "pos": [
+        346,
+        600
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-05",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R01"
+      ],
+      "count": 2,
+      "era": "past",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "devices": [],
+  "flags": [
+    "w26_grave_open",
+    "w26_stele_read",
+    "w26_narr_01",
+    "w26_bone_01"
+  ],
+  "checkpoint": null,
+  "boss": ""
+}

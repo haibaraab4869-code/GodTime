@@ -17,10 +17,17 @@ const ACTION_ORDER := [
 	"move_left",
 	"move_right",
 	"jump",
+	"move_down",
 	"attack",
 	"dash",
 	"switch_era",
 	"reset_checkpoint",
+	"interact",
+	"open_journal",
+	"heal",
+	"heavy_attack",
+	"beast_skill",
+	"open_map",
 ]
 
 ## Registered but not user-rebindable: they drive the settings panel itself.
@@ -30,10 +37,18 @@ const ACTION_LABELS := {
 	"move_left": "左移",
 	"move_right": "右移",
 	"jump": "跳跃",
+	"dive": "水中下潜",
+	"move_down": "下移 / 水中下潜",
 	"attack": "攻击",
 	"dash": "冲刺",
 	"switch_era": "切换时代",
 	"reset_checkpoint": "回到存档点",
+	"interact": "调查 / 交谈",
+	"open_journal": "渡口日志",
+	"heal": "包扎疗伤",
+	"heavy_attack": "流派重击",
+	"beast_skill": "凶气技能",
+	"open_map": "区域分层地图",
 }
 
 const JOY_NAMES := {
@@ -64,6 +79,11 @@ const AXIS_NAMES := {
 }
 
 const DEFAULT_BINDINGS := {
+	"move_down": [{"type": "key", "code": KEY_S}, {"type": "key", "code": KEY_DOWN}, {"type": "axis", "axis": JOY_AXIS_LEFT_Y, "value": 1.0}],
+	"open_map": [{"type": "key", "code": KEY_M}, {"type": "button", "button": JOY_BUTTON_DPAD_DOWN}],
+	"heavy_attack": [{"type": "key", "code": KEY_K}, {"type": "button", "button": JOY_BUTTON_RIGHT_STICK}],
+	"beast_skill": [{"type": "key", "code": KEY_L}, {"type": "button", "button": JOY_BUTTON_LEFT_STICK}],
+	"heal": [{"type": "key", "code": KEY_H}, {"type": "button", "button": JOY_BUTTON_DPAD_UP}],
 	"move_left": [
 		{"type": "key", "code": KEY_A},
 		{"type": "key", "code": KEY_LEFT},
@@ -101,9 +121,19 @@ const DEFAULT_BINDINGS := {
 		{"type": "key", "code": KEY_ESCAPE},
 		{"type": "button", "button": JOY_BUTTON_START},
 	],
+	"interact": [
+		{"type": "key", "code": KEY_E},
+		{"type": "button", "button": JOY_BUTTON_RIGHT_SHOULDER},
+	],
+	"open_journal": [
+		{"type": "key", "code": KEY_Q},
+		{"type": "button", "button": JOY_BUTTON_LEFT_SHOULDER},
+	],
 }
 
 var bindings: Dictionary = {}
+# Tests can use their own ConfigFile without touching the player's bindings.
+var save_path := SAVE_PATH
 
 func _ready() -> void:
 	bindings = _default_bindings()
@@ -149,6 +179,8 @@ func _describe(event: InputEvent) -> Dictionary:
 		return {"type": "key", "code": code}
 	if event is InputEventJoypadButton:
 		return {"type": "button", "button": (event as InputEventJoypadButton).button_index}
+	if event is InputEventJoypadMotion and absf(event.axis_value) >= 0.6:
+		return {"type": "axis", "axis": event.axis, "value": signf(event.axis_value)}
 	return {}
 
 # --- apply ------------------------------------------------------------------
@@ -162,8 +194,14 @@ func _apply_action(action: String) -> void:
 		var event := _to_event(descriptor)
 		if event != null:
 			InputMap.action_add_event(action, event)
+	if action == "move_down":
+		if not InputMap.has_action("dive"): InputMap.add_action("dive")
+		InputMap.action_erase_events("dive")
+		for event in InputMap.action_get_events(action): InputMap.action_add_event("dive", event)
 
 func _apply_all() -> void:
+	for retired in ["view_wide", "view_close"]:
+		if InputMap.has_action(retired): InputMap.erase_action(retired)
 	for action in all_actions():
 		if not bindings.has(action):
 			bindings[action] = []
@@ -174,15 +212,16 @@ func _apply_all() -> void:
 func _save() -> void:
 	var config := ConfigFile.new()
 	config.set_value("bindings", "actions", bindings)
-	config.save(SAVE_PATH)
+	config.save(save_path)
 
 func _load() -> void:
 	var config := ConfigFile.new()
-	if config.load(SAVE_PATH) != OK:
+	if config.load(save_path) != OK:
 		return
 	var saved = config.get_value("bindings", "actions", null)
 	if typeof(saved) != TYPE_DICTIONARY:
 		return
+	if not saved.has("move_down") and saved.has("dive"): saved["move_down"] = saved.dive
 	for action in all_actions():
 		if saved.has(action) and saved[action] is Array:
 			bindings[action] = _sanitize(saved[action])

@@ -1,0 +1,386 @@
+{
+  "id": "W01",
+  "name": "刻漏津渡",
+  "chapter": 1,
+  "role": "过渡",
+  "shape": "极横长 + 末段竖井",
+  "aspect": "3.6:1",
+  "size": [
+    3456,
+    960
+  ],
+  "canvas_origin": [
+    0,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "泊位",
+      "rect": [
+        0,
+        320,
+        576,
+        640
+      ],
+      "shape": "矩形",
+      "floor_y": 576,
+      "era": "both",
+      "region": "A 入滩段",
+      "content": "教学",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "桥西台",
+      "rect": [
+        576,
+        320,
+        704,
+        640
+      ],
+      "shape": "矩形",
+      "floor_y": 576,
+      "era": "both",
+      "region": "A 入滩段",
+      "content": "灯龛/教学",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "桥心",
+      "rect": [
+        1280,
+        320,
+        832,
+        640
+      ],
+      "shape": "矩形",
+      "floor_y": 576,
+      "era": "both",
+      "region": "B 桥段",
+      "content": "能力取得/跨断层教学",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "刻漏台",
+      "rect": [
+        2112,
+        320,
+        768,
+        640
+      ],
+      "shape": "矩形",
+      "floor_y": 576,
+      "era": "both",
+      "region": "B 桥段",
+      "content": "战斗/塔门",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "桥楼",
+      "rect": [
+        1280,
+        0,
+        832,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "C 支脉",
+      "content": "支脉/收集",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "刻漏塔·下",
+      "rect": [
+        2880,
+        320,
+        576,
+        640
+      ],
+      "shape": "竖井",
+      "floor_y": 576,
+      "era": "both",
+      "region": "D 竖井",
+      "content": "机关/攀爬",
+      "landmark": true
+    },
+    {
+      "id": "R07",
+      "name": "刻漏塔·顶",
+      "rect": [
+        2880,
+        0,
+        576,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 320,
+      "era": "both",
+      "region": "D 竖井",
+      "content": "出口",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R05",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R04",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "E",
+      "room": "R06",
+      "pos": [
+        3456,
+        384
+      ],
+      "to": "W02",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "永久强化",
+      "name": "VC 时间切换",
+      "room": "R03",
+      "pos": [
+        1670,
+        544
+      ],
+      "obtain": "调查刻漏漏箭",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "凶骨",
+      "name": "刻漏渡旧骨",
+      "room": "R05",
+      "pos": [
+        1700,
+        272
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "刻漏残铭（两态合读）",
+      "room": "R03",
+      "pos": [
+        1500,
+        544
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "渡口告示",
+      "room": "R01",
+      "pos": [
+        300,
+        536
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "塔顶工牌",
+      "room": "R07",
+      "pos": [
+        3010,
+        296
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "渡口沉淀",
+      "room": "R02",
+      "pos": [
+        1180,
+        536
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "河床沉淀",
+      "room": "R03",
+      "pos": [
+        1960,
+        928
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "桥台沉淀",
+      "room": "R04",
+      "pos": [
+        2600,
+        536
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "塔基沉淀",
+      "room": "R06",
+      "pos": [
+        3140,
+        536
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R03"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "抄手",
+      "hp": 45,
+      "rooms": [
+        "R03"
+      ],
+      "count": 2,
+      "era": "present",
+      "respawn": "checkpoint"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R06",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w01_tower_lift_1",
+      "fail_feedback": "配重未挂上索扣，平台不升"
+    }
+  ],
+  "flags": [
+    "w01_checkpoint",
+    "w01_vc_acquired",
+    "w01_notice_read",
+    "w01_stele_read",
+    "w01_bone_picked",
+    "w01_hymn_read",
+    "w01_tower_lift_1",
+    "w01_worker_tag"
+  ],
+  "checkpoint": {
+    "room": "R02",
+    "pos": [
+      900,
+      576
+    ]
+  },
+  "grants": [
+    {
+      "ability": "VC",
+      "room": "R03",
+      "pos": [
+        1670,
+        544
+      ],
+      "era": "both",
+      "radius": 56,
+      "label": "刻漏漏箭",
+      "text": "漏箭停在旧刻上。按下它，脚下的城便换回没塌的那一半。"
+    }
+  ]
+}

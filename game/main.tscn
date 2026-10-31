@@ -1,36 +1,26 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://game/world.gd" id="1_world"]
+[ext_resource type="Script" path="res://game/world_game.gd" id="1_world"]
 [ext_resource type="Script" path="res://game/player.gd" id="2_player"]
-[ext_resource type="Script" path="res://game/training_dummy.gd" id="3_dummy"]
+[ext_resource type="PackedScene" path="res://assets/characters/shihung/rig/shihung_rig.tscn" id="4_rig"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
 size = Vector2(24, 40)
 
-[node name="TimeGodPrototype" type="Node2D"]
+[node name="WorldMain" type="Node2D"]
 script = ExtResource("1_world")
 
 [node name="Terrain" type="Node2D" parent="."]
 
-[node name="Targets" type="Node2D" parent="."]
-
-[node name="DummyStart" type="Node2D" parent="Targets"]
-position = Vector2(210, 408)
-script = ExtResource("3_dummy")
-
-[node name="DummyEra" type="Node2D" parent="Targets"]
-position = Vector2(640, 308)
-script = ExtResource("3_dummy")
-
-[node name="DummyFar" type="Node2D" parent="Targets"]
-position = Vector2(1240, 408)
-script = ExtResource("3_dummy")
-
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(80, 397)
+position = Vector2(160, 460)
 collision_layer = 2
 collision_mask = 1
 script = ExtResource("2_player")
+
+[node name="Rig" parent="Player" instance=ExtResource("4_rig")]
+position = Vector2(0, 4)
+scale = Vector2(0.5, 0.5)
 
 [node name="Body" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_player")
@@ -38,5 +28,11 @@ shape = SubResource("RectangleShape2D_player")
 [node name="Camera" type="Camera2D" parent="Player"]
 enabled = true
 zoom = Vector2(1, 1)
+position = Vector2(0, -100)
+limit_left = 0
+limit_top = 0
+limit_right = 3840
+limit_bottom = 720
+limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 7.0

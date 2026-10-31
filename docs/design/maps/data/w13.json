@@ -1,0 +1,379 @@
+{
+  "id": "W13",
+  "name": "无钟回音室",
+  "chapter": 4,
+  "role": "准入秘境",
+  "shape": "近正方",
+  "aspect": "1.05:1",
+  "size": [
+    1664,
+    1600
+  ],
+  "canvas_origin": [
+    26288,
+    640
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "井壁口",
+      "rect": [
+        0,
+        400,
+        416,
+        400
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 入口段",
+      "content": "入口/灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "断句回廊",
+      "rect": [
+        416,
+        400,
+        416,
+        400
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 入口段",
+      "content": "叙事/音柱线索",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "无钟中庭",
+      "rect": [
+        832,
+        0,
+        416,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 无钟中庭",
+      "content": "地标/竖向中枢",
+      "landmark": true
+    },
+    {
+      "id": "R04",
+      "name": "结晶阶",
+      "rect": [
+        1248,
+        0,
+        416,
+        400
+      ],
+      "shape": "矩形",
+      "floor_y": 400,
+      "era": "both",
+      "region": "C 上层结晶阶",
+      "content": "机关(光路)",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "删稿台",
+      "rect": [
+        1248,
+        400,
+        416,
+        400
+      ],
+      "shape": "梯形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 删稿台",
+      "content": "机关房/叙事",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "回音井厅",
+      "rect": [
+        832,
+        800,
+        832,
+        400
+      ],
+      "shape": "矩形",
+      "floor_y": 1200,
+      "era": "both",
+      "region": "E 回音井厅",
+      "content": "回报房/机关(音柱)",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "高层档案",
+      "rect": [
+        416,
+        0,
+        416,
+        400
+      ],
+      "shape": "拱顶",
+      "floor_y": 400,
+      "era": "both",
+      "region": "F 高层档案",
+      "content": "支线/叙事",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R06",
+      "b": "R03",
+      "side": "N",
+      "kind": "loop",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R02",
+      "b": "R07",
+      "side": "N",
+      "kind": "branch",
+      "requires": "PW",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "E",
+      "room": "R06",
+      "pos": [
+        1664,
+        820
+      ],
+      "to": "W12",
+      "to_room": "R16",
+      "requires": "PA",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "凶骨·钟舌",
+      "room": "R06",
+      "pos": [
+        1040,
+        1160
+      ],
+      "obtain": "机关",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "删稿残音（前三音）",
+      "room": "R02",
+      "pos": [
+        560,
+        740
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "钟架铭文",
+      "room": "R03",
+      "pos": [
+        900,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "删稿台名册",
+      "room": "R05",
+      "pos": [
+        1300,
+        760
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "全录音（后两音+拼接）",
+      "room": "R06",
+      "pos": [
+        1100,
+        1140
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "叙事物",
+      "name": "高层档案匣",
+      "room": "R07",
+      "pos": [
+        500,
+        360
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "DT"
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R02",
+      "pos": [
+        640,
+        700
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R04",
+      "pos": [
+        1360,
+        350
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R05",
+      "pos": [
+        1420,
+        700
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "魂魄沉淀点",
+      "room": "R06",
+      "pos": [
+        900,
+        1120
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R06",
+      "type": "音柱",
+      "levels": 5,
+      "solution": 3,
+      "flag": "w13_echo_seq",
+      "fail_feedback": "错音只重置当前序列（不清已敲对的前缀）；过去态可在 R02 重播前三音"
+    },
+    {
+      "id": "D2",
+      "room": "R04",
+      "type": "光路",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w13_lightpath",
+      "fail_feedback": "射线被遮挡物截断，接收器不亮，R05 天窗在现在态保持覆板"
+    }
+  ],
+  "flags": [
+    "w13_checkpoint",
+    "w13_lightpath_2",
+    "w13_echo_seq",
+    "w13_bone_01",
+    "w13_rec_full",
+    "w13_archive_07",
+    "w13_archive_taken",
+    "w13_soul_02",
+    "w13_soul_04",
+    "w13_soul_05",
+    "w13_soul_06"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      200,
+      760
+    ]
+  }
+}

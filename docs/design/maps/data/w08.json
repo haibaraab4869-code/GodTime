@@ -1,0 +1,436 @@
+{
+  "id": "W08",
+  "name": "浮桥逐日",
+  "chapter": 3,
+  "role": "过渡",
+  "shape": "极横长",
+  "aspect": "5.0:1",
+  "size": [
+    4000,
+    800
+  ],
+  "canvas_origin": [
+    17664,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西岸·索桩",
+      "rect": [
+        0,
+        0,
+        560,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "A 西岸",
+      "content": "教学",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "第一跨·风蚀吊索",
+      "rect": [
+        560,
+        0,
+        640,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "B 第一跨",
+      "content": "战斗+机关",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "日影钟台",
+      "rect": [
+        1200,
+        0,
+        640,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "C 日影钟台",
+      "content": "读钟",
+      "landmark": true
+    },
+    {
+      "id": "R04",
+      "name": "无风廊",
+      "rect": [
+        1840,
+        0,
+        560,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "D 无风廊",
+      "content": "喘息",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "断板·第二跨",
+      "rect": [
+        2400,
+        0,
+        640,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "E 第二跨",
+      "content": "精灵+风场",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "逐日台",
+      "rect": [
+        3040,
+        0,
+        480,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "F 逐日台",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "东岸·接引台",
+      "rect": [
+        3520,
+        0,
+        480,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 800,
+      "era": "both",
+      "region": "G 东岸",
+      "content": "出口",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        450
+      ],
+      "to": "W06",
+      "to_room": "R14",
+      "requires": "P2",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R07",
+      "pos": [
+        4000,
+        760
+      ],
+      "to": "W09",
+      "to_room": "R09",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "K-01",
+      "type": "叙事物",
+      "name": "浮桥航图",
+      "room": "R01",
+      "pos": [
+        300,
+        470
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "K-02",
+      "type": "叙事物",
+      "name": "日影钟读法",
+      "room": "R03",
+      "pos": [
+        1500,
+        740
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "K-03",
+      "type": "叙事物",
+      "name": "索匠刻字",
+      "room": "R06",
+      "pos": [
+        3200,
+        760
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "K-04",
+      "type": "凶骨",
+      "name": "逐日凶骨",
+      "room": "R06",
+      "pos": [
+        3280,
+        740
+      ],
+      "obtain": "击杀索匠傀",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "K-05",
+      "type": "魂魄",
+      "name": "魂魄沉淀·西岸",
+      "room": "R02",
+      "pos": [
+        700,
+        470
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "K-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀·钟台",
+      "room": "R04",
+      "pos": [
+        2100,
+        780
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "K-07",
+      "type": "魂魄",
+      "name": "魂魄沉淀·东岸",
+      "room": "R07",
+      "pos": [
+        3700,
+        780
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-15",
+      "tier": "远程",
+      "name": "风中射手",
+      "hp": 35,
+      "rooms": [
+        "R02",
+        "R05"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-16",
+      "tier": "杂兵",
+      "name": "索匠傀·残",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R06"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-17",
+      "tier": "飞行",
+      "name": "隙风蛾",
+      "hp": 30,
+      "rooms": [
+        "R03",
+        "R05"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-18",
+      "tier": "环境",
+      "name": "坠索",
+      "hp": 0,
+      "rooms": [
+        "R02",
+        "R05",
+        "R06"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-03",
+      "name": "风隙灵",
+      "room": "R05",
+      "era": "past",
+      "blocks": "过去态桥面 x=2680 处被风幕截断",
+      "dispel": "切至现在即不存在",
+      "detour_cost": "现在态索结 + 横风带，冲刺跨越"
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-03",
+      "name": "索匠傀",
+      "room": "R06",
+      "arena": [
+        480,
+        800
+      ],
+      "trigger": "穿过西侧门洞即锁东西两门",
+      "phases": 1,
+      "moves": [
+        {
+          "name": "索钩甩",
+          "telegraph": 0.75,
+          "window": 0.24,
+          "damage": 2,
+          "dodge": "跳跃/冲刺",
+          "cd": 3.6
+        },
+        {
+          "name": "收索拉近",
+          "telegraph": 0.65,
+          "window": 0.2,
+          "damage": 1,
+          "dodge": "冲刺脱离",
+          "cd": 5.0
+        }
+      ],
+      "weakness": "每次甩空后 1.6s 收索硬直",
+      "reward": "凶骨 ×1 + 战后东西门开放为通路"
+    }
+  ],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R05",
+      "type": "风场",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w08_wind_core_2",
+      "fail_feedback": "横风保持/增强，气哨提示"
+    }
+  ],
+  "flags": [
+    "w08_checkpoint_lit",
+    "w08_item_K01",
+    "w08_item_K02",
+    "w08_item_K03",
+    "w08_item_K04",
+    "w08_item_K05",
+    "w08_item_K06",
+    "w08_item_K07",
+    "w08_wind_core_1",
+    "w08_wind_core_2",
+    "w08_wind_core_3",
+    "w08_sprite_soothed",
+    "w08_elite_slayed",
+    "w08_door_w06",
+    "w08_door_w09"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      140,
+      740
+    ]
+  }
+}

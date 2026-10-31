@@ -1,0 +1,665 @@
+{
+  "id": "W04",
+  "name": "鼓楼封粮门",
+  "chapter": 1,
+  "role": "边界",
+  "shape": "极横长",
+  "aspect": "4.2:1",
+  "size": [
+    5376,
+    3072
+  ],
+  "canvas_origin": [
+    6528,
+    -1920
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "城门西口",
+      "rect": [
+        0,
+        384,
+        640,
+        2304
+      ],
+      "shape": "矩形",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "A 西段",
+      "content": "入口",
+      "landmark": false,
+      "note": "西墙为世界连接面：北段 y=880 通 W03（东侧回廊），南段 y=2216 通 W02；券洞两层"
+    },
+    {
+      "id": "R02",
+      "name": "车辙广场",
+      "rect": [
+        640,
+        2176,
+        768,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "A 西段",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "门缝回廊",
+      "rect": [
+        1408,
+        2176,
+        576,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "A 西段",
+      "content": "回环",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "墙内兵道",
+      "rect": [
+        1984,
+        1792,
+        576,
+        896
+      ],
+      "shape": "竖井",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "B 中段",
+      "content": "攀爬",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "鼓楼下层",
+      "rect": [
+        2560,
+        1792,
+        640,
+        896
+      ],
+      "shape": "矩形",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "B 中段",
+      "content": "灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "鼓楼中层",
+      "rect": [
+        2560,
+        896,
+        640,
+        896
+      ],
+      "shape": "矩形",
+      "floor_y": 1792,
+      "era": "both",
+      "region": "B 中段",
+      "content": "探索",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "鼓楼顶",
+      "rect": [
+        2560,
+        0,
+        640,
+        896
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 鼓楼",
+      "content": "机关",
+      "landmark": true
+    },
+    {
+      "id": "R08",
+      "name": "断索平台",
+      "rect": [
+        3200,
+        896,
+        640,
+        896
+      ],
+      "shape": "矩形",
+      "floor_y": 1792,
+      "era": "both",
+      "region": "C 鼓楼",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "战前厅",
+      "rect": [
+        3200,
+        1792,
+        704,
+        896
+      ],
+      "shape": "矩形",
+      "floor_y": 2688,
+      "era": "both",
+      "region": "D 战场",
+      "content": "战前",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "城门内侧",
+      "rect": [
+        3904,
+        1792,
+        896,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 2304,
+      "era": "both",
+      "region": "D 战场",
+      "content": "Boss战场",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "东门",
+      "rect": [
+        4800,
+        1792,
+        576,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 2304,
+      "era": "both",
+      "region": "D 战场",
+      "content": "出口",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "南门缝",
+      "rect": [
+        640,
+        2688,
+        768,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 3072,
+      "era": "both",
+      "region": "E 暗区伏笔",
+      "content": "暗区伏笔",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R12",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        632
+      ],
+      "to": "W03",
+      "to_room": "R10",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        1960
+      ],
+      "to": "W02",
+      "to_room": "R06",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R11",
+      "pos": [
+        5376,
+        1960
+      ],
+      "to": "W05",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R11",
+      "pos": [
+        5376,
+        1832
+      ],
+      "to": "W09",
+      "to_room": "R15",
+      "requires": "PA",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "E",
+      "room": "R11",
+      "pos": [
+        5376,
+        1832
+      ],
+      "to": "W24",
+      "to_room": "R11",
+      "requires": "ENDGAME",
+      "kind": "main",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "关键道具",
+      "name": "第一章印",
+      "room": "R10",
+      "pos": [
+        4344,
+        2262
+      ],
+      "obtain": "击败报丧鼓将",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "通关木牌",
+      "room": "R03",
+      "pos": [
+        1664,
+        2648
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "南门碑",
+      "room": "R12",
+      "pos": [
+        1024,
+        3032
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "鼓楼残记",
+      "room": "R06",
+      "pos": [
+        2816,
+        1752
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "凶骨",
+      "name": "封粮骨",
+      "room": "R07",
+      "pos": [
+        2816,
+        856
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "墙内高台沉淀",
+      "room": "R04",
+      "pos": [
+        2272,
+        1832
+      ],
+      "obtain": "击碎",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "车辙沉淀",
+      "room": "R02",
+      "pos": [
+        896,
+        2648
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "鼓楼下沉淀",
+      "room": "R05",
+      "pos": [
+        2880,
+        2648
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "地图残页",
+      "name": "城门半图",
+      "room": "R09",
+      "pos": [
+        3552,
+        2648
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R02"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "抄手",
+      "hp": 45,
+      "rooms": [
+        "R05"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R09"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R06"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "环境",
+      "name": "兵道斜刺墙（斜刺墙）",
+      "hp": 0,
+      "rooms": [
+        "R04"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": {
+    "id": "B-01",
+    "name": "报丧鼓将",
+    "room": "R10",
+    "arena": [
+      896,
+      512
+    ],
+    "hp": 240,
+    "stagger": 100,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "单鼓地波",
+          "双鼓连击"
+        ],
+        "terrain_change": "none"
+      },
+      {
+        "hp_above": 0.0,
+        "new_moves": [
+          "三鼓全奏"
+        ],
+        "terrain_change": "地面车辙崩裂"
+      }
+    ],
+    "moves": [
+      {
+        "name": "单鼓地波",
+        "telegraph": 1.0,
+        "window": 0.2,
+        "damage": 1,
+        "dodge": "跳跃/冲刺",
+        "cd": 3.0
+      },
+      {
+        "name": "双鼓连击",
+        "telegraph": 0.85,
+        "window": 0.4,
+        "damage": 1,
+        "dodge": "两段各躲",
+        "cd": 4.0
+      },
+      {
+        "name": "三鼓全奏",
+        "telegraph": 0.85,
+        "window": 0.6,
+        "damage": 1,
+        "dodge": "第三下跳起",
+        "cd": 6.0
+      },
+      {
+        "name": "收招喘息",
+        "telegraph": 0.0,
+        "window": 2.5,
+        "damage": 0,
+        "dodge": "输出窗口",
+        "cd": 0.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.85,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "第一章印",
+      "flags": [
+        "w04_boss_down",
+        "w04_east_open"
+      ],
+      "map_change": "东门开放，封条落下"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R07",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w04_hoist_1",
+      "fail_feedback": "现在拉索空响"
+    },
+    {
+      "id": "D2",
+      "room": "R08",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 2,
+      "flag": "w04_rope_2",
+      "fail_feedback": "断索无法上升"
+    }
+  ],
+  "flags": [
+    "w04_checkpoint",
+    "w04_hoist_1",
+    "w04_rope_2",
+    "w04_boss_down",
+    "w04_east_open",
+    "w04_stele_read",
+    "w04_plank_read",
+    "w04_drum_read",
+    "w04_bone_picked",
+    "w04_map_page"
+  ],
+  "checkpoint": {
+    "room": "R09",
+    "pos": [
+      3552,
+      2648
+    ]
+  }
+}

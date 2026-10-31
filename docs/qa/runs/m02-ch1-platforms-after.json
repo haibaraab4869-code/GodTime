@@ -1,0 +1,197 @@
+{
+	"regions": {
+		"M01": {
+			"collision_hash": "3871372934",
+			"platforms": 2
+		},
+		"M02": {
+			"collision_hash": "4171468053",
+			"platforms": 1
+		},
+		"M03": {
+			"collision_hash": "3420560347",
+			"platforms": 70
+		},
+		"M04": {
+			"collision_hash": "3724734915",
+			"platforms": 54
+		},
+		"M05": {
+			"collision_hash": "1955147477",
+			"platforms": 50
+		},
+		"M06": {
+			"collision_hash": "457500066",
+			"platforms": 64
+		},
+		"M07": {
+			"collision_hash": "1766219912",
+			"platforms": 56
+		},
+		"M08": {
+			"collision_hash": "2696783485",
+			"platforms": 43
+		},
+		"M09": {
+			"collision_hash": "3529304799",
+			"platforms": 61
+		},
+		"M10": {
+			"collision_hash": "614895318",
+			"platforms": 66
+		},
+		"M11": {
+			"collision_hash": "1637102869",
+			"platforms": 56
+		},
+		"M12": {
+			"collision_hash": "1274354052",
+			"platforms": 56
+		},
+		"M13": {
+			"collision_hash": "1111035135",
+			"platforms": 57
+		},
+		"M14": {
+			"collision_hash": "2493937737",
+			"platforms": 59
+		},
+		"M15": {
+			"collision_hash": "4067339398",
+			"platforms": 57
+		},
+		"M16": {
+			"collision_hash": "3846111876",
+			"platforms": 57
+		},
+		"M17": {
+			"collision_hash": "3683598795",
+			"platforms": 59
+		},
+		"M18": {
+			"collision_hash": "3419901200",
+			"platforms": 59
+		},
+		"M19": {
+			"collision_hash": "586057705",
+			"platforms": 67
+		},
+		"M20": {
+			"collision_hash": "1873718248",
+			"platforms": 60
+		},
+		"M21": {
+			"collision_hash": "2296200176",
+			"platforms": 52
+		},
+		"M22": {
+			"collision_hash": "275042347",
+			"platforms": 68
+		},
+		"M23": {
+			"collision_hash": "2784182221",
+			"platforms": 64
+		},
+		"M24": {
+			"collision_hash": "3136327767",
+			"platforms": 56
+		},
+		"M25": {
+			"collision_hash": "3536206699",
+			"platforms": 55
+		},
+		"M26": {
+			"collision_hash": "1334023583",
+			"platforms": 64
+		},
+		"M27": {
+			"collision_hash": "1971793556",
+			"platforms": 60
+		},
+		"M28": {
+			"collision_hash": "3346816725",
+			"platforms": 64
+		},
+		"M29": {
+			"collision_hash": "2875074972",
+			"platforms": 55
+		},
+		"M30": {
+			"collision_hash": "519893831",
+			"platforms": 47
+		},
+		"M31": {
+			"collision_hash": "648871663",
+			"platforms": 56
+		},
+		"M32": {
+			"collision_hash": "512530365",
+			"platforms": 62
+		},
+		"M33": {
+			"collision_hash": "723289266",
+			"platforms": 76
+		},
+		"M34": {
+			"collision_hash": "820928509",
+			"platforms": 62
+		},
+		"M35": {
+			"collision_hash": "75420071",
+			"platforms": 61
+		},
+		"M36": {
+			"collision_hash": "626332603",
+			"platforms": 60
+		},
+		"M37": {
+			"collision_hash": "1884517994",
+			"platforms": 60
+		},
+		"M38": {
+			"collision_hash": "2427679495",
+			"platforms": 65
+		},
+		"M39": {
+			"collision_hash": "2517202414",
+			"platforms": 66
+		},
+		"M40": {
+			"collision_hash": "3425996585",
+			"platforms": 48
+		},
+		"M41": {
+			"collision_hash": "1888497474",
+			"platforms": 60
+		},
+		"M42": {
+			"collision_hash": "387494819",
+			"platforms": 77
+		},
+		"M43": {
+			"collision_hash": "1630418002",
+			"platforms": 63
+		},
+		"M44": {
+			"collision_hash": "394229775",
+			"platforms": 82
+		},
+		"M45": {
+			"collision_hash": "2585133422",
+			"platforms": 57
+		},
+		"M46": {
+			"collision_hash": "892482552",
+			"platforms": 57
+		},
+		"M47": {
+			"collision_hash": "1968913834",
+			"platforms": 60
+		},
+		"M48": {
+			"collision_hash": "1825174441",
+			"platforms": 69
+		}
+	},
+	"total": 2780
+}

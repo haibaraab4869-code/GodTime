@@ -1,0 +1,24 @@
+{
+  "_说明": "run 片段专用画源（跑姿母版）的生成参数。定稿站立母版做不出跨步（见 ai-prompt-spec-shihung.md §12.9），run 必须换画源。产出经抠图 + 128 归一化 + 袍色调色后存为 art-out/runpose_128.png。",
+  "template": "img2img",
+  "ckpt": "SDXL\\Illustrious-XL-v2.0.safetensors",
+  "lora": "角色卡\\qsuimo-000005.safetensors",
+  "lora_w": 0.72,
+  "w": 832,
+  "h": 1216,
+  "steps": 28,
+  "cfg": 5.0,
+  "sampler": "euler_ancestral",
+  "sched": "normal",
+  "denoise": 0.80,
+  "init": "master_full.png",
+  "seed": 20261401,
+  "pos": "masterpiece, best quality, amazing quality, very aesthetic, chibi, super deformed, 2.8 heads tall, short body, big head, full body, solo, side view, profile, facing right, running, sprinting, fast run, body leaning forward, torso tilted forward, front leg lifted forward, back leg extended behind, foot off the ground, robe hem flying behind, wide sleeves swinging, androgynous young boy, short black hair, bob cut, half-closed eyes, small simple three-pointed gold crown sitting low on head, vermilion dot on forehead, dark grey long robe, wide sleeves, crossed collar, gold trim, gold sash, two long gold ribbons hanging at waist, bare feet, ink wash painting, sumi-e, chinese ink, flat color, thick ink outline, limited palette, black and gold, plain cream paper background, white background, simple background, no shadow",
+  "neg": "worst quality, low quality, lowres, bad anatomy, bad hands, extra fingers, extra limbs, deformed, blurry, text, watermark, signature, multiple views, character sheet, 3d, photorealistic, gradient, oversaturated, front view, facing viewer, both eyes visible, tall, realistic proportions, adult, long legs, shoes, trousers, sitting, floating, background scenery, black swirl, chinese text, japanese text, kanji, calligraphy, inscription, lettering, red seal, stamp, turban, headscarf, chef hat, headband, ribbon on floor, ribbon trailing on ground, ink splash, ink splatter, motion lines, speed lines, jewels, gems, red gem, ornate crown, tall crown, wide crown, walking, standing",
+  "_已知代价": [
+    "袍形由多层裙摆变一片式，袖口金边由滚边变云纹",
+    "金冠比定稿大一圈，头身比 3.35 → 3.48",
+    "袍色已用分通道调色对齐到 #7A7974；金饰与肤色不动",
+    "负向里的 walking / standing 会压低姿势幅度，太强的前倾词又会诱发墨点飞溅（splash 已在负向）"
+  ]
+}

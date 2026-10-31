@@ -1,0 +1,1033 @@
+{
+  "id": "W09",
+  "name": "无翼试风庭",
+  "chapter": 3,
+  "role": "主题大区",
+  "shape": "竖井（向天攀）",
+  "aspect": "0.82:1",
+  "size": [
+    1312,
+    1600
+  ],
+  "canvas_origin": [
+    21664,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "落瀑阶",
+      "rect": [
+        0,
+        1280,
+        656,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 落瀑入口段",
+      "content": "入口+环境",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "湿庭水柜",
+      "rect": [
+        656,
+        1280,
+        336,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 落瀑入口段",
+      "content": "灯龛+机关",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "塔基东巷",
+      "rect": [
+        992,
+        1280,
+        320,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "both",
+      "region": "A 落瀑入口段",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "索匠脚手架",
+      "rect": [
+        992,
+        960,
+        320,
+        320
+      ],
+      "shape": "L形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 水幕回廊",
+      "content": "精英战",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "无翼庭西",
+      "rect": [
+        0,
+        960,
+        336,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "B 无翼庭教学段",
+      "content": "教学",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "无翼庭东",
+      "rect": [
+        336,
+        960,
+        320,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "B 无翼庭教学段",
+      "content": "教学+收藏",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "塔内井·下",
+      "rect": [
+        656,
+        960,
+        336,
+        320
+      ],
+      "shape": "竖井",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "C 塔内井段",
+      "content": "攀爬",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "塔内井·上",
+      "rect": [
+        656,
+        320,
+        336,
+        640
+      ],
+      "shape": "竖井",
+      "floor_y": 960,
+      "era": "both",
+      "region": "C 塔内井段",
+      "content": "主枢纽+全高地标",
+      "landmark": true
+    },
+    {
+      "id": "R09",
+      "name": "水幕西台",
+      "rect": [
+        0,
+        640,
+        336,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 水幕回廊",
+      "content": "双时代主谜题",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "水幕东台",
+      "rect": [
+        336,
+        640,
+        320,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 水幕回廊",
+      "content": "双时代主谜题（通行必需）",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "空槽检修廊",
+      "rect": [
+        992,
+        640,
+        320,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 960,
+      "era": "both",
+      "region": "D 水幕回廊",
+      "content": "支路+机关",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "断梁庭西",
+      "rect": [
+        0,
+        320,
+        336,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "E 断梁庭",
+      "content": "战斗+跳跃",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "断梁庭东",
+      "rect": [
+        336,
+        320,
+        320,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "E 断梁庭",
+      "content": "战斗+跳跃",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "东檐下台",
+      "rect": [
+        992,
+        320,
+        320,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "E 断梁庭",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "风口平台",
+      "rect": [
+        0,
+        0,
+        656,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "F 塔顶段",
+      "content": "世界出口",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "塔顶试风台",
+      "rect": [
+        656,
+        0,
+        336,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "F 塔顶段",
+      "content": "PA 取得+断层教学",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "塔顶东檐",
+      "rect": [
+        992,
+        0,
+        320,
+        320
+      ],
+      "shape": "梯形",
+      "floor_y": 320,
+      "era": "both",
+      "region": "F 塔顶段",
+      "content": "世界出口+远期钩子",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R07",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R05",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R06",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R09",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R10",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R10",
+      "side": "W",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R11",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R13",
+      "side": "W",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R14",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R16",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R10",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R12",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R13",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "V",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R04",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R14",
+      "side": "N",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R15",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R15",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R16",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R17",
+      "side": "E",
+      "kind": "main",
+      "requires": "PA",
+      "era": "present"
+    },
+    {
+      "a": "R14",
+      "b": "R17",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R09",
+      "pos": [
+        0,
+        760
+      ],
+      "to": "W08",
+      "to_room": "R07",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R11",
+      "pos": [
+        1312,
+        780
+      ],
+      "to": "W10",
+      "to_room": "R04",
+      "requires": "PA",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "W",
+      "room": "R15",
+      "pos": [
+        0,
+        40
+      ],
+      "to": "W04",
+      "to_room": "R11",
+      "requires": "PA",
+      "kind": "loop",
+      "flush": false
+    },
+    {
+      "side": "E",
+      "room": "R17",
+      "pos": [
+        1312,
+        96
+      ],
+      "to": "W19",
+      "to_room": "R03",
+      "requires": "DT",
+      "kind": "loop",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "凶骨",
+      "name": "无翼骨",
+      "room": "R06",
+      "pos": [
+        472,
+        1232
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "试风庭训碑（两态合读）",
+      "room": "R05",
+      "pos": [
+        168,
+        1256
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "水柜石函（现在态）",
+      "room": "R02",
+      "pos": [
+        740,
+        1568
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "塔顶风历（过去态）",
+      "room": "R16",
+      "pos": [
+        760,
+        304
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-05",
+      "type": "永久强化",
+      "name": "战技残篇·风隙斩",
+      "room": "R04",
+      "pos": [
+        1104,
+        1264
+      ],
+      "obtain": "击败精英",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R03",
+      "pos": [
+        1140,
+        1580
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R09",
+      "pos": [
+        72,
+        944
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R13",
+      "pos": [
+        400,
+        624
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R14",
+      "pos": [
+        1264,
+        624
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R17",
+      "pos": [
+        1248,
+        304
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-11",
+      "type": "魂魄",
+      "name": "魂魄×4",
+      "room": "R11",
+      "pos": [
+        1264,
+        944
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": "PA"
+    },
+    {
+      "id": "I-12",
+      "type": "魂魄",
+      "name": "魂魄×3",
+      "room": "R08",
+      "pos": [
+        940,
+        352
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PW"
+    },
+    {
+      "id": "I-13",
+      "type": "地图残页",
+      "name": "试风庭·现在态测绘",
+      "room": "R11",
+      "pos": [
+        1056,
+        800
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-14",
+      "type": "叙事物",
+      "name": "塔骨外壁·旧风刻（挑战段折返台）",
+      "room": "R08",
+      "pos": [
+        940,
+        356
+      ],
+      "obtain": "调查（挑战段段 3 终点）",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-15",
+      "type": "魂魄",
+      "name": "魂魄（挑战段末台）",
+      "room": "R07",
+      "pos": [
+        820,
+        1040
+      ],
+      "obtain": "拾取（挑战段段 6 终点）",
+      "missable": true,
+      "requires": "PA"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "索匠傀",
+      "hp": 45,
+      "rooms": [
+        "R07",
+        "R08",
+        "R13"
+      ],
+      "count": 6,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "风中射手",
+      "hp": 45,
+      "rooms": [
+        "R10",
+        "R11",
+        "R15"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "飞行",
+      "name": "风蚀絮",
+      "hp": 45,
+      "rooms": [
+        "R03",
+        "R08",
+        "R16"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "落瀑水锤",
+      "hp": 0,
+      "rooms": [
+        "R01",
+        "R08"
+      ],
+      "count": 3,
+      "era": "past",
+      "respawn": "none"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "高架索匠",
+      "hp": 180,
+      "rooms": [
+        "R04"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "none"
+    },
+    {
+      "id": "E-06",
+      "tier": "环境",
+      "name": "塔基刺带甲（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R08"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "none"
+    },
+    {
+      "id": "E-07",
+      "tier": "环境",
+      "name": "塔基刺带乙（地刺）",
+      "hp": 0,
+      "rooms": [
+        "R08"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "none"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "凤羽灵",
+      "room": "R08",
+      "era": "present",
+      "blocks": "现在态压住 R08 下半的上升气流（220→60），断掉直上快路",
+      "dispel": "切至过去即不存在（逐帧淡出）",
+      "detour_cost": "过去态顶水柱硬上，慢 4—6s 且吃 1 次环境伤害"
+    }
+  ],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R02",
+      "type": "潮位",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w09_tide_level",
+      "fail_feedback": "北沿壁龛不显形，浮力不足"
+    },
+    {
+      "id": "D2",
+      "room": "R16",
+      "type": "风场",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w09_wind_phase",
+      "fail_feedback": "相位错时气流下压，角色被按在台面"
+    },
+    {
+      "id": "D3",
+      "room": "R11",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w09_lift_level",
+      "fail_feedback": "过去态齿轮浸水，启动无响应"
+    }
+  ],
+  "flags": [
+    "w09_checkpoint",
+    "w09_pa_acquired",
+    "w09_gap_crossed",
+    "w09_bone_01",
+    "w09_codex_xunbei_past",
+    "w09_codex_xunbei_present",
+    "w09_codex_shuigui",
+    "w09_codex_fengli",
+    "w09_skill_windslash",
+    "w09_map_present",
+    "w09_soul_R03",
+    "w09_soul_R09",
+    "w09_soul_R13",
+    "w09_soul_R14",
+    "w09_soul_R17",
+    "w09_soul_R11",
+    "w09_soul_R08",
+    "w09_soul_R07",
+    "w09_elite_down",
+    "w09_tide_level",
+    "w09_wind_phase",
+    "w09_lift_level",
+    "w09_w19_seal",
+    "w09_pf_windbone_step",
+    "w09_pf_windbone_item",
+    "w09_pf_windbone_soul"
+  ],
+  "checkpoint": {
+    "room": "R02",
+    "pos": [
+      824,
+      1576
+    ]
+  },
+  "challenges": [
+    {
+      "id": "CH-01",
+      "name": "试风塔外壁·风骨跳",
+      "optional": true,
+      "count": 6,
+      "rooms": [
+        "R07",
+        "R08"
+      ],
+      "gate": "",
+      "steps": [
+        {
+          "n": 1,
+          "from": "R08",
+          "to": "R08",
+          "span": 120,
+          "rise": 180,
+          "landing": 96,
+          "era": "both",
+          "requires": [],
+          "note": "单跳即可；落点风骨甲，两态皆可站"
+        },
+        {
+          "n": 2,
+          "from": "R08",
+          "to": "R08",
+          "span": 240,
+          "rise": 192,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "落点风骨乙现在态断成两截（缺 96）不可站，须在风骨甲上切过去"
+        },
+        {
+          "n": 3,
+          "from": "R08",
+          "to": "R08",
+          "span": 240,
+          "rise": 204,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "落点折返台，全段最高点；叙事物 I-14 在此"
+        },
+        {
+          "n": 4,
+          "from": "R08",
+          "to": "R08",
+          "span": 240,
+          "rise": -216,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "落点风骨丁现在态缺失；折返台上不切时代直接跳 = 扑空"
+        },
+        {
+          "n": 5,
+          "from": "R08",
+          "to": "R08",
+          "span": 240,
+          "rise": -228,
+          "landing": 96,
+          "era": "past",
+          "requires": [],
+          "note": "落点风骨戊，两态皆可站"
+        },
+        {
+          "n": 6,
+          "from": "R08",
+          "to": "R07",
+          "span": 120,
+          "rise": -240,
+          "landing": 128,
+          "era": "present",
+          "requires": [
+            "PA"
+          ],
+          "note": "空槽横风把落点东推 96，须空冲逆风修正；落点塔基外沿台"
+        }
+      ],
+      "fail": "落塔基安全带（不掉血）；若在现在态起跳段 2/段 4，正落刺甲 E-06：扣 1 血 + 0.65s 无敌 + 弹回塔基",
+      "reward": [
+        "I-14",
+        "I-15"
+      ],
+      "reward_note": "",
+      "era_note": "现在态读结构（看得见 6 处落点与 2 处断口）、过去态站缺口；段 2 前切过去、段 6 前切回现在，两个切换点都是两态可站面"
+    }
+  ],
+  "grants": [
+    {
+      "ability": "PA",
+      "room": "R16",
+      "pos": [
+        760,
+        272
+      ],
+      "era": "past",
+      "radius": 56,
+      "label": "第二羽石龛",
+      "text": "龛中停着凤凰的第二根羽。取下时它仍朝前指着。"
+    }
+  ]
+}

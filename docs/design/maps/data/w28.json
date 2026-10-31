@@ -1,0 +1,76 @@
+{
+  "id": "W28",
+  "name": "溺火石碑",
+  "chapter": 5,
+  "role": "暗区",
+  "shape": "拱顶",
+  "aspect": "1.65:1",
+  "size": [
+    528,
+    320
+  ],
+  "canvas_origin": [
+    35832,
+    -320
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "溺火石碑龛",
+      "rect": [
+        0,
+        0,
+        528,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "溺火石碑",
+      "content": "暗区·碑龛",
+      "landmark": false
+    }
+  ],
+  "links": [],
+  "world_links": [
+    {
+      "side": "S",
+      "room": "R01",
+      "pos": [
+        264,
+        320
+      ],
+      "to": "W15",
+      "to_room": "R06",
+      "requires": "DS",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "溺火石碑(碑文+背刻)",
+      "room": "R01",
+      "pos": [
+        132,
+        270
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "DS",
+      "deep_requires": "DT"
+    }
+  ],
+  "enemies": [],
+  "sprite": [],
+  "elite_guard": [],
+  "devices": [],
+  "flags": [
+    "w28_stele_read",
+    "w28_stele_deep"
+  ],
+  "checkpoint": null,
+  "boss": ""
+}

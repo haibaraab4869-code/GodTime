@@ -1,0 +1,807 @@
+{
+  "id": "W02",
+  "name": "双版市廛",
+  "chapter": 1,
+  "role": "中枢",
+  "shape": "横条 · 三角环",
+  "aspect": "2.4:1",
+  "size": [
+    3072,
+    1280
+  ],
+  "canvas_origin": [
+    3456,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西栅口",
+      "rect": [
+        0,
+        0,
+        704,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 上层布棚",
+      "content": "通行/教学",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "布棚北廊",
+      "rect": [
+        704,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 上层布棚",
+      "content": "通行/出口(N)",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "钟楼西檐",
+      "rect": [
+        1216,
+        0,
+        448,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 上层布棚",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "双面钟楼",
+      "rect": [
+        1664,
+        0,
+        384,
+        1280
+      ],
+      "shape": "竖井",
+      "floor_y": 384,
+      "era": "both",
+      "region": "B 钟楼",
+      "content": "地标/机关/垂直中转",
+      "landmark": true
+    },
+    {
+      "id": "R05",
+      "name": "钟楼东檐",
+      "rect": [
+        2048,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 上层布棚",
+      "content": "通行/钩子",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "东栈台",
+      "rect": [
+        2560,
+        0,
+        512,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 384,
+      "era": "both",
+      "region": "A 上层布棚",
+      "content": "机关",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "西市口",
+      "rect": [
+        0,
+        384,
+        512,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 主层",
+      "content": "入口(W)/灯前",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "粮行前",
+      "rect": [
+        512,
+        384,
+        704,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 主层",
+      "content": "灯龛/战斗",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "钟楼南街",
+      "rect": [
+        1216,
+        384,
+        448,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 主层",
+      "content": "精灵/通行",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "石架横廊",
+      "rect": [
+        2048,
+        384,
+        448,
+        512
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 主层",
+      "content": "战斗/对照点 2",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "东市口·上",
+      "rect": [
+        2496,
+        384,
+        576,
+        256
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "C 主层",
+      "content": "通行",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "东市口·下",
+      "rect": [
+        2496,
+        640,
+        576,
+        256
+      ],
+      "shape": "矩形",
+      "floor_y": 896,
+      "era": "both",
+      "region": "C 主层",
+      "content": "出口(E)",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "窖口",
+      "rect": [
+        0,
+        896,
+        640,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 下层",
+      "content": "精英/支路",
+      "landmark": false
+    },
+    {
+      "id": "R14",
+      "name": "侧巷·试台",
+      "rect": [
+        640,
+        896,
+        704,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 下层",
+      "content": "卡墙拒绝试台",
+      "landmark": false
+    },
+    {
+      "id": "R15",
+      "name": "井院",
+      "rect": [
+        1344,
+        896,
+        320,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 下层",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R16",
+      "name": "旧渠",
+      "rect": [
+        2048,
+        896,
+        448,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 下层",
+      "content": "战斗",
+      "landmark": false
+    },
+    {
+      "id": "R17",
+      "name": "东南窖",
+      "rect": [
+        2496,
+        896,
+        576,
+        384
+      ],
+      "shape": "矩形",
+      "floor_y": 1280,
+      "era": "both",
+      "region": "D 下层",
+      "content": "出口(S)/支路",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R01",
+      "b": "R07",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R08",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R09",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R10",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R11",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R08",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R09",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R10",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R11",
+      "b": "R12",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R10",
+      "side": "W",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R07",
+      "b": "R13",
+      "side": "S",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R13",
+      "b": "R14",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R14",
+      "b": "R15",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R15",
+      "b": "R04",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R16",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R16",
+      "b": "R17",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R12",
+      "b": "R17",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R10",
+      "b": "R16",
+      "side": "S",
+      "kind": "loop",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        384
+      ],
+      "to": "W01",
+      "to_room": "R06",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "N",
+      "room": "R02",
+      "pos": [
+        1136,
+        0
+      ],
+      "to": "W03",
+      "to_room": "R15",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R06",
+      "pos": [
+        3072,
+        40
+      ],
+      "to": "W04",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R17",
+      "pos": [
+        3072,
+        1240
+      ],
+      "to": "W12",
+      "to_room": "R19",
+      "requires": "PW",
+      "kind": "main",
+      "flush": false
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "永久强化",
+      "name": "战技残篇·绳铃",
+      "room": "R05",
+      "pos": [
+        2200,
+        120
+      ],
+      "obtain": "调查（需 P2 上绳铃梁）",
+      "missable": false,
+      "requires": "P2"
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "粮行价牌·粮票",
+      "room": "R08",
+      "pos": [
+        800,
+        864
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "祭纸摊账簿（两态合读）",
+      "room": "R10",
+      "pos": [
+        2240,
+        864
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "过秤记",
+      "room": "R12",
+      "pos": [
+        2800,
+        864
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-05",
+      "type": "地图残页",
+      "name": "市廛半图",
+      "room": "R13",
+      "pos": [
+        300,
+        1248
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "市口沉淀",
+      "room": "R07",
+      "pos": [
+        300,
+        864
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "粮行沉淀",
+      "room": "R08",
+      "pos": [
+        1150,
+        864
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "南街沉淀",
+      "room": "R09",
+      "pos": [
+        1620,
+        864
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "旧渠沉淀",
+      "room": "R16",
+      "pos": [
+        2360,
+        1248
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-10",
+      "type": "魂魄",
+      "name": "东窖沉淀",
+      "room": "R17",
+      "pos": [
+        2950,
+        1248
+      ],
+      "obtain": "击碎",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R07"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "杂兵",
+      "name": "纸人",
+      "hp": 45,
+      "rooms": [
+        "R08"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "远程",
+      "name": "抄手",
+      "hp": 45,
+      "rooms": [
+        "R08"
+      ],
+      "count": 2,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R09"
+      ],
+      "count": 2,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-05",
+      "tier": "杂兵",
+      "name": "巡簿兵",
+      "hp": 45,
+      "rooms": [
+        "R16",
+        "R17"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-07",
+      "tier": "精英",
+      "name": "巡簿兵·正册",
+      "hp": 120,
+      "rooms": [
+        "R13"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "纸面灵",
+      "room": "R09",
+      "era": "present",
+      "blocks": "现在态以 7 张纸人在街心叠成一堵纸墙，横跨 896 层全部通行面（净高 512 全部封住）",
+      "dispel": "切至过去：过去态该处是一段空街，纸面灵不存在（它是「未归档者的影子」，只被现在记住）",
+      "detour_cost": "绕行代价：过去上层路线 R08→R02→R03→R04→R05→R10，多 2 个房间；或走下窖环 R07→R13→R14→R15→R04→R10，多 4 个房间且多 2 组敌人"
+    }
+  ],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R04",
+      "type": "升降平台",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w02_lift_clock_2",
+      "fail_feedback": "吊桶停在半层，未对准檐口"
+    },
+    {
+      "id": "D2",
+      "room": "R06",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w02_lift_east_1",
+      "fail_feedback": "货梯索道空转，平台不承重"
+    }
+  ],
+  "flags": [
+    "w02_checkpoint",
+    "w02_shop_compare_1",
+    "w02_shop_compare_2",
+    "w02_shop_compare_3",
+    "w02_wall_reject_seen",
+    "w02_sprite_passed",
+    "w02_lift_clock_1",
+    "w02_lift_clock_2",
+    "w02_lift_east_1",
+    "w02_elite_down",
+    "w02_map_page",
+    "w02_scroll_ridge"
+  ],
+  "checkpoint": {
+    "room": "R08",
+    "pos": [
+      860,
+      880
+    ]
+  }
+}

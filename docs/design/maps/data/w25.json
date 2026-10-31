@@ -1,0 +1,593 @@
+{
+  "id": "W25",
+  "name": "未删的明日",
+  "chapter": 8,
+  "role": "终局",
+  "shape": "近正方 · 空庭判决结构（一轴三进）",
+  "aspect": "1.0:1",
+  "size": [
+    3200,
+    3200
+  ],
+  "canvas_origin": [
+    76400,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "西阙门",
+      "rect": [
+        0,
+        720,
+        720,
+        1280
+      ],
+      "shape": "矩形",
+      "floor_y": 2000,
+      "era": "both",
+      "region": "A 阙门",
+      "content": "探索（尺度）",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "空庭南道",
+      "rect": [
+        0,
+        2000,
+        720,
+        1200
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "B 空庭南道",
+      "content": "探索 + 环境",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "灾民名册廊",
+      "rect": [
+        720,
+        2000,
+        1760,
+        1200
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "C 名册廊",
+      "content": "机关 + 战斗 + 叙事 + 灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "原告席",
+      "rect": [
+        2480,
+        720,
+        720,
+        2480
+      ],
+      "shape": "竖井",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "D 原告席",
+      "content": "支路 + 精英 + 秘门（东墙通 W29）",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "主审庭",
+      "rect": [
+        720,
+        720,
+        1760,
+        1280
+      ],
+      "shape": "拱顶",
+      "floor_y": 2000,
+      "era": "both",
+      "region": "E 主审庭",
+      "content": "BOSS 战场",
+      "landmark": true
+    },
+    {
+      "id": "R06",
+      "name": "判后庭",
+      "rect": [
+        720,
+        0,
+        1760,
+        720
+      ],
+      "shape": "拱顶",
+      "floor_y": 720,
+      "era": "both",
+      "region": "F 判后庭",
+      "content": "叙事（落判）",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "西空阶",
+      "rect": [
+        0,
+        0,
+        720,
+        720
+      ],
+      "shape": "竖井",
+      "floor_y": 720,
+      "era": "both",
+      "region": "A 阙门",
+      "content": "支路",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "东阙影壁",
+      "rect": [
+        2480,
+        0,
+        720,
+        720
+      ],
+      "shape": "矩形",
+      "floor_y": 720,
+      "era": "both",
+      "region": "G 东阙影壁",
+      "content": "支路 + 双刻合读",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "S",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R05",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R01",
+      "b": "R07",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "W",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R08",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "branch",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        1210
+      ],
+      "to": "W24",
+      "to_room": "R10",
+      "requires": "FINAL_DOOR",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R04",
+      "pos": [
+        3200,
+        3040
+      ],
+      "to": "W29",
+      "to_room": "R01",
+      "requires": "w25_verdict_sealed",
+      "kind": "secret",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "叙事物",
+      "name": "灾民名单（第七地 · 现在态）",
+      "room": "R03",
+      "pos": [
+        1600,
+        3000
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "w25_echo_sequence"
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "原告证词（两家姓名的年份差）",
+      "room": "R04",
+      "pos": [
+        2840,
+        3000
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "壁画「未删的明日」题记",
+      "room": "R08",
+      "pos": [
+        2840,
+        400
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "凶骨",
+      "name": "庭骨（第 8 章第 2 枚）",
+      "room": "R07",
+      "pos": [
+        360,
+        600
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "P2"
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄沉淀",
+      "room": "R02",
+      "pos": [
+        360,
+        3000
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄沉淀",
+      "room": "R06",
+      "pos": [
+        1600,
+        400
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "远程",
+      "name": "抄录傀",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R03"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "飞行",
+      "name": "名单墨蛾",
+      "hp": 40,
+      "rooms": [
+        "R03",
+        "R04"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "杂兵",
+      "name": "缄口者",
+      "hp": 60,
+      "rooms": [
+        "R03"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "判决石",
+      "hp": 0,
+      "rooms": [
+        "R02"
+      ],
+      "count": 4,
+      "era": "both",
+      "respawn": "never"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "席守",
+      "hp": 420,
+      "rooms": [
+        "R04"
+      ],
+      "count": 1,
+      "era": "both",
+      "respawn": "never"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": {
+    "id": "B-08",
+    "name": "司历·删稿相",
+    "room": "R05",
+    "arena": [
+      1760,
+      1280
+    ],
+    "hp": 360,
+    "stagger": 120,
+    "door_lock": true,
+    "phases": [
+      {
+        "hp_above": 1.0,
+        "new_moves": [
+          "删笔横扫",
+          "墨点追判",
+          "卷宗压落",
+          "退席"
+        ],
+        "terrain_change": "无（固定过去断面：平整白石 + 两台席位升至 320）"
+      },
+      {
+        "hp_above": 0.5,
+        "new_moves": [
+          "沟涌",
+          "撕页风",
+          "断句落笔",
+          "席位塌落",
+          "判词连击",
+          "强制换时代"
+        ],
+        "terrain_change": "每 20.0s 强制换时代；现在断面 = 3 条纵向名单沟（宽 96 / 深 240）+ 席位降到 0；换前 0.4s 沟槽临时填平"
+      }
+    ],
+    "moves": [
+      {
+        "name": "删笔横扫",
+        "telegraph": 0.9,
+        "window": 0.2,
+        "damage": 2,
+        "dodge": "跳跃 / 空中冲刺越顶",
+        "cd": 3.2
+      },
+      {
+        "name": "墨点追判",
+        "telegraph": 0.8,
+        "window": 0.18,
+        "damage": 2,
+        "dodge": "走位断线 / 冲刺穿缝（墨点 3 枚，弹速 320）",
+        "cd": 4.0
+      },
+      {
+        "name": "卷宗压落",
+        "telegraph": 1.0,
+        "window": 0.22,
+        "damage": 3,
+        "dodge": "冲刺离开落点（260×160，警示圈 0.6s）",
+        "cd": 5.5
+      },
+      {
+        "name": "退席",
+        "telegraph": 0.9,
+        "window": 0.0,
+        "damage": 0,
+        "dodge": "读席影预判落点（瞬移到三席之一）",
+        "cd": 7.0
+      },
+      {
+        "name": "改判（阶段转换）",
+        "telegraph": 1.2,
+        "window": 0.0,
+        "damage": 0,
+        "dodge": "不可躲，无伤害；强制换时代 + 3.0s 空窗",
+        "cd": 0.0
+      },
+      {
+        "name": "沟涌",
+        "telegraph": 0.9,
+        "window": 0.24,
+        "damage": 2,
+        "dodge": "提前上字脊（脊宽 128—160）；墨柱沿沟推进，速度 420",
+        "cd": 3.8
+      },
+      {
+        "name": "撕页风",
+        "telegraph": 0.8,
+        "window": 0.3,
+        "damage": 2,
+        "dodge": "逆风走 / 贴地，或站上席台（风只扫低层 240 高）",
+        "cd": 4.5
+      },
+      {
+        "name": "断句落笔",
+        "telegraph": 1.0,
+        "window": 0.25,
+        "damage": 3,
+        "dodge": "冲刺跨过第一落点，停在第二落点左侧（三段落点间距 280）",
+        "cd": 5.0
+      },
+      {
+        "name": "席位塌落",
+        "telegraph": 1.0,
+        "window": 0.22,
+        "damage": 3,
+        "dodge": "提前离开该席台；塌落 2.0s 后复位",
+        "cd": 6.0
+      },
+      {
+        "name": "判词连击",
+        "telegraph": 0.6,
+        "window": 0.16,
+        "damage": 1,
+        "dodge": "侧移 / 精确闪避（窗口 0.18）；两段近身 200×160",
+        "cd": 2.6
+      },
+      {
+        "name": "强制换时代",
+        "telegraph": 0.6,
+        "window": 0.0,
+        "damage": 0,
+        "dodge": "不可拒绝；换前 0.4s 沟槽临时填平，保证不产生扣血",
+        "cd": 20.0
+      }
+    ],
+    "fairness": {
+      "min_telegraph": 0.6,
+      "no_offscreen_startup": true
+    },
+    "on_defeat": {
+      "drop": "章印·第八",
+      "flags": [
+        "w25_boss_down",
+        "w25_boss_phase2"
+      ],
+      "map_change": "三条名单沟被白石板永久填平；两台席台永久停在 320；R05 北门开放；四门解锁"
+    }
+  },
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R03",
+      "type": "音柱",
+      "levels": 4,
+      "solution": 4,
+      "flag": "w25_echo_sequence",
+      "fail_feedback": "错音只重置当前序列，不重置已听段；过去态站 1 可重播"
+    },
+    {
+      "id": "D2",
+      "room": "R05",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 2,
+      "flag": "w25_plate_west",
+      "fail_feedback": "非 Boss 战时切时代会立即改变台面高度（0.4s 渐变），台上玩家随之升降，不落空"
+    },
+    {
+      "id": "D3",
+      "room": "R05",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 2,
+      "flag": "w25_plate_east",
+      "fail_feedback": "同上；两台塌落相互独立，席位塌落只塌当期高位的那一台"
+    }
+  ],
+  "flags": [
+    "w25_cp_mingce",
+    "w25_bone_r07",
+    "w25_note_roster_past",
+    "w25_note_roster_present",
+    "w25_note_plaintiff_past",
+    "w25_note_plaintiff_present",
+    "w25_note_mural_past",
+    "w25_note_mural_present",
+    "w25_echo_sequence",
+    "w25_plate_west",
+    "w25_plate_east",
+    "w25_secret_door_open",
+    "w25_boss_phase2",
+    "w25_boss_down",
+    "w25_verdict_sealed",
+    "w25_ending_choice",
+    "w25_soul_r02",
+    "w25_soul_r06",
+    "w25_secret_char_su",
+    "w25_secret_char_ming",
+    "w25_secret_char_chun",
+    "w25_elite_r04_down",
+    "w25_second_line_read"
+  ],
+  "checkpoint": {
+    "room": "R03",
+    "pos": [
+      1600,
+      2900
+    ]
+  }
+}

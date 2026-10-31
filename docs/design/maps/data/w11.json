@@ -1,0 +1,426 @@
+{
+  "id": "W11",
+  "name": "负石悬棺道",
+  "chapter": 4,
+  "role": "过渡",
+  "shape": "极横长（山前长坡）",
+  "aspect": "4.4:1",
+  "size": [
+    2816,
+    640
+  ],
+  "canvas_origin": [
+    25136,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "道口",
+      "rect": [
+        0,
+        320,
+        704,
+        320
+      ],
+      "shape": "斜坡",
+      "floor_y": 640,
+      "era": "both",
+      "region": "A 道口段",
+      "content": "入口+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "索道槽口",
+      "rect": [
+        704,
+        320,
+        704,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "A 道口段",
+      "content": "机关+分流点",
+      "landmark": false
+    },
+    {
+      "id": "R03",
+      "name": "落石槽段",
+      "rect": [
+        1408,
+        320,
+        704,
+        320
+      ],
+      "shape": "斜坡",
+      "floor_y": 640,
+      "era": "both",
+      "region": "B 坡道段（下层·现在）",
+      "content": "环境+收藏",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "出坡口",
+      "rect": [
+        2112,
+        320,
+        704,
+        320
+      ],
+      "shape": "矩形",
+      "floor_y": 640,
+      "era": "both",
+      "region": "D 出坡段",
+      "content": "世界出口",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "悬棺栈西",
+      "rect": [
+        0,
+        0,
+        960,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "C 悬棺栈（上层·过去）",
+      "content": "支路+精英",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "悬棺栈中",
+      "rect": [
+        960,
+        0,
+        960,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "C 悬棺栈（上层·过去）",
+      "content": "主路（过去）+叙事",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "悬棺栈东",
+      "rect": [
+        1920,
+        0,
+        896,
+        320
+      ],
+      "shape": "拱顶",
+      "floor_y": 320,
+      "era": "both",
+      "region": "C 悬棺栈（上层·过去）",
+      "content": "主路（过去）+收藏",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "present"
+    },
+    {
+      "a": "R02",
+      "b": "R06",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R05",
+      "b": "R06",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R07",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        465
+      ],
+      "to": "W10",
+      "to_room": "R09",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R04",
+      "pos": [
+        2816,
+        600
+      ],
+      "to": "W12",
+      "to_room": "R17",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "永久强化",
+      "name": "战技残篇·负石势",
+      "room": "R05",
+      "pos": [
+        96,
+        296
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "叙事物",
+      "name": "负石道里程石（两态合读）",
+      "room": "R01",
+      "pos": [
+        176,
+        616
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "悬棺铭（过去态）",
+      "room": "R06",
+      "pos": [
+        1296,
+        296
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "落石槽刻字（现在态）",
+      "room": "R03",
+      "pos": [
+        1616,
+        616
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-05",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R02",
+      "pos": [
+        1264,
+        616
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-06",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R03",
+      "pos": [
+        1904,
+        616
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "魂魄",
+      "room": "R06",
+      "pos": [
+        1696,
+        296
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "魂魄×2",
+      "room": "R07",
+      "pos": [
+        2264,
+        64
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "PW"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "负石者",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R02",
+        "R04"
+      ],
+      "count": 5,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "悬棺守",
+      "hp": 45,
+      "rooms": [
+        "R05",
+        "R06",
+        "R07"
+      ],
+      "count": 4,
+      "era": "past",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "飞行",
+      "name": "落石虫",
+      "hp": 45,
+      "rooms": [
+        "R02",
+        "R03"
+      ],
+      "count": 4,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "槽壁落石",
+      "hp": 0,
+      "rooms": [
+        "R02",
+        "R03",
+        "R04"
+      ],
+      "count": 5,
+      "era": "present",
+      "respawn": "none"
+    },
+    {
+      "id": "E-05",
+      "tier": "精英",
+      "name": "悬棺老守",
+      "hp": 180,
+      "rooms": [
+        "R05"
+      ],
+      "count": 1,
+      "era": "past",
+      "respawn": "none"
+    }
+  ],
+  "sprite": [],
+  "elite_guard": [],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R02",
+      "type": "升降平台",
+      "levels": 2,
+      "solution": 1,
+      "flag": "w11_dev_lift",
+      "fail_feedback": "现在态绞盘锈死，交互提示「齿轮咬死」，无任何位移"
+    }
+  ],
+  "flags": [
+    "w11_codex_licheng_past",
+    "w11_codex_licheng_present",
+    "w11_codex_xuanguan",
+    "w11_codex_luoshicao",
+    "w11_skill_fushishi",
+    "w11_elite_down",
+    "w11_soul_R02",
+    "w11_soul_R03",
+    "w11_soul_R06",
+    "w11_soul_R07",
+    "w11_dev_lift",
+    "w11_stack_collapsed"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      96,
+      616
+    ]
+  }
+}

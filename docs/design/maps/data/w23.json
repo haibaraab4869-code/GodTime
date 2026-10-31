@@ -1,0 +1,689 @@
+{
+  "id": "W23",
+  "name": "八门汇流厅",
+  "chapter": 8,
+  "role": "终局",
+  "shape": "横条 + 塔体",
+  "aspect": "2.4:1",
+  "size": [
+    7680,
+    3200
+  ],
+  "canvas_origin": [
+    64560,
+    0
+  ],
+  "rooms": [
+    {
+      "id": "R01",
+      "name": "塔底接引室",
+      "rect": [
+        0,
+        2400,
+        1920,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 3200,
+      "era": "both",
+      "region": "A 塔体",
+      "content": "入口/灯龛",
+      "landmark": false
+    },
+    {
+      "id": "R02",
+      "name": "塔顶望门台",
+      "rect": [
+        0,
+        1600,
+        1920,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "A 塔体",
+      "content": "地标/关键道具",
+      "landmark": true
+    },
+    {
+      "id": "R03",
+      "name": "西汇流厅",
+      "rect": [
+        1920,
+        1600,
+        1920,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "B 长厅",
+      "content": "精怪战场",
+      "landmark": false
+    },
+    {
+      "id": "R04",
+      "name": "中汇流厅",
+      "rect": [
+        3840,
+        1600,
+        1920,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "B 长厅",
+      "content": "精灵/关键道具",
+      "landmark": false
+    },
+    {
+      "id": "R05",
+      "name": "东汇流厅",
+      "rect": [
+        5760,
+        1600,
+        1920,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 2400,
+      "era": "both",
+      "region": "B 长厅",
+      "content": "出口/短径",
+      "landmark": false
+    },
+    {
+      "id": "R06",
+      "name": "门一 · 潮汐景室",
+      "rect": [
+        1920,
+        800,
+        720,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·景室",
+      "landmark": false
+    },
+    {
+      "id": "R07",
+      "name": "门二 · 骨梁景室",
+      "rect": [
+        2640,
+        800,
+        720,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·叙事回看",
+      "landmark": false
+    },
+    {
+      "id": "R08",
+      "name": "门三 · 盐风景室",
+      "rect": [
+        3360,
+        800,
+        720,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·景室",
+      "landmark": false
+    },
+    {
+      "id": "R09",
+      "name": "门四 · 林场景室",
+      "rect": [
+        4080,
+        800,
+        720,
+        800
+      ],
+      "shape": "梯田",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·景室",
+      "landmark": false
+    },
+    {
+      "id": "R10",
+      "name": "门五 · 城郭景室",
+      "rect": [
+        4800,
+        800,
+        720,
+        800
+      ],
+      "shape": "矩形",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "主脉（过去态）",
+      "landmark": false
+    },
+    {
+      "id": "R11",
+      "name": "门六 · 雪刻景室",
+      "rect": [
+        5520,
+        800,
+        720,
+        800
+      ],
+      "shape": "斜坡",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "主脉（过去态）",
+      "landmark": false
+    },
+    {
+      "id": "R12",
+      "name": "门七 · 焰海景室",
+      "rect": [
+        6240,
+        800,
+        720,
+        800
+      ],
+      "shape": "拱顶",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·景室",
+      "landmark": false
+    },
+    {
+      "id": "R13",
+      "name": "门八 · 星砂景室",
+      "rect": [
+        6960,
+        800,
+        720,
+        800
+      ],
+      "shape": "竖井",
+      "floor_y": 1600,
+      "era": "past",
+      "region": "C 八景室",
+      "content": "可选·短径",
+      "landmark": false
+    }
+  ],
+  "links": [
+    {
+      "a": "R01",
+      "b": "R02",
+      "side": "V",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R02",
+      "b": "R03",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R03",
+      "b": "R04",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R05",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "both"
+    },
+    {
+      "a": "R04",
+      "b": "R10",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R10",
+      "b": "R11",
+      "side": "E",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R05",
+      "b": "R11",
+      "side": "N",
+      "kind": "main",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R06",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R07",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R03",
+      "b": "R08",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R04",
+      "b": "R09",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R05",
+      "b": "R12",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R05",
+      "b": "R13",
+      "side": "N",
+      "kind": "branch",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R06",
+      "b": "R07",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R08",
+      "b": "R09",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "past"
+    },
+    {
+      "a": "R12",
+      "b": "R13",
+      "side": "E",
+      "kind": "loop",
+      "requires": "",
+      "era": "past"
+    }
+  ],
+  "world_links": [
+    {
+      "side": "W",
+      "room": "R01",
+      "pos": [
+        0,
+        3104
+      ],
+      "to": "W21",
+      "to_room": "R14",
+      "requires": "DB",
+      "kind": "main",
+      "flush": true
+    },
+    {
+      "side": "E",
+      "room": "R13",
+      "pos": [
+        7680,
+        1580
+      ],
+      "to": "W24",
+      "to_room": "R01",
+      "requires": "",
+      "kind": "main",
+      "flush": true
+    }
+  ],
+  "items": [
+    {
+      "id": "I-01",
+      "type": "关键道具",
+      "name": "证据台账·原件（实体，不可错过）",
+      "room": "R02",
+      "pos": [
+        960,
+        2300
+      ],
+      "obtain": "调查塔顶档案龛",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-02",
+      "type": "关键道具",
+      "name": "证据台账·公开副本（实体，不可错过）",
+      "room": "R04",
+      "pos": [
+        4800,
+        2300
+      ],
+      "obtain": "调查汇流盘心",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-03",
+      "type": "叙事物",
+      "name": "八门名录",
+      "room": "R02",
+      "pos": [
+        600,
+        2300
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-04",
+      "type": "叙事物",
+      "name": "封条告示（两态合读）",
+      "room": "R04",
+      "pos": [
+        4300,
+        2300
+      ],
+      "obtain": "调查（两态各读一半）",
+      "missable": false,
+      "requires": "VC"
+    },
+    {
+      "id": "I-05",
+      "type": "叙事物",
+      "name": "星砂刻辞",
+      "room": "R13",
+      "pos": [
+        7200,
+        1000
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-06",
+      "type": "凶骨",
+      "name": "盐晶里的齿",
+      "room": "R12",
+      "pos": [
+        6500,
+        1000
+      ],
+      "obtain": "DT 破盐晶柱",
+      "missable": true,
+      "requires": "DT"
+    },
+    {
+      "id": "I-07",
+      "type": "魂魄",
+      "name": "塔底沉淀",
+      "room": "R01",
+      "pos": [
+        1500,
+        3100
+      ],
+      "obtain": "拾取",
+      "missable": false,
+      "requires": ""
+    },
+    {
+      "id": "I-08",
+      "type": "魂魄",
+      "name": "林场沉淀",
+      "room": "R09",
+      "pos": [
+        4400,
+        1000
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-09",
+      "type": "魂魄",
+      "name": "雪刻沉淀",
+      "room": "R11",
+      "pos": [
+        5900,
+        1000
+      ],
+      "obtain": "拾取",
+      "missable": true,
+      "requires": "P2"
+    },
+    {
+      "id": "I-10",
+      "type": "叙事物",
+      "name": "千名碑拓片（门二·叙事回看）",
+      "room": "R07",
+      "pos": [
+        2900,
+        1500
+      ],
+      "obtain": "调查",
+      "missable": true,
+      "requires": "P2"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "E-01",
+      "tier": "杂兵",
+      "name": "齿轮役",
+      "hp": 45,
+      "rooms": [
+        "R01",
+        "R02"
+      ],
+      "count": 3,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-02",
+      "tier": "远程",
+      "name": "抄录傀",
+      "hp": 45,
+      "rooms": [
+        "R03",
+        "R04"
+      ],
+      "count": 3,
+      "era": "both",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-03",
+      "tier": "杂兵",
+      "name": "门卫",
+      "hp": 45,
+      "rooms": [
+        "R03",
+        "R05"
+      ],
+      "count": 2,
+      "era": "present",
+      "respawn": "checkpoint"
+    },
+    {
+      "id": "E-04",
+      "tier": "环境",
+      "name": "星砂流",
+      "hp": 0,
+      "rooms": [
+        "R13"
+      ],
+      "count": 1,
+      "era": "past",
+      "respawn": "none"
+    }
+  ],
+  "sprite": [
+    {
+      "id": "SPL-01",
+      "name": "刻齿灵",
+      "room": "R04",
+      "era": "present",
+      "blocks": "现在态盘在 R04→R05 门洞上，用 420×480 的齿环把门洞咬合成实心，封死整条公共廊",
+      "dispel": "切至过去：过去长厅在此处是实心隔墙、八门各通景室，它无处栖身，立刻不存在",
+      "detour_cost": "过去态必须走 门五 R10 → 暗廊丙 → 门六 R11，多 2 个房间，无战斗",
+      "shared_individual": "ke_chi_ling",
+      "counted": false
+    }
+  ],
+  "elite_guard": [
+    {
+      "id": "ELT-01",
+      "name": "验核吏",
+      "room": "R03",
+      "arena": [
+        1920,
+        800
+      ],
+      "trigger": "进入即锁门（东西两门落封条），可在开战前退出",
+      "phases": 2,
+      "moves": [
+        {
+          "name": "核记横挥",
+          "telegraph": 0.36,
+          "window": 0.18,
+          "damage": 2,
+          "dodge": "冲刺/闪避",
+          "cd": 2.2
+        },
+        {
+          "name": "验印下压",
+          "telegraph": 0.5,
+          "window": 0.24,
+          "damage": 2,
+          "dodge": "侧移",
+          "cd": 3.2
+        },
+        {
+          "name": "逐条点名",
+          "telegraph": 0.3,
+          "window": 0.14,
+          "damage": 2,
+          "dodge": "纯走位（不可格挡，三段）",
+          "cd": 5.0
+        }
+      ],
+      "weakness": "削韧 90；两次「逐条点名」后低头核记 0.9s 硬直，破绽在此",
+      "reward": "魂魄 ×30"
+    }
+  ],
+  "boss": null,
+  "devices": [
+    {
+      "id": "D1",
+      "room": "R01",
+      "type": "升降平台",
+      "levels": 3,
+      "solution": 2,
+      "flag": "w23_lift_2",
+      "fail_feedback": "档 1 停在半空（够不到塔顶也回不到地面，可用 PW 侧壁连蹬脱困）；档 0 不启动"
+    },
+    {
+      "id": "D2",
+      "room": "R02",
+      "type": "光路",
+      "levels": 3,
+      "solution": 3,
+      "flag": "w23_light_3",
+      "fail_feedback": "遮挡阻断时门号只亮一半（缺门五/门六），不锁死主脉"
+    },
+    {
+      "id": "D3",
+      "room": "R05",
+      "type": "光路",
+      "levels": 3,
+      "solution": 1,
+      "flag": "w23_light_1",
+      "fail_feedback": "未命中：东厅地面保持干燥，星砂滑道无减速带"
+    }
+  ],
+  "flags": [
+    "w23_checkpoint_lit",
+    "w23_item_01",
+    "w23_item_02",
+    "w23_item_03",
+    "w23_item_04",
+    "w23_item_05",
+    "w23_item_06",
+    "w23_item_07",
+    "w23_item_08",
+    "w23_item_09",
+    "w23_item_10",
+    "w23_ledger_1",
+    "w23_ledger_2",
+    "w23_elite_guard_down",
+    "w23_lift_2",
+    "w23_light_1",
+    "w23_light_3",
+    "w23_gate5_seen",
+    "w23_gate6_seen",
+    "w23_seal_read_1",
+    "w23_seal_read_2",
+    "w23_seal_read_3",
+    "w23_seal_read_4",
+    "w23_seal_read_5",
+    "w23_seal_read_6",
+    "w23_seal_read_7",
+    "w23_seal_read_8"
+  ],
+  "checkpoint": {
+    "room": "R01",
+    "pos": [
+      960,
+      3080
+    ]
+  }
+}
