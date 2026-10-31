@@ -58,6 +58,11 @@ func era_flag(era: String, past: bool) -> bool:
 	if era == "both": return true
 	return era == ("past" if past else "present")
 
+func _unlock_grant_prereqs(world: Node2D, grant: Dictionary) -> void:
+	# DB 中泉前置：D2「三灵协作」（w21_trinity_3）须先置位，否则交互提示不出现。
+	if str(grant.get("code", "")) == "DB":
+		world.chapter_flags["w21_trinity_3"] = true
+
 # --- 主流程 ---------------------------------------------------------------
 
 func run() -> void:
@@ -129,6 +134,7 @@ func run() -> void:
 	for grant in points:
 		world.chapter_flags.clear()
 		world.load_map(grant.map)
+		_unlock_grant_prereqs(world, grant)
 		world.journal.close_reader()
 		player.position = grant.at
 		# 错的那一态：nearest_interaction 不得返回该取得点
@@ -168,11 +174,31 @@ func run() -> void:
 	check(world.ability_available("PW"), "PW 触碰即取（不按键）")
 	world.journal.close_reader()
 
+	# ---- 阶段 2.6：DB 中泉受 D2 三灵协作（w21_trinity_3）前置 ----
+	# 未置 flag 时中泉只冒泡、不给能力（ability-grants.md §3.9 / §4.2）：
+	# nearest_interaction 不返回 ability_DB，_grant_ability 也拒绝发放。
+	world.chapter_flags.clear()
+	world.load_map("W21")
+	world.journal.close_reader()
+	var db := grant_for("DB")
+	player.position = db.at
+	world.past_era = false  # era: both
+	check(str(world.nearest_interaction().get("id", "")) != db.id, "w21_trinity_3 未置位时中泉不出现 DB 交互")
+	world._grant_ability(db.id)
+	check(not world.ability_available("DB"), "w21_trinity_3 未置位时中泉拒绝发放 DB")
+	world.journal.close_reader()
+	world.chapter_flags["w21_trinity_3"] = true
+	check(str(world.nearest_interaction().get("id", "")) == db.id, "w21_trinity_3 置位后中泉出现 DB 交互")
+	world.interact_nearby()
+	check(world.ability_available("DB"), "w21_trinity_3 置位后站在中泉可取 DB")
+	world.journal.close_reader()
+
 	# ---- 阶段 3：每区走真实入口取得，其余能力仍未获得 ----
 	var all_codes := codes()
 	for grant in points:
 		world.chapter_flags.clear()
 		world.load_map(grant.map)
+		_unlock_grant_prereqs(world, grant)
 		world.journal.close_reader()
 		player.position = grant.at
 		world.past_era = (grant.era == "past")
@@ -226,6 +252,7 @@ func run() -> void:
 		var grant := grant_for(code)
 		check(not grant.is_empty(), "%s 所需能力 %s 有取得点" % [str(edge.id), code])
 		if grant.is_empty(): continue
+		_unlock_grant_prereqs(world, grant)
 		# 用真实取得路径发能力（不是直接置旗标）
 		world.current_map = grant.map
 		world.past_era = (grant.era == "past")
@@ -274,6 +301,32 @@ func run() -> void:
 	world.chapter_flags.clear()
 	world.load_map("W01")
 	world.journal.close_reader()
+
+	# ---- 阶段 7：DS 持有后 HUD 状态图标常驻 + 战场提示碑可反复读 ----
+	world.chapter_flags.clear()
+	world.load_map("W16")
+	world.journal.close_reader()
+	var ds := grant_for("DS")
+	check(not ds.is_empty(), "DS 有取得点")
+	player.position = ds.at
+	world.past_era = (ds.era == "past")
+	world.interact_nearby()
+	world.journal.close_reader()
+	check(world.ability_available("DS"), "DS 取得后 ability_available(\"DS\") 为真")
+	world._update_hud(world.player.health, world.player.maximum_health)
+	check(bool(world.ds_status_icon.visible), "持有 DS 时 HUD 状态图标常驻显示")
+	check(str(world.ds_status_icon.tip_text) == str(world.ABILITY_USAGE["DS"]), "HUD 图标说明复用红线句常量")
+	# 战场提示碑：可反复读、不置旗标、不扣资源
+	var flags_before := int(world.chapter_flags.size())
+	var souls_before := int(world.souls)
+	var bones_before := int(world.bones)
+	world._interact("sign_I09")
+	world.journal.close_reader()
+	check(int(world.chapter_flags.size()) == flags_before, "sign_I09 不置任何旗标")
+	check(world.souls == souls_before and world.bones == bones_before, "sign_I09 不扣魂魄/凶骨")
+	world._interact("sign_I09")
+	world.journal.close_reader()
+	check(int(world.chapter_flags.size()) == flags_before, "sign_I09 二次调查仍不置旗标")
 
 	world.queue_free()
 	await process_frame

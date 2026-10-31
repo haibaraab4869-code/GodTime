@@ -14839,6 +14839,20 @@
           "requires": ""
         },
         {
+          "id": "sign_I09",
+          "name": "战场提示碑",
+          "at": [
+            868,
+            792
+          ],
+          "room": 8,
+          "radius": 60,
+          "kind": "提示碑",
+          "obtain": "调查",
+          "missable": false,
+          "requires": ""
+        },
+        {
           "id": "ability_DS",
           "name": "蜕鳞台",
           "at": [
@@ -15139,6 +15153,19 @@
           ],
           "obtain": "拾取",
           "missable": true,
+          "requires": ""
+        },
+        {
+          "id": "I-09",
+          "type": "提示碑",
+          "name": "战场提示碑",
+          "room": "R09",
+          "pos": [
+            868,
+            792
+          ],
+          "obtain": "调查",
+          "missable": false,
           "requires": ""
         }
       ],

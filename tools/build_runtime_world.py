@@ -378,8 +378,10 @@ def build_region(meta: dict, spec: dict, number: int, titles: dict) -> dict:
         kind = need(raw, "type", ctx)
         if str(kind) in GRANT_DEDUP_KINDS and suppressed_by_grant(grants, room_index[room_id], pos):
             continue
+        # 提示碑是可反复读的立碑（sign_*），不走 item_* 的一次性收集语义。
+        prefix = "sign_" if str(kind) == "提示碑" else "item_"
         interactions.append({
-            "id": "item_" + str(raw["id"]).replace("-", ""),
+            "id": prefix + str(raw["id"]).replace("-", ""),
             "name": need(raw, "name", ctx),
             "at": [int(v) for v in pos],
             "room": room_index[room_id],

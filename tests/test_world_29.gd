@@ -170,6 +170,22 @@ func run() -> void:
 	check(Maps.interactions("W09").any(func(i): return i.id == "item_I04"), "W09 塔顶风历保留")
 	check(Maps.interactions("W12").any(func(i): return i.id == "item_I02"), "W12 石工亲笔信保留")
 
+	# --- 战场提示碑（sign_ 交互 · 数据驱动，见 ds-ability-copy.md §3）---
+	var sign_item := {}
+	for item in Maps.interactions("W16"):
+		if str(item.id) == "sign_I09": sign_item = item
+	check(not sign_item.is_empty(), "W16 有战场提示碑 sign_I09")
+	if not sign_item.is_empty():
+		check(str(sign_item.get("kind", "")) == "提示碑", "sign_I09 kind == 提示碑（实际 %s）" % str(sign_item.get("kind", "")))
+		check(sign_item.at == Vector2(868, 792), "sign_I09 at == (868,792)（实际 %s）" % str(sign_item.at))
+		check(int(sign_item.room) == 8, "sign_I09 room 索引指向 R09（实际 %d）" % int(sign_item.room))
+		check(Maps.room_at("W16", sign_item.at) == int(sign_item.room), "sign_I09 at 落在声明的 room 内")
+		check(float(sign_item.radius) == 60.0, "sign_I09 radius 60（实际 %s）" % str(sign_item.radius))
+	var total_interactions := 0
+	for id in db.regions:
+		total_interactions += Maps.interactions(id).size()
+	check(total_interactions == 413, "交互总数 413（实际 %d）" % total_interactions)
+
 	# 36 条边逐条来回：两侧 travel_* 存在、落点站得住、大地图锚点不是 spawn 兜底
 	var shared := 0
 	var loops := 0

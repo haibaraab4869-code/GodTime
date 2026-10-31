@@ -18,6 +18,8 @@ const GATE_HINTS := {
 	"ENDGAME": "此门自内而开。",
 	"w25_verdict_sealed": "先在原告席落判，再回看这扇门。",
 }
+# 战场提示碑第二行（W16 R09 灯龛旁 · 本区专属战术提示，24 字）。红线句不在此处，复用 ABILITY_USAGE["DS"]。
+const DS_BATTLE_HINT := "借火的殿里只有盐台是凉的——没有鳞也能靠盐台打完"
 var region_instance: Node2D
 var region_guard: Node2D
 var environment: Node2D
@@ -95,7 +97,7 @@ var boundary_armed := false
 var boundary_busy := false
 var boundary_notice := 0.0
 ## 本区「触碰即取」的取得点（grants[].auto）。load_map 时缓存，每帧最多 1 次距离判定：
-## 29 区共 412 条交互，绝不能在 _physics_process 里全表遍历。
+## 29 区共 413 条交互，绝不能在 _physics_process 里全表遍历。
 var auto_grants: Array = []
 
 func _physics_process(delta: float) -> void:
@@ -350,6 +352,10 @@ func _update_hud(hp: int, maximum: int) -> void:
 	var zone := Maps.region(current_map)
 	hud.text = "第%d章 %s / %s %s · %s · 生命%d/%d 药%d 魂魄%d 凶骨%d" % [zone.chapter, zone.chapter_name, current_map, zone.title, "过去" if past_era else "未来", hp, maximum, heal_charges, souls, bones]
 	if combat != null: hud.text += "  " + combat.display_name() + " 气%d" % combat.state.qi
+	if ds_status_icon != null:
+		# DS 持有时常驻鳞片图标；说明文字复用红线句单一真源，不另抄一份。
+		ds_status_icon.set_tip(ABILITY_USAGE["DS"])
+		ds_status_icon.visible = ability_available("DS")
 
 func _objective_text() -> String:
 	var zone := Maps.region(current_map)
@@ -375,6 +381,7 @@ func nearest_interaction() -> Dictionary:
 		if not str(item.id).begins_with("ability_"): continue
 		if not Maps.era_ok(item, past_era): continue
 		if ability_available(str(item.get("ability", ""))): continue
+		if not _grant_gate(item).is_empty(): continue
 		var grant_distance: float = player.position.distance_to(item.at)
 		if grant_distance <= float(item.radius) and grant_distance < best:
 			best = grant_distance
@@ -383,6 +390,7 @@ func nearest_interaction() -> Dictionary:
 	for item in items:
 		if item.id.begins_with("travel_"): continue
 		if not Maps.era_ok(item, past_era): continue
+		if str(item.id).begins_with("ability_") and not _grant_gate(item).is_empty(): continue
 		var d: float = player.position.distance_to(item.at)
 		if d <= float(item.radius) and d < best:
 			best = d
@@ -496,6 +504,10 @@ func _interact(id: String) -> void:
 	if id.begins_with("ability_"):
 		_grant_ability(id)
 		return
+	if id.begins_with("sign_"):
+		# 战场提示碑：可反复读，不置旗标、不扣资源（数据驱动自 items[].type == 提示碑）。
+		_show_entry("战场提示碑", ABILITY_USAGE["DS"] + "\n" + DS_BATTLE_HINT)
+		return
 	if id.begins_with("item_"):
 		var item_key := "item_" + current_map + "_" + id.trim_prefix("item_")
 		if chapter_flags.get(item_key, false):
@@ -572,6 +584,19 @@ func _interact(id: String) -> void:
 		_:
 			super._interact(id)
 
+func _grant_gate(entry: Dictionary) -> String:
+	# 设备前置（ability-grants.md §4.2）：DB 中泉须先完成 D2「三灵协作」全校准。
+	# grants 契约不携带 flag，这里从当前区 devices[] 反查「三灵协作」型机关的 flag，
+	# 避免把 w21_trinity_3 硬编码进两份代码。未满足时中泉只冒泡、不给能力。
+	var code := str(entry.get("ability", ""))
+	if code != "DB": return ""
+	for raw in Maps.region(current_map).get("devices", []):
+		if str(raw.get("type", "")) == "三灵协作":
+			var flag := str(raw.get("flag", ""))
+			if not flag.is_empty() and not chapter_flags.get(flag, false):
+				return "泉眼只冒泡，尚未结冰。先让水轮、风轮、地脉三灵同时归位。"
+	return ""
+
 func _grant_ability(id: String) -> void:
 	# 取得入口（docs/design/maps/ability-grants.md + data/wXX.json 的 grants）。
 	# 代号与文案都由交互自带：一个区可以发两个能力（W06 = P2 + QS），
@@ -585,6 +610,10 @@ func _grant_ability(id: String) -> void:
 		return
 	var code := str(entry.get("ability", Maps.region(current_map).ability))
 	if not ABILITIES.has(code): return
+	var gate := _grant_gate(entry)
+	if not gate.is_empty():
+		_notify(gate, 4)
+		return
 	if ability_available(code):
 		_show_entry("已取 · " + ABILITIES[code], "这处遗迹已经把它的能力交给你了，不会有第二份。")
 		return
@@ -725,6 +754,15 @@ func _draw() -> void:
 			else: draw_circle(at - Vector2(0, 8), 14, Color("c8d9c2"))
 		elif item.id == "view_inscription":
 			for k in range(4): draw_line(at + Vector2(-10, -40 - k * 8), at + Vector2(12, -45 - k * 8), Color("bde0ce"), 2)
+		elif item.id.begins_with("sign_"):
+			# 战场提示碑：竖长盐晶碑，地面锚定（at 取 floor_y - 40，碑底落到地面）。
+			var sign_base := at + Vector2(0, 40)
+			var sign_body := Rect2(sign_base + Vector2(-12, -72), Vector2(24, 72))
+			draw_rect(sign_body, Color("c9b99a"))
+			draw_line(sign_body.position, Vector2(sign_body.end.x, sign_body.position.y), Color("ecce9a"), 2)
+			for k in range(3):
+				draw_line(Vector2(sign_body.position.x + 5, sign_body.position.y + 20 + k * 15), Vector2(sign_body.end.x - 5, sign_body.position.y + 20 + k * 15), Color("13110f"), 2)
+			draw_arc(Vector2(sign_body.get_center().x, sign_body.position.y + 4), 5, PI, TAU, 12, Color("e0a040"), 2)
 		elif item.id.begins_with("mythic_"):
 			var index: int = int(item.id.trim_prefix("mythic_"))
 			var beast: String = zone.mythic.steps[index].beast

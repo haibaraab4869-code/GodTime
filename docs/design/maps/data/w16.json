@@ -586,6 +586,19 @@
       "obtain": "拾取",
       "missable": true,
       "requires": ""
+    },
+    {
+      "id": "I-09",
+      "type": "提示碑",
+      "name": "战场提示碑",
+      "room": "R09",
+      "pos": [
+        868,
+        792
+      ],
+      "obtain": "调查",
+      "missable": false,
+      "requires": ""
     }
   ],
   "enemies": [

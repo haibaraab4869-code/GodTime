@@ -97,14 +97,8 @@ func run() -> void:
 	enemy._hurt_player(true)
 	check(player.health == health and combat.state.qi == 28, "taotie absorbs ground wave and refunds qi")
 	check(not combat.state.can_shift_in_field(), "chapter does not enable unapproved field form switching")
-	world.souls = 100
-	world._buy_supply()
-	world.journal.close_reader()
-	check(world.heal_charges == 4 and world.souls == 50, "chapter rewards can buy supply capacity")
-	world._buy_supply()
-	world.journal.close_reader()
-	world._rest()
-	check(world.heal_charges == 5 and player.maximum_health == 4, "supply upgrade preserves base health and refills at rest")
+	# 旧「购买补给容量」(_buy_supply) 已随 48 区撤离而移除；这里的四凶战斗集成断言
+	# 走 world.combat + Guard 的真实路径，29 区仍保留对应功能，予以保留。
 	world.queue_free()
 	await process_frame
 	print("CHECKS=", checks)

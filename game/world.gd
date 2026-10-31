@@ -5,6 +5,7 @@ extends Node2D
 signal exit_requested(map_id: String, anchor_id: String)
 const SettingsPanel := preload("res://game/settings_panel.gd")
 const Journal := preload("res://game/m01_journal.gd")
+const DSStatusIcon := preload("res://game/ds_status_icon.gd")
 const SAVE_PATH := "user://world_progress.cfg"
 const SAVE_VERSION := 2
 const VIEW_WIDTH := 4096.0
@@ -35,6 +36,7 @@ var interact_requested := false
 var notice_timer := 0.0
 var clock := 0.0
 var hud: Label
+var ds_status_icon: Control
 var objective: Label
 var guide: Label
 var prompt: Label
@@ -121,8 +123,16 @@ func _build_ui() -> void:
 	top.color = Color(0.055, 0.09, 0.11, 0.94)
 	top.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	control.add_child(top)
-	hud = _screen_label(control, 22, Color("f1e6cc"))
-	hud.position = Vector2(26, 16)
+	var hud_row := HBoxContainer.new()
+	hud_row.position = Vector2(26, 16)
+	hud_row.add_theme_constant_override("separation", 8)
+	hud_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	control.add_child(hud_row)
+	hud = _screen_label(hud_row, 22, Color("f1e6cc"))
+	ds_status_icon = DSStatusIcon.new()
+	ds_status_icon.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	ds_status_icon.visible = false
+	hud_row.add_child(ds_status_icon)
 	objective = _screen_label(control, 16, Color("cad4d1"))
 	objective.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
 	objective.offset_left = 26
